@@ -5,12 +5,39 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
+  </head>
+  
   <body>
+  <div id="global-container">
+    <%= render 'layouts/header' %>
+
     <%= yield %>
+     
+    <%= render 'layouts/contact'%>
+
+    <%= render 'layouts/sns'%>
+
+    <%= render 'layouts/footer'%>
+  </div>
+  
+
+<%# <h1 id="hello">Hello World</h1> %>
+
+<%# <%= javascript_pack_tag 'home/index' %> 
+<%= javascript_pack_tag 'scripts/first' %>
+<%= javascript_pack_tag 'scripts/hero-slider' %>
+<%= javascript_pack_tag 'scripts/mobile-menu' %>
+<%= javascript_pack_tag 'scripts/scroll' %>
+<%= javascript_pack_tag 'scripts/text-animation' %>
+
+
+
   </body>
 </html>
