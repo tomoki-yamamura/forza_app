@@ -1,0 +1,50 @@
+@import "../variables";
+
+
+.header{
+  
+  top:0;
+  left:0;
+  width: 100%;
+  height: $navHeight;
+  background-color:transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+      width: 90%;
+      margin: 0 auto;
+      max-width: $contentMaxWidth;
+    
+  }
+
+  &__nav{
+    display: none;
+  }
+  
+  &__ul{
+      display: flex;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      align-items: center;
+  }
+  
+  &__li{
+      margin-left: 40px;
+      & > a {
+        color: $cBlack;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+  }
+  & .logo{
+      justify-content: center;
+      font-size: 25px;
+  }
+}

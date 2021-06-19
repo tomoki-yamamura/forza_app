@@ -1,0 +1,56 @@
+@import "../variables";
+@import "../mixin";
+
+.sns {
+  &-area {
+    @extend .content-width;
+    & h2 {
+      @extend .mb-contact;
+      text-align: center
+    }
+  }
+  &-area-inner {
+    @extend .font-sm;
+    display: flex;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: 45px 0;
+
+  }
+  &-right {
+    width: 50%;
+    text-align: center;
+  }
+  &-left {
+    width: 50%;
+    text-align: center;
+  }
+  &-twitter-link {
+    position: relative;
+    padding-left: 5%;
+    
+    @include p-base($left: -20px, $top: 50%, $width: 1.5em, $height: 1.5em) {
+      transform: translateY(-50%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &::before {
+      background-image: url(twitter.svg);
+    }
+    
+  }
+  &-instagram-link {
+    position: relative;
+    padding-left: 5%;
+    @include p-base($left: -20px, $top: 50%, $width: 1.5em, $height: 1.5em) {
+      transform: translateY(-50%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &::before {
+      background-image: url(instagram.svg);
+    }
+  }
+}

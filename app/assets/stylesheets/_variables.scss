@@ -5,3 +5,63 @@ $cBgGray: #eaebe6;
 $contentMaxWidth: 1070px;
 $navHeight: 100px;
 $cWineRed: red;
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+  object-fit: cover;
+}
+
+.font-text {
+  font-size: 12px;
+}
+
+.font-sm {
+  font-size: 14px;
+}
+
+.font-p {
+  font-size: 16px;
+}
+
+.font-md {
+  font-size: 21.5px;
+}
+
+.font-lr {
+  font-size: 17px;
+}
+
+.font-lg {
+  font-size: 25px;
+}
+
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+.mb-contact {
+  margin-bottom: 40px;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+// bootstrap spacing
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+.flex{
+  display: flex;
+  flex-direction: column;
+}

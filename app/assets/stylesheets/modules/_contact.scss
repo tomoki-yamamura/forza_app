@@ -1,0 +1,42 @@
+@import "../variables";
+
+.contact-area {
+  @extend .content-width;
+  padding: 45px 0px;
+  & h2 {
+    text-align: center;
+    @extend .mb-contact;
+  }
+  &-inner {
+    background-color: #fbf8f3;
+  }
+  &-box {
+    padding: 40px 30px;
+    text-align: center;
+  }
+  &-link {
+    border: 1px solid;
+    display: block;
+    padding: 15px 0px;
+    letter-spacing: 2px;
+    background-color: $cWhite;
+    transition: all .3s;
+    &:hover {
+      background-color: #f1e4cf;
+      color: $cBlack;
+    }
+  }
+  &-icon {
+    width: 25px;
+    height: auto;
+    margin: 0 auto 25px;
+    &-mail {
+      width: 25px;
+    }
+  }
+  &-text {
+    @extend .font-text;
+    margin-bottom: 25px;
+  }
+}
+
