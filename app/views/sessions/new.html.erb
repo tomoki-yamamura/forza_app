@@ -1,2 +1,18 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+  <div id="form">
+    <h1>Login</h1>
+  
+    <%= form_for(:session, url: login_path) do |f| %>
+
+      <div class="form-item">
+      <p class="formLabel">Email</p>
+      <%= f.email_field :email, class: 'form-style form-control',autocomplete: 'off' %>
+      </div>
+
+      <div class="form-item">
+      <p class="formLabel">Password</p>
+      <%= f.password_field :password, class: 'form-style form-control' %>
+      </div>
+
+      <%= f.submit "Log in", class: "login pull-right" %>
+    <% end %>
+  </div>
