@@ -1,0 +1,37 @@
+@import "../../variables";
+
+.footer{
+
+
+  width: 90%;
+  margin: 40px auto;
+  max-width: 1070px;
+
+
+  &__inner {
+    flex-direction: column;
+  }
+
+  &__ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: center;
+  }
+
+  &__li {
+    margin-top: 20px;
+    font-size: $font-text;
+  }
+
+  & .logo {
+    justify-content: center;
+    font-size: $font-lg;
+  }
+
+  &__copyright {
+    margin-top: 30px;
+  }
+}

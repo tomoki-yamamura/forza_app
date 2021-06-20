@@ -1,0 +1,107 @@
+@import "../variables";
+@import "../mixin";
+@import "../loader";
+
+
+.first{
+  height: 700px;
+}
+
+.mobile-menu{
+  &__btn {
+    display: none;
+    z-index: 300;
+
+  }
+}
+
+.header{
+  &__nav{
+    display: block;
+  }
+
+  &__li {
+    font-size: $font-md;
+  }
+}
+
+#about {
+  display: flex;
+  flex-direction: row;
+}
+
+.about {
+
+  &-copy {
+    font-size: $font-lg;
+    margin-bottom: $mb-sm;
+    line-height: 2.0;
+  }
+
+  &-text {
+    font-size: $font-lr;
+    line-height: 2.5;
+    margin-bottom: 25px;
+  }
+
+  &-sec-right {
+      position: relative;
+      margin: 0;
+      padding-left: 75px;
+
+    &::before{
+      content: "";
+      display: block;
+    } 
+
+    &::after{
+      content: "";
+      display: block;
+    }
+  }
+
+  &-img01 {
+    transition: all 1s;
+    transform: translateY(10px);
+    opacity: 0;
+    &.inview {
+      transform: none;
+      opacity: 1;
+    }
+    &-img {
+      width: 100%;
+    }
+  }
+  &-img02 {
+    position: relative;
+    width: 30%;
+    // background-color: aquamarine;
+    transition: all 1s;
+    transform: translateY(10px);
+    opacity: 0;
+    &.inview {
+      opacity: 1;
+      transform: none;
+    }
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+    
+  }
+}
+
+.contact-area {
+  width: 900px;
+  &-link {
+    margin: 0 auto;
+    width: 600px;
+  }
+}
+
+h2 {
+  font-weight: 400;
+  font-size: $font-md;
+}

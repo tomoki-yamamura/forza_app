@@ -1,30 +1,36 @@
-@import "../variables";
-@import "../mixin";
+@import "../../variables";
+@import "../../mixin";
 
 .sns {
   &-area {
-    @extend .content-width;
+    width: 90%;
+    margin: 0 auto;
+    max-width: $contentMaxWidth;
+
     & h2 {
-      @extend .mb-contact;
+      margin-bottom: $mb-md;
       text-align: center
     }
   }
+
   &-area-inner {
-    @extend .font-sm;
+    font-size: $font-sm;
     display: flex;
     border-top: 1px solid;
     border-bottom: 1px solid;
     padding: 45px 0;
-
   }
+
   &-right {
     width: 50%;
     text-align: center;
   }
+
   &-left {
     width: 50%;
     text-align: center;
   }
+  
   &-twitter-link {
     position: relative;
     padding-left: 5%;

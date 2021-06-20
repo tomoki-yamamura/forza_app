@@ -1,7 +1,4 @@
-@import "variables";
-
-$cMenuClose: $cBlack;
-$cMenuOpen: $cBlack;
+@import "../../variables";
 
 .mobile-menu {
 
@@ -9,13 +6,14 @@ $cMenuOpen: $cBlack;
         padding: 0 40px;
         font-size: 38px;
     }
-
+  
     &__btn {
         background-color: unset;
         border: none;
         outline: none !important;
         cursor: pointer;
         z-index: 300;
+        display: block;
     
         & > span {
             background-color: $cMenuClose;
@@ -62,13 +60,13 @@ $cMenuOpen: $cBlack;
         color: $cBlack;
         text-decoration: none !important;
     }
-}
-
-.menu-open {
+  }
+  
+  .menu-open {
     & #container {
         // opacity: 0;
     }
-
+  
     & .header {
         // position: fixed;
     }
@@ -85,7 +83,7 @@ $cMenuOpen: $cBlack;
         &__item {
             transform: none;
             opacity: 1;
-
+  
             @for $i from 1 through 5 {
                 &:nth-child(#{$i}) {
                     transition-delay: $i * 0.07s;
@@ -111,5 +109,4 @@ $cMenuOpen: $cBlack;
             }
         }
     }
-}
-
+  }

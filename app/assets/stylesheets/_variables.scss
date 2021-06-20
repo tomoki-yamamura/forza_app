@@ -1,67 +1,29 @@
+// colors
+
 $cWhite: white;
 $cBlack: black;
 $cSubTitle: #535353;
 $cBgGray: #eaebe6;
+$btnhover: #f1e4cf;
+$ballyeloow:#FFA541;
+$ballblue: #2391EB;
 $contentMaxWidth: 1070px;
 $navHeight: 100px;
-$cWineRed: red;
-.content-width {
-  width: 90%;
-  margin: 0 auto;
-  max-width: $contentMaxWidth;
-}
+$cMenuClose: $cBlack;
+$cMenuOpen: $cBlack;
 
-img {
-  width: 100%;
-  vertical-align: bottom;
-  object-fit: cover;
-}
 
-.font-text {
-  font-size: 12px;
-}
+// font-size
 
-.font-sm {
-  font-size: 14px;
-}
+$font-text: 12px;
+$font-sm:   14px;
+$font-p:    16px;
+$font-md: 21.5px;
+$font-lr:   17px;
+$font-lg:   25px;
 
-.font-p {
-  font-size: 16px;
-}
+// margin
 
-.font-md {
-  font-size: 21.5px;
-}
-
-.font-lr {
-  font-size: 17px;
-}
-
-.font-lg {
-  font-size: 25px;
-}
-
-.mb-sm {
-  margin-bottom: 16px !important;
-}
-
-.mb-contact {
-  margin-bottom: 40px;
-}
-
-.mb-lg {
-  margin-bottom: 80px !important;
-}
-// bootstrap spacing
-.pb-sm {
-  padding-bottom: 16px !important;
-}
-
-.pb-lg {
-  padding-bottom: 80px !important;
-}
-
-.flex{
-  display: flex;
-  flex-direction: column;
-}
+$mb-sm: 16px;
+$mb-md: 40px;
+$mb-lr: 80px;

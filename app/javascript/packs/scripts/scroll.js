@@ -54,6 +54,8 @@ const add = function(el, inview){
 
 };
 
+new ScrollObserver('.about-sec-left', add);
+
 new ScrollObserver('.about-img01', add);
 
 new ScrollObserver('.about-img02', add);

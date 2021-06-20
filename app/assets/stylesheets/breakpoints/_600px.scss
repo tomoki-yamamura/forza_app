@@ -1,0 +1,43 @@
+@import "../variables";
+@import "../mixin";
+@import "../loader";
+
+.flex{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+
+.about {
+  &__texts,
+  &__img {
+    flex-basis: 47%;
+  }
+
+  &__texts {
+    display: flex;
+    align-items: flex-end;
+  }
+  &__inner {
+    padding: 50px;
+  }
+}
+
+.footer{
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__ul {
+    flex-direction: row;
+  }
+
+  &__li {
+    margin-left: 40px;
+    font-size: $font-sm;
+  }
+}
