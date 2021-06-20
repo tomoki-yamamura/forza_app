@@ -1,0 +1,130 @@
+// ベーススタイル
+
+@import "../variables";
+@import "../mixin";
+@import "../loader";
+
+ 
+html {
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Montserrat','Noto Sans JP', sans-serif;
+  font-size: 1.4em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-bottom: 0;
+  font-size: 100%;
+}
+
+a {
+  color: $cBlack !important;
+  &:hover {
+    color: $cBgGray !important;
+    text-decoration: none !important;
+  }
+}
+
+#container {
+  transition: transform 0.5s, box-shadow 0.5s ;
+  background-color: $cWhite;
+  position: relative;
+  z-index: 10;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+  object-fit: cover;
+}
+
+.font-text {
+  font-size: $font-text;
+}
+
+.font-sm {
+  font-size: $font-sm;
+}
+
+.font-p {
+  font-size: $font-p;
+}
+
+.font-md {
+  font-size: $font-md;
+}
+
+.font-lr {
+  font-size: $font-lr;
+}
+
+.font-lg {
+  font-size: $font-lg;
+}
+
+.mb-sm {
+  margin-bottom: $mb-sm;
+}
+
+.mb-contact {
+  margin-bottom: $mb-md;
+}
+
+.mb-lg {
+  margin-bottom: $mb-lr;
+}
+// bootstrap spacing
+.pb-sm {
+  padding-bottom: $mb-sm;
+}
+
+.pb-lg {
+  padding-bottom: $mb-lr;
+}
+
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+}
+
+#main-content {
+  margin-top: 50px;
+}
+
+h2{
+  font-weight: 200;
+  font-size: $font-p;
+}
+
+#about{
+  @extend .content-width;
+}
+
+.main-title {
+  font-size: $font-lg;
+  font-weight: 600;
+  margin-bottom: 0;
+  display: block;
+}
+
+.sub-title {
+  font-size: $font-sm;
+}
+
+
+.logo {
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+  &__img{
+    width: 90px;
+    height: 65px;
+    object-fit: contain;
+    margin-right:5px;
+  }
+}
+
+

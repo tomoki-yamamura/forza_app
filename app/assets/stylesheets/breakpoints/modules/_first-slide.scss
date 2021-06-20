@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixin";
+@import "../../variables";
+@import "../../mixin";
 
 .first{
   position: relative;
@@ -11,10 +11,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: $cWhite;
+    color: $cBlack;
     z-index: 30;
-    font-size: 7.8vw;
-    // color: $cWhite;
+    font-size: 3.8vw;
+    color: $cWhite;
   }
 
   &__footer {
@@ -27,7 +27,7 @@
     letter-spacing: 0.2em;
     transition: all .3s;
     z-index: 30;
-    color: $cWhite;
+    color: $cWhite !important;
     
 
     & > span {

@@ -1,0 +1,18 @@
+@import "../../variables";
+
+.btn {
+  background-color: $cWhite;
+  color: $cBlack;
+  border: 1px solid $cBlack;
+  border-radius: 100px;
+  padding: 10px 40px;
+  margin: 50px 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color:$btnhover;
+    color: $cBlack;
+  }
+}

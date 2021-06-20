@@ -1,5 +1,4 @@
-@import "../variables";
-
+@import "../../variables";
 
 .header{
   
@@ -45,6 +44,6 @@
   }
   & .logo{
       justify-content: center;
-      font-size: 25px;
+      font-size: $font-lg;
   }
 }
