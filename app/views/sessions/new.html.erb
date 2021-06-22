@@ -1,7 +1,10 @@
-  <div id="form">
+ <div id="form">
     <h1>Login</h1>
-  
-    <%= form_for(:session, url: login_path) do |f| %>
+    <%= render 'shared/alert'%>
+    <!-- formの送信先を指定 -->
+
+    <%= form_for(:session, url: login_path) do |f| %>      
+    <!-- 送信先をurlが/login、Sessionsコントローラのcreateアクションに@userを送り、fブロックに代入-->
 
       <div class="form-item">
       <p class="formLabel">Email</p>
@@ -15,4 +18,4 @@
 
       <%= f.submit "Log in", class: "login pull-right" %>
     <% end %>
-  </div>
+</div>
