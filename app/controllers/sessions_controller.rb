@@ -1,13 +1,32 @@
 class SessionsController < ApplicationController
+
+  layout 'sessions'
+
   def new
-    render :layout => nil
+    # render :layout => nil
+
   end
 
   def create
-    render :layout => nil
+    # render :layout => nil
+
+    user = User.find_by(email: params[:session][:email])
+        if user && user.authenticate(params[:session][:password])
+    #↓こちらに変更
+           log_in(user)
+        else
+          flash.now[:danger] = '有効なメールアドレス、またはパスワードではありません。'
+          render 'new'
+
+        end
   end
 
   def destroy
-    render :layout => nil
+    # render :layout => nil
+
+    log_out
+    redirect_to login_url
   end
+
+
 end
