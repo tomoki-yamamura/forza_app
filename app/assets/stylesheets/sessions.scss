@@ -94,3 +94,15 @@ input[type="submit"].login{
 input[type="submit"].login:hover{background-color: #fff; border:1px solid #55b1df; color:#55b1df; cursor:pointer;}
 input[type="submit"].login:focus{outline: none;}
 
+.checkbox {
+  span {
+    font-size: 0 0.8125rem;
+    margin-left: 10px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
