@@ -9,11 +9,13 @@
               <li class="header__li"><a href="#">Home</a></li>
               <li class="header__li"><a href="#">About</a></li>
               <li class="header__li"><a href="#">Activity</a></li>
-              <li class="header__li"><a href="#">Contact</a></li>
-              <li class="devider"></li>
+              <li class="header__li" id="header__li4"><a href="#">Contact</a></li>
+              <% if logged_in? %>
+              
               <li>
-                <%= link_to "Log out", logout_path, method: :delete %>          <!-- ログアウトリンク-->
+                <%= link_to "Log out", logout_path, method: :delete, :class => 'header__li'%>          <!-- ログアウトリンク-->
               </li>
+              <% end %>
             </ul>
           </nav>
           <button class="mobile-menu__btn">
@@ -43,9 +45,9 @@
                       <span class="sub-title">コンタクト方法</span>
                   </a>
               </li>
-              <% if logged_in? %>
+               <% if logged_in? %> 
               <li class="mobile-menu__item">
-                <%= link_to "Log out", logout_path, method: :delete %>          <!-- ログアウトリンク-->
+                <%= link_to "Log out", logout_path, method: :delete, :class => 'logout' %>          <!-- ログアウトリンク-->
               </li>
               <% end %>
           </ul>

@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a {
-  color: $cBlack !important;
+  // color: $cBlack !important;
   &:hover {
     color: $cBgGray !important;
     text-decoration: none !important;
@@ -103,16 +103,7 @@ h2{
   @extend .content-width;
 }
 
-.main-title {
-  font-size: $font-lg;
-  font-weight: 600;
-  margin-bottom: 0;
-  display: block;
-}
 
-.sub-title {
-  font-size: $font-sm;
-}
 
 
 .logo {

@@ -1,6 +1,7 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import "variables";
 
 body{
   background: url(http://www.timurtek.com/wp-content/uploads/2014/10/form-bg.jpg) no-repeat center center fixed; 
@@ -33,8 +34,8 @@ div.logo svg{
 .darken-bg{background: rgba(0,0,0,.5) !important; transition:all .3s ease;}
 
 div#form{
- position: absolute;
- width:360px;
+ position: fixed;
+ width:425px;
  height:320px;
  height:auto;
  background-color: #fff;
@@ -45,6 +46,9 @@ div#form{
  top:50%;
  margin-left:-180px;
  margin-top:-200px;
+}
+ h1 {
+  font-size: 30px;
 }
 div.form-item{position: relative; display: block; margin-bottom: 20px;}
 input{transition: all .2s ease;}
@@ -105,4 +109,29 @@ input[type="submit"].login:focus{outline: none;}
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+// #login{
+   
+//     background-image: url(login.jpg);
+//     // background-size: contain;
+//     width: 100px;
+//     height: 100px;
+  
+// }
+
+.form-msg {
+  font-size: 14px;
+}
+
+.alert-danger {
+  color: red;
+  font-size: 14px;
+  margin-bottom: $mb-sm;
+}
+
+.session{
+  img {
+    height: 100vh;
+  }
 }
