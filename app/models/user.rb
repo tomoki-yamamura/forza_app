@@ -1,8 +1,15 @@
 class User < ApplicationRecord
+  #オブジェクトが保存される前に、インスタンス変数(email)自身に、小文字のemailの値を代入。
+  before_save { self.email = email.downcase } 
+   
   attr_accessor :remember_token
   validates :name,  presence: true, length: { maximum: 50 }
-  validates :email, presence: true, length: { maximum: 255 }
-  validates :password, presence: true,length: { minimum: 6 }                    #passwordの文字列が空でなく、6文字以上ならtrue
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, length: { maximum: 255 },
+                    format: { with: VALID_EMAIL_REGEX },
+                    uniqueness: true 
+
+  validates :password, presence: true,length: { minimum: 6 }        #passwordの文字列が空でなく、6文字以上ならtrue  
   has_secure_password
 
   

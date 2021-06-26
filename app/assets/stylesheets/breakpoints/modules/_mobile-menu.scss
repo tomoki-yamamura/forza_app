@@ -86,7 +86,7 @@
           background-color:#6bb1e0;
           position:absolute;
           top:0;
-        //   left:10px;
+          left:-25px;
 
       
         }
@@ -106,7 +106,7 @@
         &__item {
             transform: none;
             opacity: 1;
-            &:nth-child(4) {
+            &:nth-child(5) {
                 padding-top: 15px;
                 margin-top: 12px;
             }
