@@ -4,7 +4,7 @@
   
   <%= render 'sessions/alert' %>
 
-    <%= form_for(:session, url: login_path) do |f| %>
+    <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
 
       <div class="form-item">
       <p class="formLabel">Email</p>
@@ -26,4 +26,6 @@
       <%= f.submit "Log in", class: "login pull-right" %>
     <% end %>
   </div>
+    <%= debug(params) if Rails.env.development? %>
+
 </div>

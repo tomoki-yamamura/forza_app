@@ -64,3 +64,5 @@ gem 'rexml', '~> 3.2', '>= 3.2.4'
 
 # has_secure_password
 gem 'bcrypt'
+
+gem 'rails-controller-testing'

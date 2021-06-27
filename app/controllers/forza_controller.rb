@@ -5,7 +5,7 @@ class ForzaController < ApplicationController
   def about
   end
 
-  def blog
+  def news
   end
 
   def contact

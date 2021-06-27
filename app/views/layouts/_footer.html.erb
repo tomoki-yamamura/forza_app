@@ -1,17 +1,15 @@
       <footer class="footer">
         <div class="footer__inner">
           <div class="logo">
-            <img src="/assets/logo.svg" alt="" class="logo__img">
+            <%= link_to image_tag("logo.svg", class:"logo__img"), "/" %>
             <div class="logo__stay">FORZA</div>
           </div>
           <nav class="footer__nav">
             <ul class="footer__ul">
-              <li class="footer__li"><a href="#">Home</a></li>
-              <li class="footer__li"><a href="#">About</a></li>
-              <li class="footer__li"><a href="#">Activity</a></li>
-              <li class="footer__li">
-                <a href="#">Contact</a>
-              </li>
+              <li><%= link_to "Home", root_path, class: "footer__li" %></li>
+              <li><%= link_to "About", about_path, class: "footer__li" %></li>
+              <li><%= link_to "News", news_path, class: "footer__li" %></li>
+              <li><%= link_to "Contact", contact_path, class: "footer__li" %></li>
             </ul>
           </nav>
         </div>
