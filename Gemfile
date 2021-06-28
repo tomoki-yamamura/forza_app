@@ -66,3 +66,9 @@ gem 'rexml', '~> 3.2', '>= 3.2.4'
 gem 'bcrypt'
 
 gem 'rails-controller-testing'
+
+# refile
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"
+
+gem 'font-awesome-sass'

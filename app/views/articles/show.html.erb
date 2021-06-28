@@ -1,0 +1,22 @@
+<div class="container">
+      <div class="col-md-12">
+
+      <% if @article.image_id.present? %>
+          <%= image_tag attachment_url(@article, :image), class: "article_image" %>
+        <% else %>
+          <%= image_tag 'insta1.png', class: "article_image" %>
+      <% end %>
+
+      <h1 class="text-center show"><%= @article.title %></h1>
+      <%= simple_format @article.body  %>
+        <div class="created_date">
+        <%= l @article.created_at %>
+        </div>
+      </div>
+      <%= link_to "編集", edit_article_path(@article), class: "btn btn-primary" %>
+      <%= link_to "削除", article_path(@article), method: :delete, data: {confirm: "削除してもよろしいですか"},  class: "btn btn-danger" %>
+
+</div>
+
+
+
