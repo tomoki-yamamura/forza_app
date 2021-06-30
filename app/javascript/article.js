@@ -1,3 +1,4 @@
+document.addEventListener("turbolinks:load", function () {
 $(function () {
   $('#cover_image').on('click', function () {
       $("#article_image").click();
@@ -27,4 +28,5 @@ $(function(){
     reader.readAsDataURL(file);
  
   });
+});
 });
