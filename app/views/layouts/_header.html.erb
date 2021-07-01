@@ -10,7 +10,7 @@
               <li><%= link_to "Home", root_path, class: "header__li" %></li>
               <li><%= link_to "About", about_path, class: "header__li" %></li>
               <li><%= link_to "News", news_path, class: "header__li" %></li>
-              <li><%= link_to "Contact", contact_path, class: "header__li" %></li>
+              <li><%#= link_to "Contact", new_contacts_path, class: "header__li" %></li>
               <% if logged_in? %>
               
               <li>
@@ -38,7 +38,7 @@
                 <%= link_to "News", news_path, class: "main-title" %>
               </li>
               <li class="mobile-menu__item">
-                <%= link_to "Contact", contact_path, class: "main-title" %>
+                <%= link_to "Contact", new_inquiry_path, class: "main-title" %>
               </li>
                <% if logged_in? %> 
               <li class="mobile-menu__item">

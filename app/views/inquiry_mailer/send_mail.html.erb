@@ -5,6 +5,7 @@
   </head>
   <body>
     <h1><%= @inquiry.name %> 様 から問い合わせがありました。</h1>
+    <p>【Mail from】：<%= @inquiry.email %></p><br>
     <p>・お問い合わせ内容</p>
     <p><%= @inquiry.message %></p>
   </body>
