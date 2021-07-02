@@ -1,20 +1,50 @@
- <%= form_with model: @inquiry do |f| %>
-  <div class="form-group">
-   <%= f.label :name, 'お名前*' %>
-    <%= f.text_field :name, autofocus: true, class: 'form-control' %>
-  </div>
 
-  <div class="form-group">
-   <%= f.label :email, 'Email*' %>
-    <%= f.text_field :email, autofocus: true, class: 'form-control' %>
-  </div>
 
-  <div class="form-group">
-    <%= f.label :message, 'メッセージ*' %>
-    <%= f.text_area :message, size: '10x10', class: 'form-control' %>
-  </div>
+<div id="inquiry_container">
+<p class="contact_intro">
+  FORZA金沢について<span class="underline">ご質問がある方は</span><br>
+  下記のお問合せフォームよりお問合せください<br>
+  <span class="underline">練習試合のお誘い</span>もお待ちしております!!
+</p>
+<%#= image_tag("forza_uniform", class:"logo_
+_img") %>
+  <%= render 'inquiries/alert' %>
 
-  <div>
-    <%= f.submit '送信', class: "btn btn-primary" %>
+  <h3 class="otoiawase">お問合せフォーム</h3>
+  <p class="otoiawase_p">必須事項をご記入の上、送信ボタンを押してください。<br>
+  <span class="ast">※</span>は必須入力になります。</p>
+  <div class="form">
+  <%= form_with model: @inquiry do |f| %>
+    <div class="form-group">
+    <div class="label_container">
+    <%= f.label :name, 'お名前' %><span class="ast">※</span>
+    </div>
+    <div class="field_container">
+      <%= f.text_field :name, autofocus: true, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="label_container">
+          <%= f.label :email, 'Email' %><span class="ast">※</span>
+      </div>
+      <div class="field_container">
+        <%= f.text_field :email, autofocus: true, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="label_container">
+        <%= f.label :message, 'お問合せ内容' %><span class="ast">※</span>
+      </div>
+      <div class="field_container">
+        <%= f.text_area :message, size: '10x10', class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="form-last">
+      <%= f.submit '送信', class: "contact-area-link" %>
+    </div>
+  <% end %>
   </div>
-<% end %>
+</div>

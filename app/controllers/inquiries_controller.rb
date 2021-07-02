@@ -7,11 +7,12 @@ class InquiriesController < ApplicationController
     @inquiry = Inquiry.new(inquiry_params)
     if @inquiry.save
       InquiryMailer.send_mail(@inquiry).deliver
-      flash.now[:success] = "送信されました!"
-      redirect_to new_inquiry_url
+      flash[:gotit] = "送信されました!"
+      redirect_to new_inquiry_path
     else
-      flash.now[:danger] = "入力内容に問題があります。確認して再度お試しください。"
-      render "new"
+      flash[:faile] = "入力内容に問題があります。再度入力ください。"
+      redirect_to new_inquiry_path
+      
     end
   end
 

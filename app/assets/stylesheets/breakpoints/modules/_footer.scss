@@ -19,10 +19,13 @@
     margin: 0;
     list-style: none;
     align-items: center;
+    text-align: center;
+    width: 100%;
   }
 
   &__li {
     margin-top: 20px;
+    margin-left: 0;
     font-size: $font-text;
   }
 

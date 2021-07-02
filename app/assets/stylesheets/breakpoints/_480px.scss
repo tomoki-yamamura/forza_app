@@ -12,6 +12,7 @@ html {
 body{
   font-family: 'Montserrat','Noto Sans JP', sans-serif;
   font-size: 1.4em;
+  letter-spacing: 0.2rem;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -118,4 +119,90 @@ h2{
   }
 }
 
+// inquiry
+.contact_intro {
+  margin-bottom: 75px;
+}
+
+#inquiry_container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#inquiry {
+  &_name {
+    background-color: #f7f7f7;
+  }
+  &_email {
+    background-color: #f7f7f7;
+  }
+  &_message {
+    background-color: #f7f7f7;
+  }
+}
+
+.underline {
+  border-bottom: 1px solid red;
+}
+
+.otoiawase {
+  margin-bottom: $mb-form;
+  &::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    margin-top: 15px;
+  }
+  &_p {
+    margin-bottom: $mb-form;
+  }
+}
+
+.form {
+  &-group{
+    margin-bottom: $mb-form !important;
+    display: flex;
+    flex-direction: column;
+
+  }
+  &-controll{
+    background-color: yellow;
+  }
+
+  &-last {
+    margin-top: 75px;
+    margin-bottom: 100px;
+  }
+
+}
+
+.field_container {
+  width: 100%;
+}
+
+.label_container {
+  width: 100%;
+}
+
+
+// flash
+.alert {
+  text-align: center;
+  padding: 15px 0px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 50px !important;
+}
+
+.alert-faile {
+    border: 1px solid red !important;
+    color: red;
+}
+
+.alert-gotit {
+    border: 1px solid green !important;
+    color: green;
+}
 
