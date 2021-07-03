@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
+ before_action :move_to_signed_in
  before_action :find_article, only: [:show, :edit, :update, :destroy]
+ 
 
   def index
     @articles = Article.order(created_at: :desc)
@@ -50,5 +52,12 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :body, :image)
   end
 
+  def move_to_signed_in
+    unless logged_in?
+      #サインインしていないユーザーはログインページが表示される
+      flash[:danger] = "ログインしてません"
+      redirect_to  login_url
+    end
+  end
 
 end

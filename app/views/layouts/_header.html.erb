@@ -13,7 +13,7 @@
               <li><%= link_to "Contact", new_inquiry_path, class: "header__li" %></li>
               <% if logged_in? %>
               
-              <li>
+              <li>  <%#DELETE/logout => sessions#destroy %>
                 <%= link_to "Log out", logout_path, method: :delete, :class => 'header__li'%>          <!-- ログアウトリンク-->
               </li>
               <% end %>

@@ -5,5 +5,9 @@
     </div>
   <% end %>
   <% else %>
-    <p class="form-msg">こちらは管理人専用ページです。</p>
+  <% if logged_in? %>
+    <p class="form-msg", style="color: green;">ログインしています。</p>
+  <% else %>
+    <p class="form-msg", style="color: red;">こちらは管理人専用ページです。</p>
+  <% end%>
 <% end %>

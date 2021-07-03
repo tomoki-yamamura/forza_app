@@ -18,6 +18,8 @@ Turbolinks.start()
 ActiveStorage.start()
 
 require('article.js')
+require('login.js')
+
 
 
 

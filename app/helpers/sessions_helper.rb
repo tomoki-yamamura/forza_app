@@ -23,17 +23,14 @@ module SessionsHelper
   end
 
   def log_out
-    # session[:user_id] = nil 下に書き換え
-    forget(current_user)
     session.delete(:user_id)
     @current_user = nil
   end 
 
   def current_user
-    if session[:user_id]
-      #  ifを使うのはDBの問い合わせ数を減らすため
-      User.find_by(id: session[:user_id])
-    end
+   if session[:user_id]
+    @current_user ||= User.find_by(id: session[:user_id])
+   end
   end
 
   def logged_in?

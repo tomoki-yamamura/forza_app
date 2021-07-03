@@ -8,20 +8,17 @@ class SessionsController < ApplicationController
   end
 
   def create
-    # render :layout => nil
       user = User.find_by(email: params[:session][:email].downcase)
       if user && user.authenticate(params[:session][:password])
         log_in user
-        redirect_to login_url
+        redirect_to articles_url
       else
-        flash.now[:danger] = "入力内容に問題があります。再度入力ください。"
+        flash.now[:danger] = "入力内容に問題があります。"
         render "new"
       end
   end
 
   def destroy
-    # render :layout => nil
-
     log_out
     redirect_to login_url
   end
