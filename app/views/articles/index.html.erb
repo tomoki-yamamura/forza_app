@@ -1,24 +1,82 @@
-<div class="container">
-  <div class="row">
+<div class="article-container">
+  <div class="article-container-left">   
     <% @articles.each do |article| %>
-      <%= link_to article do %>
-        <div class="col-md-3">
-        <% if article.image_id.present? %>
-        <%= image_tag attachment_url(article, :image), class: "article_img_list" %>
-        <% else %>
-        <%= image_tag 'insta1.png', class: "article_img_list" %>
+      <article>
+        <%= link_to article do %>
+          <div class="article_header">
+              <h3 class="article_title">
+                <%= article.title %>
+              </h3>
         <% end %>
 
-        <p class="article_title"><%= article.title %></p>
-          <%= l article.created_at %>
+            <div class="article_date">
+              <%= l article.created_at %>
+            </div>
+          </div>
+       
+
+        <div class="article_content">
+            <% if article.image_id.present? %>
+              <%= image_tag attachment_url(article, :image), class: "article_img_list" %>
+            <% else %>
+              <%= image_tag 'insta1.png', class: "article_img_list" %>
+            <% end %>
         </div>
-      <% end %>
+    
+
+        <div class="article_body">
+          <%=safe_join(article.body.split("\n"),tag(:br))%> 
+        </div>
+                
+      </article>
     <% end %>
+
+    
+  
+     <%#<div class="row">
+     <%= link_to '新規作成', new_article_path, class: "btn btn-primary" %>
+     
   </div>
-  <div class="row">
-  <%= link_to '新規作成', new_article_path, class: "btn btn-primary" %>
+
+  <div class="article-container-right">
+      <div class="recent_entry_container">
+        <div class="recent_header">
+          Recent Entry
+        </div>
+        <div class="recent_body">
+          <% @articles.each do |article| %>
+                  <ul class="recent_ul">
+                    <li class="recent_li">
+                      <%= link_to article do %>
+                        <%= article.title %>
+                      <% end %>
+                    </li>
+                  </ul>
+           <% end %>
+        </div>
+      </div>  
+      <div class="recent_entry_container">
+        <div class="recent_header">
+          Category
+        </div>
+        <div class="recent_body">
+          <% @articles.each do |article| %>
+                  <ul class="recent_ul">
+                    <li class="recent_li">
+                      <%= link_to article do %>
+                        <%= article.title %>
+                      <% end %>
+                    </li>
+                  </ul>
+           <% end %>
+        </div>
+      </div>  
+ 
   </div>
+
+
 </div>
+
 
 
 

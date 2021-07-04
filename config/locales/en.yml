@@ -32,7 +32,3 @@
 en:
   hello: "Hello world"
 
-ja:
-  time:
-    formats:
-      default: "%Y/%m/%d %H:%M:%S"

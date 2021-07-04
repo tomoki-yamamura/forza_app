@@ -56,8 +56,14 @@
                 </div>
               </div>
               </section>
+              <div>
+                <%= @articles.each do |article| %>
+                <%= image_tag attachment_url(article, :image), class: "article_image" %>
+                <% end %>
+              </div>
+               
 
-                <section class="contact-area">
+              <section class="contact-area">
                 <h2>CONTACT</h2>
                 <div class="contact-area-inner">
                   <div class="contact-area-box">
