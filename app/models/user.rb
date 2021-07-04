@@ -32,6 +32,7 @@ class User < ApplicationRecord
   end
 
   # 渡されたトークンがダイジェストと一致したらtrueを返す
+  #has_secureで自動でやってくれたことを実装しているだけ
   def authenticate?(remember_token)
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
   end
