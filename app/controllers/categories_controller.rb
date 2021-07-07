@@ -7,9 +7,25 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
-    @categories = @article.categories
+    @category = Category.find(params[:id])
+    @categories = Category.all
+
+    @articles = @category.articles
   end
+
+  def edit
+  end
+
+  private
+
+  def find_article
+    @article = Article.find(params[:id])
+  end
+
+  def article_params
+    params.require(:article).permit(:title, :body, :image,  category_ids: [])
+  end
+
 
 
 end
