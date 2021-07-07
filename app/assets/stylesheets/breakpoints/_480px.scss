@@ -206,3 +206,32 @@ h2{
     color: green;
 }
 
+// articleゾーン
+
+.article {
+  &_body {
+    font-size: $font-sm;
+  }
+}
+
+.edit-icons {
+  padding: 10px 5px;
+}
+
+.fa {
+  &-trash {
+  font-size: 25px;
+  padding-left: 5px;
+  color: gray;
+  }
+  &-edit {
+  font-size: 25px;
+  padding-left: 5px;
+  color: gray;
+  }
+  &-list-ul {
+  font-size: 25px;
+  padding-left: 5px;
+  color: gray;
+  }
+} 

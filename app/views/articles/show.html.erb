@@ -1,21 +1,58 @@
 <div class="container">
-      <div class="col-md-12">
-
+  <div class="col-md-12">
+    <h1 class="article_title"><%= @article.title %></h1>
+    <div class="article_date">
+      <%= l @article.created_at %>
+    </div>
+    <div class="article_content">
       <% if @article.image_id.present? %>
-          <%= image_tag attachment_url(@article, :image), class: "article_image" %>
+        <%= image_tag attachment_url(@article, :image), class: "article_image" %>
         <% else %>
-          <%= image_tag 'insta1.png', class: "article_image" %>
+        <%= image_tag 'insta1.png', class: "article_image" %>
       <% end %>
 
-      <h1 class="text-center show"><%= @article.title %></h1>
-      <%= simple_format @article.body  %>
-        <div class="created_date">
-        <%= l @article.created_at %>
-        </div>
+      <div class="article_body">
+            <%=safe_join(@article.body.split("\n"),tag(:br))%> 
+          </div>
       </div>
-      <%= link_to "編集", edit_article_path(@article), class: "btn btn-primary" %>
-      <%= link_to "削除", article_path(@article), method: :delete, data: {confirm: "削除してもよろしいですか"},  class: "btn btn-danger" %>
+  
 
+      <div class="category_container">
+        <div class="category_header">
+          カテゴリー
+        </div>
+        <ul class="category_ul">
+            <% @categories.each_with_index do |category, index| %>
+              <% if index ==  @categories.size - 1 %>
+              <li class="category_li">
+              <%= category.name %>
+              </li>
+          
+              <% else %>
+              <li class="category_li">
+              <%= category.name %>
+              </li>
+              <div class="category_comma">,</div>
+              <% end %>
+            <% end %>
+        </ul>
+      </div>
+
+      <div class="edit-icons">
+
+          <%= link_to edit_article_path(@article) do %>
+          <i class="fa fa-edit"></i>
+          <% end %>
+
+          <%= link_to article_path(@article), method: :delete, data:{confirm:"こちらの投稿を削除しますか？"} do %>
+          <i class="fa fa-trash"></i>
+          <% end %>
+
+          <%= link_to articles_path do %>
+          <i class="fa fa-list-ul"></i>
+          <% end %>
+
+      </div>
 </div>
 
 

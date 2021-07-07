@@ -1,0 +1,33 @@
+// Place all the styles related to the categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import "variables";
+
+.category {
+  &_container{
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px #d7ccc8;
+    height: auto;
+  }
+  &_header {
+    margin: 15px;
+    padding-right: 15px;
+    border-right: solid 1px #d7ccc8;
+  }
+  &_ul {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+  }
+  &_li {
+    padding: 10px 0px 10px 8px;
+  }
+  &_comma {
+    padding: 10px 0;
+  }
+}
+

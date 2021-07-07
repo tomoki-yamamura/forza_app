@@ -21,15 +21,44 @@
             <% else %>
               <%= image_tag 'insta1.png', class: "article_img_list" %>
             <% end %>
-        </div>
+        
     
 
-        <div class="article_body">
-          <%=safe_join(article.body.split("\n"),tag(:br))%> 
+            <div class="article_body">
+              <%=safe_join(article.body.split("\n"),tag(:br))%> 
+            </div>
         </div>
-                
+        
+        <%#= article.categories.each do |c| %>
+          <%#= c.id %>
+        <%# end %>
+        <div class="category_container">
+          <div class="category_header">
+            カテゴリー
+          </div>
+           <ul class="category_ul">
+            <% article.categories.each_with_index do |category, index| %>
+             <% if index ==  article.categories.size - 1 %>
+              <li class="category_li">
+              <%= category.name %>
+              </li>
+          
+              <% else %>
+              <li class="category_li">
+              <%= link_to category.name, new_article_path %>
+              <%#= category.name %>
+              </li>
+              <div class="category_comma">,</div>
+              <% end %>
+            <% end %>
+           </ul>
+         </div>
+       
       </article>
+
     <% end %>
+
+
 
     
   
@@ -60,12 +89,12 @@
           Category
         </div>
         <div class="recent_body">
-          <% @articles.each do |article| %>
+          <% @categories.each do |category| %>
                   <ul class="recent_ul">
                     <li class="recent_li">
-                      <%= link_to article do %>
-                        <%= article.title %>
-                      <% end %>
+                      <%#= link_to article do %>
+                        <%= category.name %>
+                      <%# end %>
                     </li>
                   </ul>
            <% end %>

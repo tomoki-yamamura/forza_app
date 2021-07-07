@@ -6,7 +6,7 @@
 
 article {
   margin-bottom: 80px;
-  border-bottom: 2px solid black;
+  // border-bottom: 2px solid black;
 }
  .article{
    &-container {
@@ -17,7 +17,6 @@ article {
    &_header {
      position: relative;
      padding-bottom: 20px;
-     border-bottom: 2px solid black;
    }
    &_date {
     position: absolute;
@@ -35,9 +34,14 @@ article {
   }
   &_content {
     padding-top: 30px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding-bottom: 30px;
   }
   &_body {
     line-height: 3;
+    padding-top: 30px; 
+    font-size: $font-sm;
   }
   &_image {
     width: 100%;
@@ -66,7 +70,7 @@ article {
   position:relative;
 }
 
-.fa {
+.fa-camera {
   position:absolute;
   top: 50%;
   left: 50%;

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :articles
+  resources :categories
   resources :inquiries, only: [:new, :create]
 
   get      '/login',  to: 'sessions#new'

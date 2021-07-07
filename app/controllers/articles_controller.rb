@@ -5,9 +5,12 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.order(created_at: :desc)
+    @categories = Category.all
   end
 
   def show
+    @article = Article.find(params[:id])
+    @categories = @article.categories
   end
 
   def edit
@@ -15,6 +18,7 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @article.article_category_relationships.build
   end
 
   def update
@@ -49,7 +53,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :body, :image)
+    params.require(:article).permit(:title, :body, :image,  category_ids: [])
   end
 
   def move_to_signed_in

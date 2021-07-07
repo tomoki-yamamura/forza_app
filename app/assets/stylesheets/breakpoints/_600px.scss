@@ -41,3 +41,9 @@
     font-size: $font-sm;
   }
 }
+
+.article {
+  &_body {
+    font-size: $font-p;
+  }
+}
