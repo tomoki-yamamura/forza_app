@@ -9,8 +9,9 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @categories = Category.all
+    @articles = @category.articles.order(created_at: :desc)
+    @articles2 = Article.order(created_at: :desc).limit(5)
 
-    @articles = @category.articles
   end
 
   def edit

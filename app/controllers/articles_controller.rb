@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
  
 
   def index
-    @articles = Article.order(created_at: :desc)
+    @articles = Article.order(created_at: :desc).limit(5)
     @categories = Category.all
   end
 
