@@ -16,7 +16,7 @@
           </div>
       </div>
   
-
+    <% if logged_in? %>
       <div class="category_container">
         <div class="category_header">
           カテゴリー
@@ -51,8 +51,8 @@
           <%= link_to articles_path do %>
           <i class="fa fa-list-ul"></i>
           <% end %>
-
       </div>
+    <% end %>
 </div>
 
 

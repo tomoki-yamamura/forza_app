@@ -6,5 +6,8 @@ class Article < ApplicationRecord
   validates :body, presence: true
   attachment :image 
 
+  # 最新を降順で３つ表示
+  scope :recent_article, -> {order(created_at: :desc).limit(3)}
+
 
 end

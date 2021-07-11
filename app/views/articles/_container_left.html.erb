@@ -1,69 +1,35 @@
-<div class="article-container-left">   
-    <% @articles.each do |article| %>
-      <article>
-        <%= link_to article do %>
-          <div class="article_header">
-              <h3 class="article_title">
-                <%= article.title %>
-              </h3>
-        <% end %>
-
-            <div class="article_date">
-              <%= l article.created_at %>
-            </div>
-          </div>
-       
-
-        <div class="article_content">
-            <% if article.image_id.present? %>
-              <%= image_tag attachment_url(article, :image), class: "article_img_list" %>
-            <% else %>
-              <%= image_tag 'insta1.png', class: "article_img_list" %>
-            <% end %>
-        
-    
-
-            <div class="article_body">
-              <%=safe_join(article.body.split("\n"),tag(:br))%> 
-            </div>
-        </div>
-        
-        <%#= article.categories.each do |c| %>
-          <%#= c.id %>
-        <%# end %>
-        <div class="category_container">
-          <div class="category_header">
-            カテゴリー
-          </div>
-           <ul class="category_ul">
-            <% article.categories.each_with_index do |category, index| %>
-             <% if index ==  article.categories.size - 1 %>
-              <li class="category_li">
-              <%= link_to category.name, category_path(category) %>
-              </li>
-          
-              <% else %>
-              <li class="category_li">
-              <%#= link_to category.name, edit_category_path %>
-              <%#= category.name %>
-              <%= link_to category.name, category_path(category) %>
-
-              </li>
-              <div class="category_comma">,</div>
-              <% end %>
-            <% end %>
-           </ul>
-         </div>
-       
-      </article>
-
-    <% end %>
-
-
-
-    
-  
-     <%#<div class="row">
-     <%= link_to '新規作成', new_article_path, class: "btn btn-primary" %>
-     
-  </div>
+<div id="top_news_container">
+                  <h2 class="page_title">News</h2>
+                  <article id="top_posts">
+                    <% @articles.each do |article| %>
+                      <div class="news_container">
+                          <div class="news_left">
+                            <% if article.image_id.present? %>  
+                              <%= link_to article do %>
+                              <li class="img_fit">     
+                              <%= image_tag attachment_url(article, :image), class: "article_img_list" %>
+                              </li>
+                              <% end%>
+                            <% else %>
+                              <%= link_to article do %>
+                              <li class="img_fit">     
+                              <%= image_tag 'insta1.png', class: "article_img_list" %>  
+                              </li>   
+                              <% end %>       
+                            <% end %>
+                          </div>
+                          <div class="news_right">
+                            <div class="news_right_1">
+                              <p class="news_date"><%= l article.created_at %></p>
+                              <p>【title】<%= article.title %></p>
+                              <p class="news_text"><%= article.body %></p>
+                            </div>
+                            <div class="news_right_2">
+                              <div class="top_news_btn"><%= link_to 'Read More', article_path(article), class: "readmore" %></div>
+                            </div>
+                          </div>
+                      </div>
+                    <% end %>
+                  </article>
+                </div>
+                

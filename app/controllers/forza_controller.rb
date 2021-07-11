@@ -1,7 +1,6 @@
 class ForzaController < ApplicationController
   def home
-    @articles = Article.all
-    
+    @top_news = Article.recent_article
   end
 
   def about
@@ -12,4 +11,6 @@ class ForzaController < ApplicationController
 
   def contact
   end
+
+
 end
