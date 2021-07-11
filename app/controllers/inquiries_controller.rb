@@ -10,8 +10,8 @@ class InquiriesController < ApplicationController
       flash[:gotit] = "送信されました!"
       redirect_to new_inquiry_path
     else
-      flash[:faile] = "入力内容に問題があります。再度入力ください。"
-      redirect_to new_inquiry_path
+      flash.now[:faile] = "入力内容に問題があります。再度入力ください。"
+      render "new"
       
     end
   end

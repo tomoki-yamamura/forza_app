@@ -1,6 +1,7 @@
 
 
 <div id="inquiry_container">
+
 <p class="contact_intro">
   FORZA金沢について<span class="underline">ご質問がある方は</span><br>
   下記のお問合せフォームよりお問合せください<br>
@@ -8,9 +9,11 @@
 </p>
 <%#= image_tag("forza_uniform", class:"logo_
 _img") %>
-  <%= render 'inquiries/alert' %>
+
 
   <h3 class="otoiawase">お問合せフォーム</h3>
+  <%= render 'inquiries/alert' %>
+
   <p class="otoiawase_p">必須事項をご記入の上、送信ボタンを押してください。<br>
   <span class="ast">※</span>は必須入力になります。</p>
   <div class="form">
@@ -45,6 +48,7 @@ _img") %>
     <div class="form-last">
       <%= f.submit '送信', class: "contact-area-link" %>
     </div>
+
   <% end %>
   </div>
 </div>
