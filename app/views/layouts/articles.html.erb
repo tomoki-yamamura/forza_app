@@ -7,7 +7,7 @@
     <%= csp_meta_tag %>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+  
     
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -15,7 +15,7 @@
 
   </head>
   
-  <body>
+  <body class="fadeout">
   <div id="global-container">
     <%= render 'layouts/header' %>
 
@@ -29,9 +29,22 @@
 
 
     <%= yield %>
+ 
+
+      <% if logged_in? %>
+    <section class="<%= controller.action_name %>btn">
+    <%= link_to new_article_path do%>
+    <div class="navigate-anchor">
+      <i class="fas fa-plus"></i>
+    </section>
+    <% end %>
+    </div>
+    <% end %>
 
 
-    <%= debug(params) if Rails.env.development? %>
+
+    
+ 
 
   </div>
 

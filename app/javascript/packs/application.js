@@ -19,6 +19,9 @@ ActiveStorage.start()
 
 require('article.js')
 require('login.js')
+require('page_top.js')
+
+
 
 
 

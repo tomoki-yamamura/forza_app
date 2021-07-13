@@ -60,3 +60,7 @@ new ScrollObserver('.about-sec-left', add);
 new ScrollObserver('.about-img01', add);
 
 new ScrollObserver('.about-img02', add);
+
+// new ScrollObserver('#page_top', add, {once: false, rootMargin: "-200px 0px"});
+
+

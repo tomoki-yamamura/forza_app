@@ -17,6 +17,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    # render :layout => false
     @article = Article.new
     @article.article_category_relationships.build
   end
