@@ -89,8 +89,12 @@
       display: block;
       padding-top: 100%;
     }
-
-    
+  }
+  &-btn-container {
+    &2 {
+      display: none;
+    }
+    display: block;
   }
 }
 

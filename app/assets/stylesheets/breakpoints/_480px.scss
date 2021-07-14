@@ -235,3 +235,20 @@ h2{
   color: gray;
   }
 } 
+
+.about-btn{
+  margin-top: -20%;
+  padding: 18px 25px;
+  letter-spacing: 2px;
+  background-color: white;
+  transition: all .3s;
+  font-size: $font-sm;
+
+  &-container {
+    &2 {
+      text-align: center;
+      display: block;
+    }
+    display: none;
+  }
+}

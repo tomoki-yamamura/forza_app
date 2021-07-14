@@ -39,25 +39,33 @@
                   大会や練習試合に向けて週二回(水曜、土曜)で練習しています。<br>
                   バレーボールを本気でしたい、上手くなりたいという熱い気持ちを持つ人はぜひ練習にご参加ください!!
                   </p>
-              </div>
-               <div class="about-btn"> 
-                    <button class="btn">
-                      <%= link_to "もっと詳しく", about_path, class: "about-btn2" %>
-                    </button>
-                  </div>
-              <div class="about-sec-right">
-                <div class="about-img01">
-                  <img src="/assets/insta1.png" class="about-img01-img" alt="">
-                </div>
-                <div class="about-img02">
-                  <div class="about-img02-inner">
-                    <img src="/assets/insta2.png" class="about-img02-img" alt="">
+                  <div class="about-btn-container">
+                    <%= link_to about_path ,class: "about-link-btn" do %>
+                    <div class="about-btn faa-parent animated-hover">
+                      <i class="fas fa-volleyball-ball faa-bounce"></i>
+                      もっと詳しく
+                    </div>
+                    <% end %>
                   </div>
                 </div>
-              </div>
+                <div class="about-sec-right">
+                  <div class="about-img01">
+                    <img src="/assets/insta1.png" class="about-img01-img" alt="">
+                  </div>
+                  <div class="about-img02">
+                    <div class="about-img02-inner">
+                      <img src="/assets/insta2.png" class="about-img02-img" alt="">
+                    </div>
+                </div>
+                <div class="about-btn-container2">
+                    <%= link_to about_path ,class: "about-link-btn" do %>
+                    <div class="about-btn faa-parent animated-hover">
+                      <i class="fas fa-volleyball-ball faa-bounce"></i>
+                      もっと詳しく
+                    </div>
+                    <% end %>
+                </div>
               </section>
-              <div>
-
 
 
               <section class="article-area">
