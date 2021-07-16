@@ -111,14 +111,18 @@
                           <% article.categories.each_with_index do |category, index| %>
                             <% if index ==  article.categories.size - 1 %>
                             <li class="category_li">
+                            <%= link_to category do %>
                             <%= category.name %>
+                            <% end %>
                             </li>
                         
                             <% else %>
                             <li class="category_li">
+                            <%= link_to category do %>
                             <%= category.name %>
                             </li>
                             <div class="category_comma">,</div>
+                            <% end %>
                             <% end %>
                           <% end %>
                       </ul>
