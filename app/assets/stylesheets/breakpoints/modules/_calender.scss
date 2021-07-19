@@ -1,0 +1,77 @@
+@import ".././../variables";
+
+#calender {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1070px;
+}
+
+// 日付、曜日をクリックできなくする
+.fc-col-header-cell-cushion {
+  pointer-events: none;
+}
+
+.fc-daygrid{
+  &-event {
+    pointer-events: none;
+  }
+  &-day-number {
+    pointer-events: none;
+  }
+}
+
+// 土曜日
+.fc-day-sat {
+  .fc-daygrid-day-top, .fc-scrollgrid-sync-inner .fc-col-header-cell-cushion, .fc-list-day-cushion {
+    color: blue;
+  }
+}
+
+// 日曜日
+.fc-day-sun{
+  .fc-daygrid-day-top, .fc-scrollgrid-sync-inner .fc-col-header-cell-cushion, .fc-list-day-cushion {
+    color: rgb(224, 102, 122);
+  }
+}
+
+// 祝日の背景を変える
+.is_holiday {
+  position: relative;
+  background-color:#ffeaea;
+  .fc-daygrid-day-number {
+    // 祝日の日付の色を変える
+    color: rgb(224, 102, 122) !important;
+  }
+  .event_holiday {
+    // background-color:  #ffeaea !important;
+    // border: none !important;
+    // position: absolute;
+    // top: 0;
+    display: none;
+  }
+}
+
+.forza_event {
+    .fc-daygrid-event-harness {
+      margin-top: 0 !important;
+    }
+}
+
+
+
+
+
+.fc-daygrid-event-dot {
+  display: none;
+}
+
+.fc-day-sat {
+  background-color: #eaf4ff;
+}
+.fc-day-sun {
+  background-color: #ffeaea;
+}
+
+// .fc-sticky {
+//   color: red;
+// }
