@@ -8,12 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.css" type="text/css" media="all" />
-   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js'></script>
     
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="" rel="stylesheet" type="text/css" media="(min-width: 320px) and (max-width: 639px)" >
-
+ 
+    
   </head>
   
   <body>
@@ -22,6 +24,7 @@
 
     <%= yield %>
      
+    <div id="calender"></div>
 
 
     <%= render 'layouts/sns'%>
@@ -37,7 +40,7 @@
     </div>
     <% end %>
     <% end %>
-
+    
     <%#= debug(params) if Rails.env.development? %>
   </div>
   
