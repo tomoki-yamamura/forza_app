@@ -28,6 +28,11 @@ require('calender.js')
 
 
 
+const days = document.querySelectorAll('.fc-event-time');
+Array.from(days, day => {
+  console.log(day)
+})
+
 
 
 

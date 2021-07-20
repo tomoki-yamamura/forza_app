@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   # get '/contact',     to: 'forza#contact'
   get '/about',       to: 'forza#about'
 
+
 end

@@ -16,6 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
     ],
     // ここまで
 
+    // events: 'forza.kanazawa.volleyball@gmail.com',
+
+
+    // 日付枠内の日付を数字のみにする
+    dayCellContent: function (e) {
+      e.dayNumberText = e.dayNumberText.replace('日', '');
+    },
 
     // 祝日の背景もグレーにする
     eventDidMount: function(e) {
@@ -41,11 +48,24 @@ document.addEventListener('DOMContentLoaded', function() {
       center: "title",
       right: ""
     },
+
     locale: 'ja',
     navLinks: false,
     // businessHours: true,
     editable: false,
     height: 'auto',
+    timeZone: 'Asia/Tokyo',
+
+    eventTimeFormat: { hour: 'numeric', minute: '2-digit' },
+
   });
   calendar.render();
+
+
+
+
+
 });
+
+
+

@@ -1,10 +1,22 @@
 @import ".././../variables";
 
-#calender {
+#calender_container {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
 }
+
+// .calender-textのCSS
+.calender-text {
+  padding-top: 15px;
+  .blue {
+  padding: 2px 16px;
+  background: #3a87ad;
+  border-radius: 2px;
+  }
+}
+  
+
 
 // 日付、曜日をクリックできなくする
 .fc-col-header-cell-cushion {
@@ -75,3 +87,5 @@
 // .fc-sticky {
 //   color: red;
 // }
+
+
