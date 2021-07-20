@@ -24,16 +24,16 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-        redirect_to @article, notice: "更新できたよ"
+        # redirect_to @article, notice: "更新できたよ"
     else
-        render "edit", alert: "更新でけへんかった"
+        # render "edit", alert: "更新でけへんかった"
     end
   end
 
   def create
     @article = Article.new(article_params)
     if @article.save
-      redirect_to @article, notice: "作成できたよ"
+      redirect_to @article
     else
         render "new", alert: "作成できませんでした"
     end
@@ -41,9 +41,9 @@ class ArticlesController < ApplicationController
 
   def destroy
     if @article.destroy
-      redirect_to root_url, notice: "削除できたよ"
+      redirect_to root_url
     else
-      redirect_to root_url, alert: "削除でけへん"
+      redirect_to root_url, alert: "削除できませんでした"
     end
   end
 
