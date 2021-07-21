@@ -2,6 +2,20 @@
 @import "../mixin";
 @import "../loader";
 
+// 横幅のサイズ
+#about {
+  width: 80%;
+}
+.article-area {
+  width: 80%;
+}
+
+#calender_container {
+  width: 80%;
+}
+
+
+// ここまで
 
 .first{
   height: 700px;
@@ -99,7 +113,7 @@
 }
 
 .contact-area {
-  width: 900px;
+  // width: 900px;
   &-link {
     margin: 0 auto;
     width: 600px;
@@ -155,3 +169,49 @@ h2 {
     justify-content: space-between;
   }
 }
+
+// newsシリーズ
+
+.top_news_btn {
+  transform: translateX(-30%);
+}
+
+.news_date {
+  margin-bottom: 40px;
+}
+
+.news_text {
+  font-size: 18px;
+}
+
+.img_fit {
+  width: 75%;
+}
+
+// ここまで
+
+// caategoryシリーズ
+
+.category{
+  &_header {
+    font-size: 12px;
+  }
+  &_li {
+    font-size: 14px;
+  }
+}
+
+// ここまで
+
+// contact
+
+.contact-area-text {
+  font-size: 14px;
+}
+
+.contact-area-link {
+  font-size: 16px;
+}
+
+// ここまで
+

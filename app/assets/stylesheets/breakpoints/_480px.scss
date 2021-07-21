@@ -252,3 +252,47 @@ h2{
     display: none;
   }
 }
+
+// newsシリーズ
+
+.article-area {
+  width: 90%;
+}
+.top_news_btn {
+  transform: translateX(-50%);
+}
+
+.img_fit {
+  width: 100%;
+}
+
+// ここまで
+
+// categoryシリーズ
+.category {
+  &_header {
+    font-size: 12px;
+  }
+  &_ul {
+    font-size: 12px;
+  }
+}
+
+// ここまで
+
+// contact
+.contact-area-text {
+  font-size: $font-text;
+}
+
+.contact-area-link {
+  font-size: 14px;
+}
+// ここまで
+
+// calender
+#calender_container {
+  width: 90%;
+}
+
+// ここまで
