@@ -1,60 +1,52 @@
-<div id="top_news_container">
+<div class="container">
+  <% @articles.each do |article| %>
+    <%= link_to article do %>
+    <h1 class="article_title"><%= article.title %></h1>
+    <% end %>
+    <div class="article_content">
+      <div class="article_index_date">
+        <%= l article.created_at %>
+      </div>
+      <% if article.image_id.present? %>
+        <%= image_tag attachment_url(article, :image), class: "article_image" %>
+        <% else %>
+        <%= image_tag 'insta1.png', class: "article_image" %>
+      <% end %>
+
+      <div class="article_body">
+        <%=safe_join(article.body.split("\n"),tag(:br))%> 
+      </div>
+    </div>
+
+    <div class="category_container">
+        <div class="category_header">
+          カテゴリー
+        </div>
+        <ul class="category_ul">
+            <% article.categories.each_with_index do |category, index| %>
+              <% if index ==  article.categories.size - 1 %>
+              <li class="category_li">
+              <%= link_to category do %>
+              <%= category.name %>
+              <% end %>
+              </li>
+          
+              <% else %>
+                <li class="category_li">
+                  <%= link_to category do %>
+                    <%= category.name %>
+                  <% end %>
+                </li>
+              <div class="category_comma">,</div>
+              <% end %>
+            <% end %>
+        </ul>
+    </div>
+  <% end %>
                 
-                  <article id="top_posts">
-                    <% @articles.each do |article| %>
-                      <p class="news_title"><%= article.title %></p>
-                      <div class="news_container">
-                          <div class="news_left">
-                            <% if article.image_id.present? %>  
-                              <%= link_to article do %>
-                              <li class="img_fit">     
-                              <%= image_tag attachment_url(article, :image), class: "article_img_list" %>
-                              </li>
-                              <% end%>
-                            <% else %>
-                              <%= link_to article do %>
-                              <li class="img_fit">     
-                              <%= image_tag 'insta1.png', class: "article_img_list" %>  
-                              </li>   
-                              <% end %>       
-                            <% end %>
-                          </div>
-                          <div class="news_right">
-                            <div class="news_right_1">
-                              <p class="news_date"><%= l article.created_at %></p>
-                              <p class="news_text"><%= article.body.truncate(30) %></p>
-                            </div>
-                            <div class="news_right_2">
-                              <div class="top_news_btn"><%= link_to 'Read More', article_path(article), class: "readmore" %></div>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="category_container">
-                      <div class="category_header">
-                        カテゴリー
-                      </div>
-                      <ul class="category_ul">
-                          <% article.categories.each_with_index do |category, index| %>
-                            <% if index ==  article.categories.size - 1 %>
-                            <li class="category_li">
-                            <%= link_to category do %>
-                            <%= category.name %>
-                            <% end %>
-                            </li>
-                        
-                            <% else %>
-                            <li class="category_li">
-                            <%= link_to category do %>
-                            <%= category.name %>
-                            </li>
-                            <div class="category_comma">,</div>
-                            <% end %>
-                            <% end %>
-                          <% end %>
-                      </ul>
-                    </div>
-                    <% end %>
-                  </article>
-                </div>
-                
-                <%= paginate @articles %>
+<%= paginate @articles %>
+
+</div>
+
+
+

@@ -100,11 +100,6 @@ h2{
   font-size: $font-p;
 }
 
-#about{
-  @extend .content-width;
-}
-
-
 
 
 .logo {
@@ -212,6 +207,18 @@ h2{
   &_body {
     font-size: $font-sm;
   }
+  &_title {
+    margin-top: 90px;
+  }
+  &_index_date {
+    padding: 5px 0 20px 0;
+  }
+  &_show_date {
+
+  }
+  &_content {
+    padding-top: 0;
+  }
 }
 
 .edit-icons {
@@ -254,11 +261,16 @@ h2{
 }
 
 // newsシリーズ
-
+.news_date {
+  margin-bottom: 30px;
+}
 .article-area {
   width: 90%;
 }
 .top_news_btn {
+  transform: translateX(-50%);
+}
+.top_news_btn2 {
   transform: translateX(-50%);
 }
 
@@ -275,6 +287,9 @@ h2{
   }
   &_ul {
     font-size: 12px;
+  }
+  &_li{
+    font-size:12px;
   }
 }
 
@@ -295,4 +310,56 @@ h2{
   width: 90%;
 }
 
+// ここまで
+
+// newspage
+#top_news_container {
+  width: 100%;
+}
+
+.article-container {
+  display: block;
+  width: 90%;
+  &-right {
+  margin-top: 40px;
+  }
+}
+
+
+
+// ここまで
+
+// news2ページ
+
+#top_posts {
+  width: 100%;
+}
+// ここまで
+
+
+// aboutシリーズ
+
+#about{
+  @extend .content-width;
+}
+
+.about {
+  &-img02 {
+    position: relative;
+    width: 45%;
+    // background-color: aquamarine;
+    transition: all 1s;
+    transform: translateY(10px);
+    opacity: 0;
+    &.inview {
+      opacity: 1;
+      transform: none;
+    }
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+}
 // ここまで

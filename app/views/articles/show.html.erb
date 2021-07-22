@@ -1,10 +1,10 @@
 <div class="container">
   <div class="col-md-12">
     <h1 class="article_title"><%= @article.title %></h1>
-    <div class="article_date">
-      <%= l @article.created_at %>
-    </div>
     <div class="article_content">
+      <div class="article_show_date">
+        <%= l @article.created_at %>
+      </div>
       <% if @article.image_id.present? %>
         <%= image_tag attachment_url(@article, :image), class: "article_image" %>
         <% else %>
@@ -16,7 +16,7 @@
           </div>
       </div>
   
-    <% if logged_in? %>
+    
       <div class="category_container">
         <div class="category_header">
           カテゴリー
@@ -42,13 +42,13 @@
         </ul>
       </div>
 
+      <% if logged_in? %>
       <div class="edit-icons">
-
           <%= link_to edit_article_path(@article) do %>
           <i class="fa fa-edit"></i>
           <% end %>
 
-          <%= link_to article_path(@article), method: :delete, data:{confirm:"こちらの投稿を削除しますか？"} do %>
+          <%= link_to @article, method: :delete, data: { confirm:"こちらの投稿を削除しますか？" } do %>
           <i class="fa fa-trash"></i>
           <% end %>
 

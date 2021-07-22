@@ -55,15 +55,10 @@
   margin: auto;
   object-fit: cover;
   border-radius: 5%;
-  // &_show {
-  //     position: absolute;
-  //     width: 50%;
-  //     height: 50%;
-  //     top: 0;
-  //     margin: auto;
-  //     object-fit: cover;
-  //     border-radius: 5%;
-  // }
+}
+
+.article_image {
+  border-radius: 2%;
 }
 
 .img_fit {
@@ -79,6 +74,12 @@
 }
 
 .top_news_btn {
+  position: relative;
+  bottom: 0;
+  left: 100%;
+}
+
+.top_news_btn2 {
   position: relative;
   bottom: 0;
   left: 100%;

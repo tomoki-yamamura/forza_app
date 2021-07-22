@@ -31,16 +31,17 @@
     
     <%= render 'layouts/page_top'%>
 
-      <% if logged_in? %>
+
+    
+    <%#= debug(params) if Rails.env.development? %>
+  </div>
+    <% if logged_in? %>
     <%= link_to new_article_path do%>
     <div class="navigate-anchor">
       <i class="fas fa-plus"></i>
     </div>
     <% end %>
     <% end %>
-    
-    <%#= debug(params) if Rails.env.development? %>
-  </div>
   
 
 <%# <h1 id="hello">Hello World</h1> %>

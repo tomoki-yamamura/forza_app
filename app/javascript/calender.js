@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+  
   let calendar = new FullCalendar.Calendar(document.getElementById('calender'), {
     // google apiを叩く
     googleCalendarApiKey:'AIzaSyBphPljC66Tbjuo5m8EHkD4BrywVTb2X_8',

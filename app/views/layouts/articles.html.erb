@@ -29,7 +29,10 @@
 
 
     <%= yield %>
- 
+
+    <%= render 'layouts/sns'%>
+
+    <%= render 'layouts/footer'%>
 
       <% if logged_in? %>
     <section class="<%= controller.action_name %>btn">

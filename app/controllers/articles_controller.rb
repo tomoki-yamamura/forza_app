@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
  before_action :move_to_signed_in
  before_action :find_article, only: [:show, :edit, :update, :destroy]
+#  before_action :current_user, only: [:edit, :update, :destroy]
+
  
 
   def index
@@ -24,7 +26,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-        # redirect_to @article, notice: "更新できたよ"
+        redirect_to @article
     else
         # render "edit", alert: "更新でけへんかった"
     end
@@ -40,11 +42,12 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    if @article.destroy
-      redirect_to root_url
-    else
-      redirect_to root_url, alert: "削除できませんでした"
-    end
+    Article.find(params[:id]).destroy
+    # if @article.destroy(article_params)
+      redirect_to articles_url
+    # else
+    #   redirect_to root_url, alert: "削除できませんでした"
+    # end
   end
 
   private
