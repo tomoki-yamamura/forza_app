@@ -42,8 +42,8 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    Article.find(params[:id]).destroy
-    # if @article.destroy(article_params)
+    # Article.find(params[:id]).destroy
+    @article.destroy!
       redirect_to articles_url
     # else
     #   redirect_to root_url, alert: "削除できませんでした"

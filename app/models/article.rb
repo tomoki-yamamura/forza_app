@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
-  has_many :article_category_relationships, dependent: :destroy
+  has_many :article_category_relationships
   has_many :categories, through: :article_category_relationships
 
   validates :title, presence: true

@@ -223,6 +223,7 @@ h2{
 
 .edit-icons {
   padding: 10px 5px;
+  display: flex;
 }
 
 .fa {
@@ -242,6 +243,11 @@ h2{
   color: gray;
   }
 } 
+
+.btn_trash{ 
+  border: none;
+  background-color: white;
+}
 
 .about-btn{
   margin-top: -20%;
