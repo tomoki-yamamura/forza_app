@@ -25,6 +25,28 @@
             </div>
           </div>
           <div id="main-content">
+            <aside class="side left">
+              <div class="side_inner">
+
+                 <%# <a href="https://twitter.com/forza_kanazawa" class="sns-twitter-link_side">TWITTER</a>
+                 <i class="fab fa-instagram"></i> %>
+                 <%# <a href="https://www.instagram.com/forza_kanazawa/" class="sns-instagram-link_side">INSTAGRAM</a> %>
+                <%= link_to "https://www.instagram.com/forza_kanazawa/" ,class: "sns-link-side" do %>
+                  <div class="faa-parent animated-hover">
+                  <i class="fab fa-twitter faa-wrench animated-hover"></i>
+                  <span>TWITTER</span>
+                  </div>
+                <% end %>
+
+                <%= link_to "https://www.instagram.com/forza_kanazawa/" ,class: "sns-link-side" do %>
+                  <div class="faa-parent animated-hover">
+                  <i class="fab fa-instagram faa-pulse animated-hover"></i>
+                  <span>INSTAGRAM</span>
+                  </div>
+                <% end %>
+              </div>
+
+            </aside>
               
             <%= render 'layouts/about'%>
 
@@ -36,6 +58,11 @@
 
             <%= render 'layouts/calender'%>
             
+            <aside class="side right">
+              <div class="side_inner">
+                 <span>&copy; 2021 FORZA kanazawa</span>
+              </div>
+            </aside>
 
           </div>
         </div>

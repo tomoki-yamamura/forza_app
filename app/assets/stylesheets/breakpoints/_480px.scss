@@ -444,3 +444,35 @@ h2{
 //   height: 100%; 
 // }
 // ここまで
+
+
+// asideはスマホでは非表示
+.side {
+  display: none;
+  position: fixed;
+  top: 70%;
+  transform: translateY(-50%);
+  // &_padding {
+  //   padding-right: 70px;
+  // }
+  &.left {
+    left: 50px;
+
+    & .side_inner {
+      transform: rotate(-90deg);
+      transform-origin: top left;
+    }
+  }
+  &.right {
+    right: 50px;
+
+    & .side_inner {
+      transform: rotate(90deg);
+      transform-origin: top right;
+    }
+  }
+}
+// ここまで
+
+
+

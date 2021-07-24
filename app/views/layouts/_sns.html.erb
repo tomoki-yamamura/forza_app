@@ -2,10 +2,20 @@
                 <h2>SNS</h2>
                 <div class="sns-area-inner">
                   <div class="sns-left">
-                    <a href="https://twitter.com/forza_kanazawa" class="sns-twitter-link">TWITTER</a>
+                    <%= link_to "https://www.instagram.com/forza_kanazawa/" ,class: "sns-link" do %>
+                      <div class="faa-parent animated-hover">
+                      <i class="fab fa-twitter faa-wrench animated-hover"></i>
+                      <span>TWITTER</span>
+                      </div>
+                    <% end %>
                   </div>
                   <div class="sns-right">
-                    <a href="https://www.instagram.com/forza_kanazawa/" class="sns-instagram-link">INSTAGRAM</a>
+                    <%= link_to "https://www.instagram.com/forza_kanazawa/" ,class: "sns-link" do %>
+                      <div class="faa-parent animated-hover">
+                      <i class="fab fa-instagram faa-pulse animated-hover"></i>
+                      <span>INSTAGRAM</span>
+                    </div>
+                <% end %>
                   </div>
                 </div>
                 <a href="#" class="faa-parent animated-hover">
