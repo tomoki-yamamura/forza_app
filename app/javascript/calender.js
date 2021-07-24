@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+  const KEY = gon.google_calender_API_key;// 環境変数
+
   let calendar = new FullCalendar.Calendar(document.getElementById('calender'), {
     // google apiを叩く
     googleCalendarApiKey:'AIzaSyBphPljC66Tbjuo5m8EHkD4BrywVTb2X_8',
@@ -27,7 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // 祝日の背景もグレーにする
     eventDidMount: function(e) {
       let el = e.el;
-      //googleAPIの祝日かで条件分岐。
+      // 時間の〜を作る
+      let t = el.querySelectorAll('.fc-event-time');
+      console.log(t);
+      t.forEach(element => {
+        element.insertAdjacentHTML('beforeend', '~')
+      });
+
       if ( el.classList.contains('event_holiday') ) {
         if ( e.view.type == "dayGridMonth" ) { //カレンダー(月)表示の場合
        //イベントが表示される場所の親をたどって各日の枠にたどり着いたらclassを授けよう
@@ -42,27 +50,27 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     },
 
-
     headerToolbar: {
       left: "",
       center: "title",
       right: ""
     },
 
+    
     locale: 'ja',
     navLinks: false,
     // businessHours: true,
     editable: false,
-    height: 'auto',
+    height: 400,
     timeZone: 'Asia/Tokyo',
+    aspectRatio: 2,
+
 
     eventTimeFormat: { hour: 'numeric', minute: '2-digit' },
-
+    
   });
+  
   calendar.render();
-
-
-
 
 
 });

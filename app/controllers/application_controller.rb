@@ -4,14 +4,8 @@ class ApplicationController < ActionController::Base
   #ヘルパーが使えるように下記を追記
   include SessionsHelper
   # 環境変数
-  # include ForzaHelper
+  # Googleカレンダー表示に必要な情報取得
 
-  # def api_calender
-  #   set_google_calender
-  # end
 
-  # def api_map
-  #   set_google_map
-  # end
 
 end
