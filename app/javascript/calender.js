@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 祝日の背景もグレーにする
     eventDidMount: function(e) {
-      console.log(e);
+      // console.log(e);
 
       let el = e.el;
       // 時間の〜を作る

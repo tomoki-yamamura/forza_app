@@ -11,16 +11,21 @@
    font-size: 16px;
    font-weight: 500;
   }
+  &_border {
+   border-top: 2px solid gray;
+
+    border-bottom: 2px solid gray;
+    &:last-of-type {
+      border-bottom: 2px solid gray;
+    }
+  }
   &_container {
    display: flex;
    padding: 25px 15px;
    position: relative;
-   border-top: 2px solid gray;
-   border-bottom: 2px solid gray;
+
    background-color: #f6f6f7;
-   &:last-of-type {
-     border-bottom: 2px solid gray;
-   }
+
 
   }
   &_left{
