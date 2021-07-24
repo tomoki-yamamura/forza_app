@@ -91,9 +91,9 @@ img {
   max-width: $contentMaxWidth;
 }
 
-#main-content {
-  margin-top: 50px;
-}
+// #main-content {
+//   margin-top: 50px;
+// }
 
 h2{
   font-weight: 200;
@@ -266,13 +266,29 @@ h2{
   }
 }
 
+
+// article-area
+.article-area {
+  padding-top: 30%;
+  width: 90%;
+}
+
+.article_sep {
+  &:nth-of-type(2) {
+    padding-top: 10%;
+  }
+  &:nth-of-type(3) {
+    padding-top: 10%;
+
+  }
+}
+// ここまで
+
 // newsシリーズ
 .news_date {
   margin-bottom: 30px;
 }
-.article-area {
-  width: 90%;
-}
+
 .top_news_btn {
   transform: translateX(-50%);
 }
@@ -302,6 +318,11 @@ h2{
 // ここまで
 
 // contact
+
+.contact-area {
+  padding-top: 30%;
+}
+
 .contact-area-text {
   font-size: $font-text;
 }
@@ -311,7 +332,43 @@ h2{
 }
 // ここまで
 
+// sns-area
+.sns-area {
+  padding-top: 15%;
+}
+// ここまで
+
+// access-area
+.access-area {
+  padding-top: 30%;
+  width: 90%;
+  margin: 0 auto;
+  & h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.googlemap {
+  // display: none;
+  margin-top: 20%;
+}
+
+// ここまで
+
+
 // calender
+.schedule-area {
+  padding-top: 30%;
+  width: 90%;
+  margin: 0 auto;
+  // background-color: $contactbgc;
+  & h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
 #calender_container {
   width: 90%;
 }
@@ -339,6 +396,7 @@ h2{
 
 #top_posts {
   width: 100%;
+  margin-top: 20px;
 }
 // ここまで
 
@@ -347,6 +405,7 @@ h2{
 
 #about{
   @extend .content-width;
+  padding-top:20px;
 }
 
 .about {
@@ -367,5 +426,23 @@ h2{
       padding-top: 100%;
     }
   }
+}
+// ここまで
+
+
+// map
+.googlemap {
+  position: relative; 
+  /* 表示するパディング領域の縦横比（4：3） */
+  padding-bottom: 75%; 
+  height: 0;
+  overflow: hidden;
+}
+.googlemap iframe {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
 }
 // ここまで

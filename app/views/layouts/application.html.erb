@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%# <%= include_gon %> 
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.css" type="text/css" media="all" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css">
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js'></script>
-    
+ 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="" rel="stylesheet" type="text/css" media="(min-width: 320px) and (max-width: 639px)" >
@@ -26,6 +29,7 @@
      
 
     <%= render 'layouts/sns'%>
+
 
     <%= render 'layouts/footer'%>
     
@@ -47,7 +51,6 @@
 <%# <h1 id="hello">Hello World</h1> %>
 
 <%# <%= javascript_pack_tag 'home/index' %> 
-
 <%= javascript_pack_tag 'scripts/hero-slider' %>
 <%= javascript_pack_tag 'scripts/mobile-menu' %>
 <%= javascript_pack_tag 'scripts/scroll' %>

@@ -3,17 +3,17 @@
 
 
 .contact-area {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   max-width: $contentMaxWidth;
-  padding: 45px 0px;
+
 
   & h2 {
     text-align: center;
     margin-bottom: $mb-md;
   }
   &-inner {
-    background-color: #fbfaf5;
+    background-color: $contactbgc;
   }
 
   &-box {

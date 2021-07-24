@@ -25,138 +25,17 @@
             </div>
           </div>
           <div id="main-content">
-            <main>
-              <section id="about">
-                <div class="about-sec-left">
-                  <h2>ABOUT</h2>
-                  <p class="about-copy">
-                  金沢のバレーサークル
-                  <br>
-                  FORZA金沢です
-                  </p>
-                  <p class="about-text">
-                  石川県金沢市で活動しているバレーボール成年のチームです。
-                  大会や練習試合に向けて週二回(水曜、土曜)で練習しています。<br>
-                  バレーボールを本気でしたい、上手くなりたいという熱い気持ちを持つ人はぜひ練習にご参加ください!!
-                  </p>
-                  <div class="about-btn-container">
-                    <%= link_to about_path ,class: "about-link-btn" do %>
-                    <div class="about-btn faa-parent animated-hover">
-                      <i class="fas fa-volleyball-ball faa-bounce"></i>
-                      もっと詳しく
-                    </div>
-                    <% end %>
-                  </div>
-                </div>
-                <div class="about-sec-right">
-                  <div class="about-img01">
-                    <img src="/assets/insta1.png" class="about-img01-img" alt="">
-                  </div>
-                  <div class="about-img02">
-                    <div class="about-img02-inner">
-                      <img src="/assets/insta2.png" class="about-img02-img" alt="">
-                    </div>
-                </div>
-                <div class="about-btn-container2">
-                    <%= link_to about_path ,class: "about-link-btn" do %>
-                    <div class="about-btn faa-parent animated-hover">
-                      <i class="fas fa-volleyball-ball faa-bounce"></i>
-                      もっと詳しく
-                    </div>
-                    <% end %>
-                </div>
-              </section>
+              
+            <%= render 'layouts/about'%>
 
+            <%= render 'layouts/article_area'%>
+              
+            <%= render 'layouts/contact'%>
 
-              <section class="article-area">
-                <%# if @top_news %>
-                <div id="top_news_container">
-                  <h2 class="page_title">News</h2>
-                  <article id="top_posts">
+            <%#= render 'layouts/access'%>
 
-                  <% @top_news.each do |article| %>
-                    <p class="news_title"><%= article.title %></p>
-                    <div class="news_container">
-                        <div class="news_left">
-                          <% if article.image_id.present? %>   
-                            <%= link_to article do%>
-                            <li class="img_fit">     
-                            <%= image_tag attachment_url(article, :image), class: "article_img_list"%>
-                            </li>
-                            <% end %>
-                          <% else %>
-                            <%= link_to article do%>
-                            <li class="img_fit">     
-                            <%= image_tag 'insta1.png', class: "article_img_list" %>  
-                            </li>  
-                            <% end %>
-
-                          <% end %>        
-                        </div>
-                        <div class="news_right">
-                          <div class="news_right_1">
-                            <p class="news_date"><%= l article.created_at %></p>
-                            <p class="news_text"><%= article.body.truncate(30) %></p>
-                          </div>
-                          <div class="news_right_2">
-                            <div class="top_news_btn"><%= link_to 'Read More', article_path(article), class: "readmore" %></div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="category_container">
-                      <div class="category_header">
-                        カテゴリー
-                      </div>
-                      <ul class="category_ul">
-                          <% article.categories.each_with_index do |category, index| %>
-                            <% if index ==  article.categories.size - 1 %>
-                            <li class="category_li">
-                            <%= link_to category do %>
-                            <%= category.name %>
-                            <% end %>
-                            </li>
-                        
-                            <% else %>
-                            <li class="category_li">
-                            <%= link_to category do %>
-                            <%= category.name %>
-                            </li>
-                            <div class="category_comma">,</div>
-                            <% end %>
-                            <% end %>
-                          <% end %>
-                      </ul>
-                    </div>
-                  <% end %>
-
-                  </article>
-                </div>
-                
-
-            
-               
-
-              <section class="contact-area">
-                <h2>CONTACT</h2>
-                <div class="contact-area-inner">
-                  <div class="contact-area-box">
-                    <p class="contact-area-icon">
-                      <img src="/assets/mail_icon.svg" alt="" class="contact-area-icon-mail">
-                    </p>
-                    <p class="contact-area-text">
-                      ご質問、練習試合のお誘いなど<br>
-                      下記のMAILからお願いします。
-                    </p>
-                    <%# <a href="" class="contact-area-link">MAIL</a> %>
-                     <%= link_to "お問合せフォームへ", new_inquiry_url(anchor: 'global-container'), class: "contact-area-link" %>
-                  </div>
-                </div>
-              </section>
-           
-
-
-            </main>
             <%= render 'layouts/calender'%>
+            
 
           </div>
         </div>
