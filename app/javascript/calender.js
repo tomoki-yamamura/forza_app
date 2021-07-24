@@ -28,10 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 祝日の背景もグレーにする
     eventDidMount: function(e) {
+      console.log(e);
+
       let el = e.el;
       // 時間の〜を作る
       let t = el.querySelectorAll('.fc-event-time');
-      console.log(t);
+      // console.log(t);
       t.forEach(element => {
         element.insertAdjacentHTML('beforeend', '~')
       });
@@ -63,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     editable: false,
     height: 400,
     timeZone: 'Asia/Tokyo',
-    aspectRatio: 2,
+    // aspectRatio: 2,
 
 
     eventTimeFormat: { hour: 'numeric', minute: '2-digit' },
