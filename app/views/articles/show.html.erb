@@ -1,5 +1,5 @@
-<div class="container">
-  <div class="col-md-12">
+<div class="article-container">
+  <div class="article-container-left">
     <h1 class="article_title"><%= @article.title %></h1>
     <div class="article_content">
       <div class="article_show_date">
@@ -49,7 +49,7 @@
           <% end %>
 
           <%#= link_to article_path(@article), method: :delete, data:{confirm:"こちらの投稿を削除しますか？"} do %>
-          <%= button_to article_path(@article), method: :delete, data:{confirm:"こちらの投稿を削除しますか？", class:"btn_trash"} do %>
+          <%= button_to article_path(@article), method: :delete, data:{confirm:"こちらの投稿を削除しますか？"}, class:"btn_trash" do %>
           <i class="fa fa-trash"></i>
           <% end %>
 
@@ -59,6 +59,9 @@
           <% end %>
       </div>
     <% end %>
+  </div>
+  <%= render partial: 'container_right' %>
+
 </div>
 
 

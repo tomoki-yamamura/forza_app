@@ -44,8 +44,6 @@ article {
     font-size: $font-sm;
   }
   &_image {
-    width: 100%;
-    height: 350px;
     object-fit: cover;
     &_list {
       width:100%;
@@ -107,7 +105,9 @@ article {
 
 .recent {
   &_entry_container {
-    margin-bottom: 80px;
+    &:first-of-type{
+      margin-bottom: 80px;
+    }
   }
   &_header{
   border-bottom: 2px solid black;

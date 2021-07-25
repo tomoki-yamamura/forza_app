@@ -6,13 +6,14 @@ class ArticlesController < ApplicationController
  
 
   def index
-    @articles = Article.order(created_at: :desc).page(params[:page]).per(5)
+    @articles = Article.order(created_at: :desc).page(params[:page]).per(3)
     @categories = Category.all
   end
 
   def show
     @article = Article.find(params[:id])
-    @categories = @article.categories
+    @articles = Article.all.order(created_at: :desc)
+    @categories = Category.all
   end
 
   def edit

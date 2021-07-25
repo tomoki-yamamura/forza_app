@@ -52,6 +52,20 @@
   }
 }
 
+.article-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  &-right {
+  margin-top: 85px;
+  }
+  &-left {
+    width: 70%;
+    padding-right: 10%;
+  }
+}
+
+
 .news_text {
   font-size: 16px;
 }

@@ -226,14 +226,19 @@ h2 {
 #top_news_container {
   // width: 60%;
 }
+
 .article-container {
   display: flex;
-  justify-content: space-between;
   width: 80%;
   &-right {
-  margin-top: 66px;
+  margin-top: 83px;
   }
 }
+
+.article_image {
+  height: 500px;
+}
+
 
 .recent_entry_container {
   font-size: 1.1em;

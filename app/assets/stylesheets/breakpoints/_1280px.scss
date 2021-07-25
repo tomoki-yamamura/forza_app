@@ -21,3 +21,9 @@
   display: flex;
 }
 // ここまで
+
+.article-container {
+  &-left {
+    width: 60%;
+  }
+}
