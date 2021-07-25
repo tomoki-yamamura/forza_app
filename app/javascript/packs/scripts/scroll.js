@@ -14,6 +14,7 @@ class ScrollObserver {
     }
     
     _init() {
+        // それぞれの監視対象要素がentries
         const callback = function (entries, observer) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -35,25 +36,25 @@ class ScrollObserver {
     destroy() {
         this.io.disconnect();
     }
-
-    // _inviewAnimation(el, inview) {
-    //     if(inview) {
-    //         el.classList.add('inview');
-    //     }else {
-    //         el.classList.remove('inview');
-    //     }
-    // }
 }
 
+
 const add = function(el, inview){
-    
     if(inview) {
         el.classList.add('inview');
     }else {
         el.classList.remove('inview');
     }
-
 };
+
+const sideAnimation = function(el, inview) {
+    if(inview) {
+        sides.forEach(side => side.classList.add('inview'));
+    } else {
+        sides.forEach(side => side.classList.remove('inview'));
+    }
+}
+
 
 new ScrollObserver('.about-sec-left', add);
 
@@ -63,6 +64,6 @@ new ScrollObserver('.about-img02', add);
 
 new ScrollObserver('.news_cover', add);
 
-// new ScrollObserver('#page_top', add, {once: false, rootMargin: "-200px 0px"});
+// new ScrollObserver('#main-content', add, {once: false});
 
 

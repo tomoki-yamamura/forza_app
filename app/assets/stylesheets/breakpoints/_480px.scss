@@ -269,7 +269,7 @@ h2{
 
 // article-area
 .article-area {
-  padding-top: 20%;
+  padding-top: 10%;
   width: 90%;
 }
 
@@ -298,6 +298,10 @@ h2{
 
 .img_fit {
   width: 100%;
+  transition: transform .3s ease;
+  &:hover {
+    transform: scale(1.03);
+  }
 }
 
 // ここまで
@@ -450,13 +454,15 @@ h2{
 .side {
   display: none;
   position: fixed;
-  top: 70%;
-  transform: translateY(-50%);
-  // &_padding {
-  //   padding-right: 70px;
-  // }
+  top: 60%;
+  // transform: translateY(-50%);
+  transition: all .3s ease-in;
   &.left {
-    left: 50px;
+    left: -50px;
+
+    &.inview {
+      left: 50px;
+    }
 
     & .side_inner {
       transform: rotate(-90deg);
@@ -464,7 +470,10 @@ h2{
     }
   }
   &.right {
-    right: 50px;
+    right: -50px;
+    &.inview {
+      right: 50px;
+    }
 
     & .side_inner {
       transform: rotate(90deg);
