@@ -1,24 +1,30 @@
       <header class="header">
         <div class="header__inner">
           <div class="logo">
-            <%# <img src="/assets/logo.svg" alt="" class="logo__img"> %>
             <%= link_to image_tag("logo.svg", class:"logo__img"), "/" %>
-            <div class="logo__stay">FORZA</div>
+            <%= link_to '/', class: 'logo__stay' do %>
+            <div>FORZA</div>
+            <% end %>
           </div>
-          <nav class="header__nav">
-            <ul class="header__ul">
-              <li><%= link_to "Home", root_path, class: "header__li"  %></li>
-              <li><%= link_to "About", about_path, class: "header__li" %></li>
-              <li><%= link_to "News", articles_path, class: "header__li" %></li>
-              <li><%= link_to "Contact", new_inquiry_path, class: "header__li" %></li>
-              <% if logged_in? %>
-              
-              <li>  <%#DELETE/logout => sessions#destroy %>
-                <%= link_to "Log out", logout_path, method: :delete, :class => 'header__li'%>          <!-- ログアウトリンク-->
-              </li>
+          <div class="header_btn">
+            <%= link_to '/', class: 'custom-btn btn-3' do %>
+              <span>Home</span>
+            <% end %>
+            <%= link_to about_path, class: 'custom-btn btn-3' do %>
+              <span>About</span>
+            <% end %>
+            <%= link_to articles_path, class: 'custom-btn btn-3' do %>
+              <span>News</span>
+            <% end %>
+            <%= link_to new_inquiry_path, class: 'custom-btn btn-3' do %>
+              <span>Contact</span>
+            <% end %>
+            <% if logged_in? %> 
+              <%= link_to  logout_path, method: :delete, class: 'custom-btn btn-3 header_log' do %>
+                <span>Logout</span>
               <% end %>
-            </ul>
-          </nav>
+            <% end %>
+          </div>
           <button class="mobile-menu__btn">
               <span></span>
               <span></span>

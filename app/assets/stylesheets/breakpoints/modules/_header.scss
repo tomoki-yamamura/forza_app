@@ -36,10 +36,14 @@
   
   &__li{
       margin-left: 40px;
+      & .logout {
+        color: red;
+      }
       & > a {
         color: $cBlack;
         text-decoration: none;
         text-transform: uppercase;
+
       }
   }
   & .logo{
@@ -47,5 +51,14 @@
       font-size: $font-lg;
       margin: 0;
   }
+  &_btn {
+
+    display: flex;
+  }
 }
 
+.logo__stay {
+  &:hover {
+    color: black;
+  }
+}

@@ -2,7 +2,9 @@
         <div class="footer__inner">
           <div class="logo">
             <%= link_to image_tag("logo.svg", class:"logo__img"), "/" %>
-            <div class="logo__stay">FORZA</div>
+            <%= link_to '/', class: 'logo__stay' do %>
+            <div>FORZA</div>
+            <% end %>
           </div>
           <nav class="footer__nav">
             <ul class="footer__ul">

@@ -27,6 +27,9 @@
     margin-top: 20px;
     margin-left: 0;
     font-size: $font-text;
+    &:hover {
+      color: gray;
+    }
   }
 
   & .logo {

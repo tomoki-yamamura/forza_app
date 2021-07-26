@@ -16,3 +16,61 @@
     color: $cBlack;
   }
 }
+
+
+/**** BTN No. 3 ****/
+.btn-3 {
+  // width: 110px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  margin-left: 40px;
+  &:hover {
+    color: black;
+  }
+} 
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: #000;
+  transition: all 0.3s ease;
+}
+
+.btn-3:after {
+  width: 0%;
+}
+
+.btn-3:hover:after {
+  width: 100%;
+}
+
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: #000;
+  transition: all 0.3s ease;
+}
+
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+
+.btn-3 span:hover:after {
+  width: 100%;
+}

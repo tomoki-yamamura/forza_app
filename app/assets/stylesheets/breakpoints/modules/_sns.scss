@@ -15,17 +15,22 @@
       text-align: center
     }
   }
+  &-link {
+    &:hover {
+      color: gray;
+    }
+  }
 
   &-area-inner {
     font-size: $font-sm;
     display: flex;
+    justify-content: space-around;
     border-top: 1px solid;
     border-bottom: 1px solid;
     padding: 45px 0;
   }
 
   &-right {
-    width: 50%;
     text-align: center;
     display: inline-block;
     & div {
@@ -36,7 +41,6 @@
   }
 
   &-left {
-    width: 50%;
     text-align: center;
     display: inline-block;
     & div {
