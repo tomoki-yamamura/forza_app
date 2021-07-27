@@ -1,3 +1,4 @@
+<div class="nav-trigger"></div>
       <header class="header">
         <div class="header__inner">
           <div class="logo">
@@ -20,7 +21,7 @@
               <span>Contact</span>
             <% end %>
             <% if logged_in? %> 
-              <%= link_to  logout_path, method: :delete, class: 'custom-btn btn-3 header_log' do %>
+              <%= link_to  logout_path, method: :delete, class: 'custom-btn btn-3', id: "header_log" do %>
                 <span>Logout</span>
               <% end %>
             <% end %>

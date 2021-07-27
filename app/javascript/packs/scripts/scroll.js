@@ -47,11 +47,12 @@ const add = function(el, inview){
     }
 };
 
-const sideAnimation = function(el, inview) {
+const header = document.querySelector('header');
+const nav = function(el, inview) {
     if(inview) {
-        sides.forEach(side => side.classList.add('inview'));
+        header.classList.remove('triggered');
     } else {
-        sides.forEach(side => side.classList.remove('inview'));
+        header.classList.add('triggered');
     }
 }
 
@@ -63,6 +64,8 @@ new ScrollObserver('.about-img01', add);
 new ScrollObserver('.about-img02', add);
 
 new ScrollObserver('.news_cover', add);
+
+new ScrollObserver('.nav-trigger', nav, {once: false});
 
 // new ScrollObserver('#main-content', add, {once: false});
 
