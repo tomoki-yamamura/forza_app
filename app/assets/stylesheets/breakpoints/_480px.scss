@@ -520,9 +520,10 @@ header {
 
   // .swiper
   .swiper-container {
-    height: 500px;
+    height: 760px;
+    position: relative;
     .swiper-slide {
-      background-color: #ccc;
+      // background-color: #ccc;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -530,3 +531,16 @@ header {
     }
   }
   // ここまで
+
+  .parallax-bg {
+    position: absolute;
+    left: 0; 
+    top: 0;
+    width: 130%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: image-url('insta2.png');
+  }
+
+

@@ -18,17 +18,13 @@
   <body class="fadeout">
   <div id="global-container">
     <%= render 'layouts/header' %>
-
     
-    <h1 class="text-center">
+   <h1 class="text-center" style="margin-top: 150px;">
       <%# Forzaのブログ %>
       <%= link_to "News", articles_url, class: "news_head_link" %>
       <%# <%= image_tag 'news_head.jpg', class: "article_image" %> 
 
     </h1>
-
-    
-
 
     <%= yield %>
 
