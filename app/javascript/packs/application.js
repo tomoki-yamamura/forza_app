@@ -13,6 +13,7 @@ import "channels"
 //= require jquery_ujs
 //= require moment
 //= require fullcalendar
+//= require scroll-reveal
 //= require_tree .
 
 Rails.start()
@@ -24,6 +25,9 @@ require('login.js')
 require('page_top.js')
 require('calender.js')
 require('side.js')
+require('fade-up.js')
+require('swiper.js')
+
 
 
 

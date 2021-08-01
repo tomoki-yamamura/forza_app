@@ -135,5 +135,126 @@
 
 
 // about_mについて
+#about_m {
+  position: relative;
+}
 
+
+
+.about_m_container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+
+// about_m_container関連
+.about_m_title {
+  position: relative;
+  z-index: 3;
+  top: 45%;
+  left: 20%;
+  transition: all 1s;
+  transform: translateX(-30px);
+  opacity: 0;
+  color: white;
+  &.inview {
+    opacity: 1;
+    transform: none;
+  }
+}
 // ここまで
+
+// .about_sep1 {
+//   position: absolute;
+//   left: 0; 
+//   top: 0;
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-image: image-url('insta2_sep1.png');
+// }
+// .about_sep2 {
+//   position: absolute;
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-image: image-url('insta2_sep2.png');
+// }
+
+
+.about_m_item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  & .about_m_img {
+    position: relative;
+    margin-left: auto;
+    right: 0;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 61.4%;
+    }
+  }
+  &:nth-of-type(1) {
+    & .about_m_img {
+      background-image: image-url('uniform.jpg');
+    }
+  }
+  &:nth-of-type(2) {
+    & .about_m_img {
+      background-image: image-url('about2.JPG');
+    }
+  }
+  &:nth-of-type(3) {
+    & .about_m_img {
+      background-image: image-url('about_bg_pic.jpg');
+    }
+  }
+  &:nth-of-type(4) {
+    & .about_m_img {
+      background-image: image-url('volley3.jpg');
+    }
+  }
+}
+
+.about_m_item {
+  &:nth-of-type(even) {
+    & .about_m_img {
+      margin-left: 0;
+      margin-right: auto;
+      right: auto;
+      left: 0;
+    }
+    & .about_m_item_texts {
+      -webkit-box-ordinal-group: 2;
+      order: 3;
+      margin-left: auto;
+    }
+  }
+}
+
+
+.about_m_item_texts {
+   position: relative;
+    z-index: 2;
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+    background-color: #fff;
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+

@@ -276,3 +276,48 @@ h2 {
 }
 // ここまで
 
+.about_m_header {
+  position: relative;
+  top: 0;
+  margin-bottom: 10%;
+  background-image: image-url('insta2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about_m_header {
+  padding-top: 80px;
+  margin-bottom: 10%;
+  height: 700px;
+}
+
+.about_m_title {
+  font-size: 3.8vw;
+}
+
+
+
+.about_m_item {
+  & .about_m_img {
+    position: absolute;
+    width: calc(50% + 45px);
+  }
+}
+
+.about_m_inner_texts {
+  font-size: 17px;
+}
+
+
+.about_m_item_texts {
+    margin-top: 80px;
+    width: calc(50%);
+    padding: 75px 60px;
+}
+
+.about_m_item_texts {
+   & h3 {
+    font-size: 25px;
+   }
+}

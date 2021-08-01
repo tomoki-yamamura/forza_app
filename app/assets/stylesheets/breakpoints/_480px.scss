@@ -519,28 +519,90 @@ header {
   // ここまで
 
   // .swiper
-  .swiper-container {
-    height: 760px;
-    position: relative;
-    .swiper-slide {
-      // background-color: #ccc;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 60px;
-    }
-  }
+
   // ここまで
 
-  .parallax-bg {
-    position: absolute;
-    left: 0; 
-    top: 0;
-    width: 130%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-image: image-url('insta2.png');
-  }
 
+
+
+.fade-up {
+  opacity: 0;
+  transform : translate(-50%, 0);
+  transition : all 3s;
+}
+
+
+
+.effect-scroll{
+  opacity : 1;
+  transform : none;
+}
+
+
+.about_m_copy {
+  font-size: 21.5px;
+  padding-top: 10px;
+}
+
+.about_m_header {
+  padding-top: 100px;
+  height: 480px;
+  position: relative;
+  top: 0;
+  margin-bottom: 20%;
+}
+
+.about_m_title {
+  font-size: 5.8vw;
+}
+
+// .about_sep1 {
+//   width: 30%;
+//   height: 200px;
+// }
+// .about_sep2 {
+//   right: 0;
+//   top: 29%;
+//   width: 50%;
+//   height: 200px;
+// }
+
+
+
+
+
+
+.about_m_inner {
+  width: 90%;
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about_m_inner_texts {
+  font-size: 14px;
+  padding-right: 0;
+  line-height: 2;
+}
+
+.about_m_item {
+  & .about_m_img {
+    position: relative;
+    width: calc(100% - 40px);
+  }
+}
+
+
+
+
+.about_m_item_texts {
+    margin-top: -17px;
+    width: 88%;
+    padding: 30px 24px 30px 39px;
+     & h3 {
+      font-size: 16px;
+      margin-bottom: 20px;
+      letter-spacing: 0.1em;
+     }
+}
 
