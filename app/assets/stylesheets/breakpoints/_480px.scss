@@ -549,7 +549,7 @@ header {
   height: 480px;
   position: relative;
   top: 0;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
 }
 
 .about_m_title {
@@ -577,6 +577,10 @@ header {
   max-width: 1050px;
   margin-left: auto;
   margin-right: auto;
+  & h2 {
+    text-align: center;
+    margin-bottom: 10%;
+  }
 }
 
 .about_m_inner_texts {
@@ -599,10 +603,6 @@ header {
     margin-top: -17px;
     width: 88%;
     padding: 30px 24px 30px 39px;
-     & h3 {
-      font-size: 16px;
-      margin-bottom: 20px;
-      letter-spacing: 0.1em;
-     }
+    overflow: hidden;
 }
 

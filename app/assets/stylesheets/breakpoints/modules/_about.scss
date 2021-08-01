@@ -164,22 +164,6 @@
 }
 // ここまで
 
-// .about_sep1 {
-//   position: absolute;
-//   left: 0; 
-//   top: 0;
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-image: image-url('insta2_sep1.png');
-// }
-// .about_sep2 {
-//   position: absolute;
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-image: image-url('insta2_sep2.png');
-// }
 
 
 .about_m_item {
@@ -235,19 +219,62 @@
       -webkit-box-ordinal-group: 2;
       order: 3;
       margin-left: auto;
+      transform: translateX(45px);
+      &.fadeIn {
+        opacity: 1;
+        transform: none;
+        & > h3 {
+          transform: none;
+        }
+      }
+        & h3 {
+          flex-direction: row-reverse;
+          transform: translateX(-50%);
+          transition: all 1.3s;
+        }
     }
   }
 }
 
 
+
+
 .about_m_item_texts {
-   position: relative;
+    position: relative;
     z-index: 2;
     -webkit-box-ordinal-group: 2;
     order: 1;
     background-color: #fff;
     box-sizing: border-box;
     line-height: 1.4;
+    opacity: 0;
+    left: 0;
+    transition: all 1s;
+    transform: translateX(-45px);
+    & h3 {
+      font-size: 16px;
+      margin-bottom: 20px;
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      transform: translateX(50%);
+      transition: all 1.3s;
+      &::after {
+        display: block;
+        content: ' ';
+        flex-grow: 1;
+        margin: 0 1em;
+        height: 2px;
+        background-color: #9F9F9F;
+      }
+    }
+    &.fadeIn {
+      opacity: 1;
+      transform: none;
+      & > h3 {
+        transform: none;
+      }
+    }
 }
 
 

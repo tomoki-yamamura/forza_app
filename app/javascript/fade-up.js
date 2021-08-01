@@ -1,12 +1,10 @@
 $(window).on('scroll',function (){
-  $('.fadeInTrigger').each(function(){ //fadeInTriggerというクラス名が
-    var elemPos = $(this).offset().top-50;//要素より、50px上の
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight){
+  $('.about_m_item_texts').each(function(){ //about_m_item_textsというクラス名が
+    let elemPos = $(this).offset().top;
+    let scroll = $(window).scrollTop();
+    let windowHeight = $(window).height();
+    if (scroll >= elemPos - windowHeight + 100){
     $(this).addClass('fadeIn');// 画面内に入ったらfadeInというクラス名を追記
-    }else{
-    $(this).removeClass('fadeIn');// 画面外に出たらfadeInというクラス名を外す
     }
     });
 });
