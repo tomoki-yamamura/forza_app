@@ -184,9 +184,7 @@ h2 {
   transform: translateX(-30%);
 }
 
-.news_date {
-  margin-bottom: 40px;
-}
+
 
 .news_text {
   font-size: 18px;
@@ -226,7 +224,7 @@ h2 {
 
 // newspage
 .news_date {
-  margin-bottom: 40px;
+  margin-bottom: 120px;
 }
 
 #top_news_container {
@@ -256,7 +254,7 @@ h2 {
 // news2ページ
 
 #top_posts {
-  width: 80%;
+  // width: 80%;
   margin: 0 auto;
 }
 
@@ -335,4 +333,24 @@ h2 {
   font-size: 17px;
   line-height: 2.5;
 
+}
+
+#map {
+  position: relative;
+  width: 100%;
+  padding-top: 450px;
+  overflow: hidden;
+}
+
+.contact-area-text {
+  font-size: 17px;
+}
+
+dl {
+  padding-top: 5%;
+  font-size: 17px;
+}
+
+.calender-text {
+  font-size: 17px;
 }
