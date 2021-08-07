@@ -9,7 +9,9 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
 
-//= require jquery
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require moment
 //= require fullcalendar
@@ -22,11 +24,10 @@ ActiveStorage.start()
 
 require('article.js')
 require('login.js')
-require('page_top.js')
 require('calender.js')
 require('side.js')
 require('fade-up.js')
-require('swiper.js')
+
 
 
 

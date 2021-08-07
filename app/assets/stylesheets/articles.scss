@@ -5,12 +5,7 @@
 
 .news_head_link {
   position: relative;
-  &:hover:before {
-    background-color: $cBgGray;
-  }
-  &:hover:after {
-    background-color: $cBgGray;
-  }
+
   &::before {
     content:"";
     display:inline-block;

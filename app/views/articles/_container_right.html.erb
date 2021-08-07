@@ -15,21 +15,13 @@
            <% end %>
         </div>
       </div>  
+
       <div class="recent_entry_container">
         <div class="recent_header">
           Category
         </div>
         <div class="recent_body">
-          <% @categories.each do |category| %>
-                  <ul class="recent_ul">
-                    <li class="recent_li">
-                      <%= link_to category do %>
-                        <%= category.name %>
-                      <% end %>
-                    </li>
-                  </ul>
-           <% end %>
-        </div>
-      </div>  
- 
+      <%= render partial: 'category', collection: @categories %>
+        </div>  
+      </div>
   </div>

@@ -12,5 +12,9 @@ Rails.application.routes.draw do
   # get '/contact',     to: 'forza#contact'
   get '/about',       to: 'forza#about'
 
+  namespace :articles do 
+    resources :searches, only: :index, defaults: { format: :json }
+  end
 
+  resources :articles # このコードより上に追加する(※補足説明へ)
 end

@@ -349,6 +349,19 @@ header {
 .contact-area-link {
   font-size: 14px;
 }
+
+.otoiawase_p {
+  font-size: 14px;
+  line-height: 30px;
+}
+.form {
+  font-size: 14px;
+}
+
+.contact_intro {
+  font-size: 14px;
+  line-height: 30px;
+}
 // ここまで
 
 // sns-area
@@ -550,26 +563,34 @@ header {
   position: relative;
   top: 0;
   margin-bottom: 10%;
+
 }
 
 .about_m_title {
   font-size: 5.8vw;
 }
+.news_m_header {
+  padding-top: 100px;
 
-// .about_sep1 {
-//   width: 30%;
-//   height: 200px;
-// }
-// .about_sep2 {
-//   right: 0;
-//   top: 29%;
-//   width: 50%;
-//   height: 200px;
-// }
+  position: relative;
+  top: 0;
+  margin-bottom: 10%;
+}
 
+.news_m_title {
+  font-size: 5.8vw;
+}
+.contact_m_header {
+  padding-top: 100px;
+  height: 480px;
+  position: relative;
+  top: 0;
+  margin-bottom: 10%;
+}
 
-
-
+.contact_m_title {
+  font-size: 5.8vw;
+}
 
 
 .about_m_inner {

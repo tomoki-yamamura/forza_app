@@ -276,15 +276,7 @@ h2 {
 }
 // ここまで
 
-.about_m_header {
-  position: relative;
-  top: 0;
-  margin-bottom: 10%;
-  background-image: image-url('insta2.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 
 .about_m_header {
   padding-top: 80px;
@@ -293,6 +285,15 @@ h2 {
 }
 
 .about_m_title {
+  font-size: 3.8vw;
+}
+.news_m_header {
+  padding-top: 80px;
+  margin-bottom: 10%;
+  height: 700px;
+}
+
+.news_m_title {
   font-size: 3.8vw;
 }
 
@@ -320,4 +321,18 @@ h2 {
    & h3 {
     font-size: 25px;
    }
+}
+
+.otoiawase_p {
+  font-size: 17px;
+  line-height: 2.5;
+}
+.form {
+  font-size: 17px;
+}
+
+.contact_intro {
+  font-size: 17px;
+  line-height: 2.5;
+
 }

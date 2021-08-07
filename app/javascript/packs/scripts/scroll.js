@@ -67,6 +67,10 @@ new ScrollObserver('.news_cover', add);
 
 new ScrollObserver('.about_m_title', add);
 
+new ScrollObserver('.news_m_title', add);
+
+new ScrollObserver('.contact_m_title', add);
+
 new ScrollObserver('.about_m_img1', add);
 
 new ScrollObserver('.nav-trigger', nav, {once: false});

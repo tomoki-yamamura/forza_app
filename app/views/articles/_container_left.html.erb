@@ -1,52 +1,15 @@
 <div class="article-container-left">
-  <% @articles.each do |article| %>
-    <%= link_to article do %>
-    <h1 class="article_title"><%= article.title %></h1>
-    <% end %>
-    <div class="article_content">
-      <div class="article_index_date">
-        <%= l article.created_at %>
-      </div>
-      <% if article.image_id.present? %>
-        <%= image_tag attachment_url(article, :image), class: "article_image" %>
-        <% else %>
-        <%= image_tag 'insta1.png', class: "article_image" %>
-      <% end %>
 
-      <div class="article_body">
-        <%=safe_join(article.body.split("\n"),tag(:br))%> 
-      </div>
-    </div>
+  <%#= render partial: 'article', collection: @articles %>
+  <%# 省略 %>
+  <%= render @articles%>
 
-    <div class="category_container">
-        <div class="category_header">
-          カテゴリー
-        </div>
-        <ul class="category_ul">
-            <% article.categories.each_with_index do |category, index| %>
-              <% if index ==  article.categories.size - 1 %>
-              <li class="category_li">
-              <%= link_to category do %>
-              <%= category.name %>
-              <% end %>
-              </li>
-          
-              <% else %>
-                <li class="category_li">
-                  <%= link_to category do %>
-                    <%= category.name %>
-                  <% end %>
-                </li>
-              <div class="category_comma">,</div>
-              <% end %>
-            <% end %>
-        </ul>
-    </div>
-  <% end %>
+
+
+  <%#= render partial: 'category', article: article %>
+<%# article.categories.each_with_index do |category, index| %>
+
                 
 <%= paginate @articles %>
 
 </div>
-
-
-

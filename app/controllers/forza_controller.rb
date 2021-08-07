@@ -1,5 +1,6 @@
 class ForzaController < ApplicationController
   def home
+    # article.参照
     @top_news = Article.recent_article
 
     gon.google_calender_API_key = ENV['GOOGLE_CALENDER_API_KEY']

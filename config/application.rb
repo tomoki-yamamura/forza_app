@@ -24,5 +24,7 @@ module ForzaApp
      # タイムゾーンを日本時間に設定
      config.time_zone = 'Asia/Tokyo'
       
+    #  form_withでremotetrueをデフォルトにする
+     config.action_view.form_with_generates_remote_forms = true
   end
 end

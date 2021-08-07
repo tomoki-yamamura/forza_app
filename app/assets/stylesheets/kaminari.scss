@@ -9,3 +9,6 @@
   color: gray !important;
 }
 
+.pagination > li .page-item .disabled {
+  display: none !important;
+}

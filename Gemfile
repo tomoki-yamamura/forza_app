@@ -84,3 +84,5 @@ gem 'momentjs-rails'
 # 環境変数
 gem 'gon'
 gem 'dotenv-rails'
+
+gem 'pry-rails'
