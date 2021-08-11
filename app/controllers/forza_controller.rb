@@ -8,6 +8,7 @@ class ForzaController < ApplicationController
     gon.calender_id_2 = ENV['CALENDER_ID_2'] 
     gon.google_map_API_key = ENV['GOOGLE_MAP_API_KEY']
 
+
   end
 
   def about

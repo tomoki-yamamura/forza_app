@@ -11,10 +11,10 @@
       <div class="news_cover inview">
         <div class="news_container">
             <div class="news_left">
-              <% if article.image_id.present? %>   
+              <% if article.image.attached? %>
                 <%= link_to article do%>
                 <li class="img_fit">     
-                <%= image_tag attachment_url(article, :image), class: "article_img_list"%>
+                  <%= image_tag article.image, class: "article_img_list" %>
                 </li>
                 <% end %>
               <% else %>
@@ -23,13 +23,12 @@
                 <%= image_tag 'insta1.png', class: "article_img_list" %>  
                 </li>  
                 <% end %>
-
               <% end %>        
             </div>
             <div class="news_right">
               <div class="news_right_1">
                 <p class="news_date"><%= l article.created_at %></p>
-                <p class="news_text"><%= article.body.truncate(30) %></p>
+                <p class="news_text"><%= description(article) %></p>
               </div>
               <div class="news_right_2">
                 <div class="top_news_btn"><%= link_to 'Read More', article_path(article), class: "readmore" %></div>

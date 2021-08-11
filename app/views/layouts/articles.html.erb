@@ -58,8 +58,11 @@
 <%= javascript_pack_tag 'scripts/mobile-menu' %>
 <%= javascript_pack_tag 'scripts/scroll' %>
 
-
-
+<script>
+$(function () {
+    document.querySelector('.disabled').innerHTML = ""
+});
+</script>
 
   </body>
 </html>

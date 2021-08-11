@@ -33,14 +33,21 @@ class ArticlesController < ApplicationController
      end
    end
  
-   def create
-     @article = Article.new(article_params)
-     if @article.save
-       redirect_to @article
-     else
-         render "new", alert: "作成できませんでした"
-     end
-   end
+  #  def create
+  #    @article = Article.new(article_params)
+  #    if image 
+  #    if @article.save
+  #      redirect_to @article
+  #    else
+  #        render "new", alert: "作成できませんでした"
+  #    end
+  #  end
+
+  def create
+    # @article = Article.create params.require(:article).permit(:title, :body, :image, category_ids: []) # POINT
+    @article = Article.create(article_params) # POINT
+    redirect_to @article
+  end
  
    def destroy
      # Article.find(params[:id]).destroy
@@ -50,6 +57,9 @@ class ArticlesController < ApplicationController
      #   redirect_to root_url, alert: "削除できませんでした"
      # end
    end
+
+
+   
  
    private
  
@@ -58,7 +68,7 @@ class ArticlesController < ApplicationController
    end
  
    def article_params
-     params.require(:article).permit(:title, :body, :image,  category_ids: [])
+     params.require(:article).permit(:title, :body, :image, category_ids: [])
    end
  
    def move_to_signed_in
@@ -68,5 +78,4 @@ class ArticlesController < ApplicationController
        redirect_to  login_url
      end
    end
- 
- end
+end

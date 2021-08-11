@@ -185,9 +185,13 @@ h2 {
 }
 
 
-
-.news_text {
-  font-size: 18px;
+.news {
+  &_text {
+    font-size: 18px;
+  }
+  &_title {
+    font-size: 24px;
+  }
 }
 
 .img_fit {
@@ -354,3 +358,4 @@ dl {
 .calender-text {
   font-size: 17px;
 }
+

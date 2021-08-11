@@ -5,15 +5,21 @@
       <div class="article_index_date">
         <%= l article.created_at %>
       </div>
+            <% if false %>
       <% if article.image_id.present? %>
         <%= image_tag attachment_url(article, :image), class: "article_image" %>
         <% else %>
         <%= image_tag 'insta1.png', class: "article_image" %>
       <% end %>
 
+
       <div class="article_body">
         <%=safe_join(article.body.split("\n"),tag(:br))%> 
       </div>
+      <% end %>
+
+      <%= article.body %>
+      
     </div>
 
     <div class="category_container">

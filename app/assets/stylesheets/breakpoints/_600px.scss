@@ -69,6 +69,7 @@
 
 .news_text {
   font-size: 16px;
+  word-wrap: break-word;
 }
 
 
@@ -84,3 +85,7 @@
 }
 
 // ここまで
+
+.trix-content {
+  font-size: 16px;
+}
