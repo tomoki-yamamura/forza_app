@@ -173,8 +173,8 @@ header {
     margin-bottom: $mb-form !important;
     display: flex;
     flex-direction: column;
-
   }
+  
   &-controll{
     background-color: yellow;
   }
@@ -681,4 +681,17 @@ dl {
 .trix-content {
   font-size: 14px;
   line-height: 3;
+}
+
+.modal__content{
+  background: #fff;
+  left: 50%;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  height: 90%;
+  // heightを指定する必要がある
+  overflow-y:scroll;
 }

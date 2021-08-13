@@ -29,6 +29,8 @@ require('login.js')
 require('calender.js')
 require('side.js')
 require('fade-up.js')
+require('modal.js')
+
 
 
 

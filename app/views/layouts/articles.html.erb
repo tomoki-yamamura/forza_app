@@ -7,7 +7,7 @@
     <%= csp_meta_tag %>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -37,6 +37,7 @@
 
     <%= render 'layouts/footer'%>
 
+<% if false %>
       <% if logged_in? %>
     <section class="<%= controller.action_name %>btn">
     <%= link_to new_article_path do%>
@@ -46,10 +47,39 @@
     <% end %>
     </div>
     <% end %>
+<% end %>
 
 
 
     
+    <% if logged_in? %>
+      <section class="FAB">
+        <div class="FAB__mini-action-button">
+          <div class="mini-action-button--hide mini-action-button">
+            <a class="js-modal-open" href="">
+            <i class="mini-action-button__icon material-icons">create</i>
+            <p class="mini-action-button__text--hide">新規投稿</p>
+            </a>
+          </div>
+          <div class="mini-action-button--hide mini-action-button">
+          <%= link_to "https://calendar.google.com/calendar/u/0/r?tab=rc" do %>
+            <i class="mini-action-button__icon material-icons">today</i>
+            <p class="mini-action-button__text--hide">Google Calender</p>
+          <% end %>
+          </div>
+        </div>
+        <div class="FAB__action-button">
+          <i class="action-button__icon material-icons">add</i>
+        </div>
+      </section>
+
+      <div class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+            <%= render 'form' %>
+        </div><!--modal__inner-->
+      </div><!--modal-->
+    <% end %>
  
 
   </div>

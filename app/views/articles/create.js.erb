@@ -1,0 +1,4 @@
+$('.article-container-left').prepend("<%= escape_javascript(render partial: 'articles/article', locals: { article: @article }) %>");
+
+$(".recent_body").html("<%= escape_javascript(render('articles/recent_entry'))%>");
+

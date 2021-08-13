@@ -1,26 +1,16 @@
 <div class="article-container-right">
-      <div class="recent_entry_container">
+     <div class="recent_entry_container">
         <div class="recent_header">
           Recent Entry
         </div>
-        <div class="recent_body">
-          <% @articles.page(params[1]).limit(5).each do |article| %>
-                  <ul class="recent_ul">
-                    <li class="recent_li">
-                      <%= link_to article do %>
-                        <%= article.title %>
-                      <% end %>
-                    </li>
-                  </ul>
-           <% end %>
-        </div>
+        <%= render 'recent_entry' %>
       </div>  
 
       <div class="recent_entry_container">
         <div class="recent_header">
           Category
         </div>
-        <div class="recent_body">
+        <div class="recent_c_body">
       <%= render partial: 'category', collection: @categories %>
         </div>  
       </div>

@@ -40,22 +40,6 @@
   }
 }
 
-
-// @mixin positionCenter() {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// }
-// @mixin positionLeft() {
-//   position: absolute;
-//   // top: 50%;
-//   left: 100%;
-//   transform: translate(-100%, 0);
-// }
-// @mixin positionRight() {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// }
+@mixin circleShadow($vertical) {
+  box-shadow:0 0 $vertical rgba(0,0,0,.14),0 $vertical $vertical*2 rgba(0,0,0,.28)
+}

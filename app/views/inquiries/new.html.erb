@@ -23,7 +23,7 @@ _img") %>
   <p class="otoiawase_p">必須事項をご記入の上、送信ボタンを押してください。<br>
   <span class="ast">※</span>は必須入力になります。</p>
   <div class="form">
-  <%= form_with model: @inquiry do |f| %>
+  <%= form_with(model: @inquiry, local: true) do |f| %>
     <div class="form-group">
     <div class="label_container">
     <%= f.label :name, 'お名前' %><span class="ast">※</span>

@@ -87,3 +87,4 @@ gem 'gon'
 gem 'dotenv-rails'
 
 gem 'pry-rails'
+

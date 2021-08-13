@@ -1,35 +1,3 @@
-
-// $(function () {
-//   $('#cover_image').on('click', function () {
-//       $("#article_image").click();
-//       return false; // must!
-//   })
-// });
-
-// $(function(){
-//   $('#article_image').change(function(e){
-//     //ファイルオブジェクトを取得する
-//     var file = e.target.files[0];
-//     var reader = new FileReader();
- 
-//     //画像でない場合は処理終了
-//     if(file.type.indexOf("image") < 0){
-//       alert("画像ファイルを指定してください。");
-//       return false;
-//     }
- 
-//     //アップロードした画像を設定する
-//     reader.onload = (function(file){
-//       return function(e){
-//         $(".article_image").attr("src", e.target.result);
-//         // $("#img1").attr("title", file.name);
-//       };
-//     })(file);
-//     reader.readAsDataURL(file);
- 
-//   });
-// });
-
 //FORM CLOSE
 function newFormClose(){
     $('.js-form-close').on('click',function(){
@@ -53,5 +21,29 @@ function editFormClose(){
     return false;
 };
 
+// ここまで
 
+// 投稿ボタン
+$(function(){
+  var x = $('.FAB__mini-action-button').find('.mini-action-button--hide').length * 60 + 60;
 
+  $('.FAB').hover(function(){
+    $('.FAB').height(x);
+  }, function(){
+    $('.mini-action-button--show').attr('class', 'mini-action-button--hide');
+    $('.FAB').height(0);
+  });
+
+  $('.mini-action-button').hover(function(){
+    $(this).find('.mini-action-button__text--hide').attr('class', 'mini-action-button__text--show');
+  }, function(){
+    $(this).find('.mini-action-button__text--show').attr('class', 'mini-action-button__text--hide');
+  });
+
+  $('.FAB__action-button').hover(function(){
+    $(this).find('.action-button__text--hide').attr('class', 'action-button__text--show');
+    $('.mini-action-button--hide').attr('class', 'mini-action-button--show');
+  }, function(){
+    $(this).find('.action-button__text--show').attr('class', 'action-button__text--hide');
+  });
+});

@@ -359,3 +359,19 @@ dl {
   font-size: 17px;
 }
 
+.modal__content{
+  background: #fff;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 60%;
+  height: 90%;
+  // heightを指定する必要がある
+  overflow-y:scroll;
+}
+
+.form-group {
+  flex-direction: column;
+}

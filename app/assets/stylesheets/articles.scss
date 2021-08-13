@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import "variables";
+@import "mixin";
+
 
 .news_head_link {
   position: relative;
@@ -135,10 +137,13 @@ article {
   &_header{
   border-bottom: 2px solid black;
   padding-bottom: 20px;
+  margin-bottom: 30px;
   }
-
+  &_c_body{
+    // padding-top: 30px;
+  }
   &_body {
-    padding-top: 30px;
+    // padding-top: 30px;
   }
   &_li {
 
@@ -177,4 +182,157 @@ body.fadeout::after {
   display: none;
 }
 
+.form_title {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
+.images{
+  margin-bottom: 30px;
+}
+
+.field {
+  margin-bottom: 30px;
+}
+
+label, input[type='checkbox'] {
+  cursor: pointer;
+}
+
+.batsu {
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  color: #95979c!important;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+  &:hover {
+    color: #2b2e38!important   
+
+  }
+}
+
+// 投稿ボタン
+
+.FAB {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  width: 56px;
+  z-index: 100;
+  
+  &__action-button,
+  &__mini-action-button{
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  &__action-button {
+    bottom: 0;
+    right: 0;
+    
+    &:hover {
+      .action-button__icon {
+        @include circleShadow(8px);
+      }
+    }
+  }
+  
+  &__mini-action-button {
+    bottom: 0;
+    right: 49px;
+    
+    
+  }
+  
+  
+}
+
+.action-button {
+
+  &__icon{
+    @include circleShadow(4px);
+    background-color: $create;
+    border-radius: 50%;
+    color: #fff;
+    padding: 16px;
+  }
+  
+  &__text {
+    
+    &--hide {
+      display: none;
+    }
+    
+    &--show {
+      background-color: #212121;
+      border-radius: 3px;
+      color: #fff;
+      right: 75px;
+      font-size: 14px;
+      opacity: .8;
+      padding: 5px 9px;
+      position: absolute;
+      top: 2px;
+      white-space: nowrap;
+    }
+  }
+}
+
+.mini-action-button {
+  
+  &__icon {
+    @include circleShadow(4px);
+    background-color: $create;
+    border-radius: 50%;
+    color: #fff;
+    padding: 8px;
+    
+    &:hover {
+      @include circleShadow(8px);
+    }
+    
+  }
+  
+  &__text {
+    
+    &--hide {
+      display: none;
+    }
+    &--show {
+      background-color: #212121;
+      border-radius: 3px;
+      color: #fff;
+      display: block;
+      right: 60px;
+      font-size: 14px;
+      opacity: .8;
+      padding: 5px 9px;
+      position: absolute;
+      top: -6px;
+      white-space: nowrap;
+    }
+  }
+
+  &--show {
+    position: absolute;
+    text-align: center; 
+  }
+  
+  &--hide {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@for $i from 1 through 10 {
+  .mini-action-button--show:nth-child(#{$i}) {
+    bottom: 20px + 60px * $i;
+  }
+}

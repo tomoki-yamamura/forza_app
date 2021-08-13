@@ -35,3 +35,13 @@
     }
   }
 }
+
+trix-editor {
+  min-height: 30em;
+  max-height: 30em;
+  overflow-y: auto;
+}
+
+.attachment__caption {
+  display: none;
+}

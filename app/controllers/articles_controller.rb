@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
  
    def index
      @articles = Article.order(created_at: :desc).page(params[:page]).per(3)
+     @article = Article.new
      @categories = Category.all
    end
  
@@ -45,8 +46,21 @@ class ArticlesController < ApplicationController
 
   def create
     # @article = Article.create params.require(:article).permit(:title, :body, :image, category_ids: []) # POINT
-    @article = Article.create(article_params) # POINT
-    redirect_to @article
+    # binding.pry
+    # @article = Article.create(article_params) # POINT
+    # redirect_to @article
+    @article = Article.new(article_params)
+
+    respond_to do |format|
+      if @article.save
+        @articles = Article.all.order(created_at: :desc)
+        format.html { redirect_to @article } # showアクションを実行し、詳細ページを表示
+        format.js  # create.js.erbが呼び出される
+      else
+        format.html { render :new } # new.html.erbを表示
+        format.js { render :errors } # 一番最後に実装の解説あります
+      end
+    end
   end
  
    def destroy
