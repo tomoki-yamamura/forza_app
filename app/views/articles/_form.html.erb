@@ -9,8 +9,10 @@
         <div class="images">
             <%= f.label :サムネ画像 %>
             <%= f.file_field :image %>
-
         </div>
+        
+        <%#サムネを表示する%>
+        <img id="preview" style="width:25%, padding-bottom: 30px;">
         
         <div class="field">
           <%= f.label :body %>

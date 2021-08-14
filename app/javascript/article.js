@@ -46,4 +46,18 @@ $(function(){
   }, function(){
     $(this).find('.action-button__text--show').attr('class', 'action-button__text--hide');
   });
+
+  // サムネ
+  $('#article_image').on('change', function (e) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        $("#preview").attr('src', e.target.result);
+        $('img').show();
+    }
+    reader.readAsDataURL(e.target.files[0]);
+  });
+
+  $('img').on('click', function(){
+    $("input[type='file']").click();
+  })
 });

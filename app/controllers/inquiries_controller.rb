@@ -6,7 +6,7 @@ class InquiriesController < ApplicationController
   def create
     @inquiry = Inquiry.new(inquiry_params)
     if @inquiry.save
-      InquiryMailer.send_mail(@inquiry).deliver
+      InquiryMailer.send_mail(@inquiry).deliver_now
       flash[:gotit] = "送信されました!"
       redirect_to new_inquiry_path
     else

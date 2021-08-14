@@ -336,3 +336,10 @@ label, input[type='checkbox'] {
     bottom: 20px + 60px * $i;
   }
 }
+
+#preview {
+  width: 25%;
+  padding-bottom: 30px;
+  display: none;
+  cursor: pointer;
+}
