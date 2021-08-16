@@ -1,0 +1,8 @@
+  $('.article-container-left').html("<%= escape_javascript(render 'index_page') %>");
+
+  $(function () {
+    let dis = document.querySelectorAll('.disabled');
+    dis.forEach(element => {
+      element.innerHTML = ""
+    })
+});

@@ -1,0 +1,36 @@
+<a href="#" class="js-modal-close batsu">×</a>
+<h2 class="form_title">投稿編集</h2>
+<div class="js-message-errors"></div>
+
+<%= form_with(model: @article, class: "js-form") do |f| %>
+        <div class="form-group">
+          <%= f.label :title, "タイトル※"%>
+          <%= f.text_field :title, class: "form-control" %>
+        </div>
+
+        <div class="images">
+            <%= f.label :サムネ画像 %>
+            <%= f.file_field :image %>
+        </div>
+        
+        <%#サムネを表示する%>
+        <img id="preview" style="width:25%, padding-bottom: 30px;">
+        
+        <div class="field">
+          <%= f.label :投稿内容※ %>
+          <%= f.rich_text_area :body %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :category, 'カテゴリ(※１つ以上選択)' %>
+          <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |category| %> 
+            <%= category.label do %>
+              <%= category.check_box %>
+              <%= category.text %>
+              <% end %>
+          <% end %>
+        </div>
+   
+        <%= f.submit "編集を保存", class: "btn btn-success" %>
+<% end %>
+

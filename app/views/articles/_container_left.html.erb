@@ -2,14 +2,15 @@
 
   <%#= render partial: 'article', collection: @articles %>
   <%# 省略 %>
+  <div class="articles">
   <%= render @articles%>
-
+  </div>
 
 
   <%#= render partial: 'category', article: article %>
 <%# article.categories.each_with_index do |category, index| %>
 
                 
-<%= paginate @articles %>
+<%= paginate @articles, remote:true %>
 
 </div>

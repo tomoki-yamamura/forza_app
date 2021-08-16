@@ -1,6 +1,5 @@
-$('.articles').prepend("<%= escape_javascript(render partial: 'articles/article', locals: { article: @article }) %>");
+$('.article_show').html("<%= escape_javascript(render(@article)) %>");
 $(".recent_body").html("<%= escape_javascript(render('articles/recent_entry'))%>");
-
 
 $('.js-modal').fadeOut();
 $('.js-form')[0].reset();

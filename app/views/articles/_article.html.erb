@@ -3,7 +3,7 @@
 <% end %>
     <div class="article_content">
       <div class="article_index_date">
-        <%= l article.created_at %>
+        <%= l(article.created_at, format: :short) %>
       </div>
             <% if false %>
       <% if article.image_id.present? %>

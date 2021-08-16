@@ -1,26 +1,21 @@
-<div class="article-container-left">    
+<div class="article-container-left">  
+    <div class="article_show">  
      <%= render @article %>
-    
+     </div>
+    <%= render 'edit_icons' %>
+</div>
 
-      <% if logged_in? %>
-      <div class="edit-icons">
-          <%= link_to edit_article_path(@article) do %>
-          <i class="fa fa-edit"></i>
-          <% end %>
+<%= render 'container_right' %>
 
-          <%#= link_to article_path(@article), method: :delete, data:{confirm:"こちらの投稿を削除しますか？"} do %>
-          <%= button_to article_path(@article), method: :delete, data:{confirm:"こちらの投稿を削除しますか？"}, class:"btn_trash" do %>
-          <i class="fa fa-trash"></i>
-          <% end %>
 
-        
-          <%= link_to articles_path do %>
-          <i class="fa fa-list-ul"></i>
-          <% end %>
-      </div>
-    <% end %>
-  </div>
-  <%= render partial: 'container_right' %>
+
+<div class="modal js-modal">
+  <div class="modal__bg js-modal-close"></div>
+  <div class="modal__content">
+      <%= render 'edit_form' %>
+  </div><!--modal__inner-->
+</div><!--modal-->
+
 
 
 

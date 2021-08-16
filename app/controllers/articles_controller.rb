@@ -6,9 +6,14 @@ class ArticlesController < ApplicationController
   
  
    def index
-     @articles = Article.order(created_at: :desc).page(params[:page]).per(3)
+     @articles = Article.order(created_at: :desc).page(params[:page]).per(2)
      @article = Article.new
      @categories = Category.all
+     
+     respond_to do |format|
+      format.html
+      format.js
+    end
    end
  
    def show
@@ -18,6 +23,7 @@ class ArticlesController < ApplicationController
    end
  
    def edit
+    @article = Article.find(params[:id])
    end
  
    def new
@@ -27,38 +33,37 @@ class ArticlesController < ApplicationController
    end
  
    def update
-     if @article.update(article_params)
-         redirect_to @article
-     else
-         # render "edit", alert: "更新でけへんかった"
-     end
+    @articles = Article.order(created_at: :desc)
+    respond_to do |format|
+      if @article.update(article_params)
+        format.html { redirect_to @article } # showアクションを実行し、詳細ページを表示
+        format.js 
+      else
+        format.html { render :new } # new.html.erbを表示
+        format.js  { render :errors } # errors.js.erbが呼び出される
+      end
+    end
    end
- 
-  #  def create
-  #    @article = Article.new(article_params)
-  #    if image 
-  #    if @article.save
-  #      redirect_to @article
+  #  def update
+  #    if @article.update(article_params)
+  #        redirect_to @article
   #    else
-  #        render "new", alert: "作成できませんでした"
+  #        # render "edit", alert: "更新でけへんかった"
   #    end
   #  end
+ 
 
   def create
-    # @article = Article.create params.require(:article).permit(:title, :body, :image, category_ids: []) # POINT
-    # binding.pry
-    # @article = Article.create(article_params) # POINT
-    # redirect_to @article
     @article = Article.new(article_params)
 
     respond_to do |format|
       if @article.save
         @articles = Article.all.order(created_at: :desc)
         format.html { redirect_to @article } # showアクションを実行し、詳細ページを表示
-        format.js  # create.js.erbが呼び出される
+        format.js   # update.js.erbが呼び出される
       else
         format.html { render :new } # new.html.erbを表示
-        format.js { render :errors } # 一番最後に実装の解説あります
+        format.js { render :errors } # errors.js.erbが呼び出される
       end
     end
   end

@@ -1,28 +1,3 @@
-//FORM CLOSE
-function newFormClose(){
-    $('.js-form-close').on('click',function(){
-
-        if($('#new-form').hasClass("active")){
-
-            $("#new-form").removeClass("active");
-
-        }
-    });
-        return false;
-};
-
-function editFormClose(){
-    $('.js-form-close').on('click',function(){
-
-        if($('#edit-form').hasClass("active")){
-            $("#edit-form").removeClass("active");
-        }
-    });
-    return false;
-};
-
-// ここまで
-
 // 投稿ボタン
 $(function(){
   var x = $('.FAB__mini-action-button').find('.mini-action-button--hide').length * 60 + 60;
@@ -57,7 +32,7 @@ $(function(){
     reader.readAsDataURL(e.target.files[0]);
   });
 
-  $('img').on('click', function(){
+  $('#preview').on('click', function(){
     $("input[type='file']").click();
   })
 });

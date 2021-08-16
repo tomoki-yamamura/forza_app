@@ -1,3 +1,40 @@
   <%= render "container_left" %>
   
   <%= render "container_right" %>
+
+
+    <% if logged_in? %>
+      <section class="FAB">
+        <div class="FAB__mini-action-button">
+          <div class="mini-action-button--hide mini-action-button">
+            <a class="js-modal-open" href="">
+            <i class="mini-action-button__icon material-icons">create</i>
+            <p class="mini-action-button__text--hide">新規投稿</p>
+            </a>
+          </div>
+          <div class="mini-action-button--hide mini-action-button">
+          <%= link_to "https://calendar.google.com/calendar/u/0/r?tab=rc" do %>
+            <i class="mini-action-button__icon material-icons">today</i>
+            <p class="mini-action-button__text--hide">Google Calender</p>
+          <% end %>
+          </div>
+        </div>
+        <div class="FAB__action-button">
+          <i class="action-button__icon material-icons">add</i>
+        </div>
+      </section>
+
+      <div class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+            <%= render 'new_form' %>
+        </div><!--modal__inner-->
+      </div><!--modal-->
+    <% end %>
+    
+<script>
+$(function () {
+    document.querySelector('.disabled').innerHTML = ""
+});
+</script>
+

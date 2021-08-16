@@ -75,6 +75,6 @@ new ScrollObserver('.about_m_img1', add);
 
 new ScrollObserver('.nav-trigger', nav, {once: false});
 
-// new ScrollObserver('#main-content', add, {once: false});
+
 
 
