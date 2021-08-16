@@ -325,13 +325,13 @@ header {
 // categoryシリーズ
 .category {
   &_header {
-    font-size: 12px;
+    font-size: 14px;
   }
   &_ul {
-    font-size: 12px;
+    font-size: 14px;
   }
   &_li{
-    font-size:12px;
+    font-size:14px;
   }
 }
 
@@ -434,8 +434,8 @@ header {
   display: block;
   width: 90%;
   &-right {
-  margin-top: 25%;
-  padding: 0 10px;
+  // margin-top: 25%;
+  // padding: 0 10px;
   }
   &-left {
     width: 100%;
@@ -694,4 +694,12 @@ dl {
   height: 90%;
   // heightを指定する必要がある
   overflow-y:scroll;
+}
+
+.recent_header {
+  font-size: 18px;
+}
+.recent_ul {
+  font-size: 14px;
+  line-height: 2;
 }
