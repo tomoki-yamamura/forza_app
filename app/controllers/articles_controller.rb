@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :move_to_signed_in
+  # before_action :move_to_signed_in
   before_action :find_article, only: [:show, :edit, :update, :destroy]
  #  before_action :current_user, only: [:edit, :update, :destroy]
  

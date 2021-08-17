@@ -76,13 +76,12 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                  587,
-  domain:               'gmail.com',
-                        # ↓どのアカウントメールから送るか
-  user_name:            'progtab17@gmail.com',
-  password:             '12266221',
-  authentication:       'plain',
-  enable_starttls_auto:  true
+   address:              'smtp.gmail.com',
+   port:                  587,
+   domain:               'gmail.com',
+   user_name:            'forza.kanazawa.volleyball@gmail.com',
+   password:             'volley.819',
+   authentication:       'plain',
+   enable_starttls_auto:  true
   }
 end
