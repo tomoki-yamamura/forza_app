@@ -1,0 +1,9 @@
+$('.article-container-left').html("<%= j(render :partial => 'show_page') %>");
+
+
+$(function () {
+    let dis = document.querySelectorAll('.disabled');
+    dis.forEach(element => {
+      element.innerHTML = ""
+    })
+});

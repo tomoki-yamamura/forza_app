@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
      @articles = Article.order(created_at: :desc).page(params[:page]).per(2)
      @article = Article.new
      @categories = Category.all
-     
+    
      respond_to do |format|
       format.html
       format.js

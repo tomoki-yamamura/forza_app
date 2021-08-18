@@ -3,7 +3,8 @@
   <%#= render partial: 'article', collection: @articles %>
   <%# 省略 %>
   <div class="articles">
-  <%= render @articles %>
+  
+  <%= render @articles_category %>
   </div>
 
 
@@ -11,6 +12,7 @@
 <%# article.categories.each_with_index do |category, index| %>
 
                 
-<%= paginate @articles, remote:true %>
+  <%= paginate @articles_category, remote: true %>
+
 
 </div>

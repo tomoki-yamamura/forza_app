@@ -1,12 +1,12 @@
 <div class="article-container">
-  <%= render "articles/container_left"%>
+  <%= render "container_left" %>
   <div class="article-container-right">
       <div class="recent_entry_container">
         <div class="recent_header">
           Recent Entry
         </div>
         <div class="recent_body">
-          <% @articles2.each do |article| %>
+          <% @articles.each do |article| %>
                   <ul class="recent_ul">
                     <li class="recent_li">
                       <%= link_to article do %>
@@ -16,6 +16,7 @@
                   </ul>
            <% end %>
         </div>
+
       </div>  
       <div class="recent_entry_container">
         <div class="recent_header">
@@ -35,5 +36,4 @@
       </div>  
  
   </div>
-
 </div>
