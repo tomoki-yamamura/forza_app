@@ -3,23 +3,27 @@ class ArticlesController < ApplicationController
   before_action :find_article, only: [:show, :edit, :update, :destroy]
  #  before_action :current_user, only: [:edit, :update, :destroy]
  
-  
+ include ArticlesHelper
  
    def index
-     @articles = Article.order(created_at: :desc).page(params[:page]).per(2)
-     @article = Article.new
-     @categories = Category.all
-    
-     respond_to do |format|
-      format.html
-      format.js
+    @article = Article.new
+    get_aside_contents
+    if params[:category_id]
+      @selected_category = Category.find(params[:category_id])
+      @articles= Article.from_category(params[:category_id]).page(params[:page]).per(2)
+    else
+      @articles = Article.order(created_at: :desc).page(params[:page]).per(2)
     end
+
+    #  respond_to do |format|
+    #   format.html
+    #   format.js
+    # end
    end
  
    def show
      @article = Article.find(params[:id])
-     @articles = Article.all.order(created_at: :desc)
-     @categories = Category.all
+     get_aside_contents
    end
  
    def edit
@@ -27,15 +31,16 @@ class ArticlesController < ApplicationController
    end
  
    def new
-     # render :layout => false
      @article = Article.new
      @article.article_category_relationships.build
    end
  
    def update
-    @articles = Article.order(created_at: :desc)
+    @article = Article.find(params[:id])
     respond_to do |format|
       if @article.update(article_params)
+      get_aside_contents
+
         format.html { redirect_to @article } # showアクションを実行し、詳細ページを表示
         format.js 
       else
@@ -44,23 +49,18 @@ class ArticlesController < ApplicationController
       end
     end
    end
-  #  def update
-  #    if @article.update(article_params)
-  #        redirect_to @article
-  #    else
-  #        # render "edit", alert: "更新でけへんかった"
-  #    end
-  #  end
  
+
 
   def create
     @article = Article.new(article_params)
 
     respond_to do |format|
       if @article.save
-        @articles = Article.all.order(created_at: :desc)
+        get_aside_contents
+        @articles = Article.order(created_at: :desc).page(params[:page]).per(2)
         format.html { redirect_to @article } # showアクションを実行し、詳細ページを表示
-        format.js   # update.js.erbが呼び出される
+        format.js   # create.js.erbが呼び出される
       else
         format.html { render :new } # new.html.erbを表示
         format.js { render :errors } # errors.js.erbが呼び出される

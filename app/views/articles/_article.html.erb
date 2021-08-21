@@ -30,16 +30,12 @@
             <% article.categories.each_with_index do |category, index| %>
               <% if index ==  article.categories.size - 1 %>
               <li class="category_li">
-              <%= link_to category do %>
-              <%= category.name %>
-              <% end %>
+                <%= link_to category.name,articles_path(category_id:category.id) %>
               </li>
           
               <% else %>
                 <li class="category_li">
-                  <%= link_to category do %>
-                    <%= category.name %>
-                  <% end %>
+                  <%= link_to category.name,articles_path(category_id:category.id) %>
                 </li>
               <div class="category_comma">,</div>
               <% end %>

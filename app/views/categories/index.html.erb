@@ -14,46 +14,7 @@
     <link href="" rel="stylesheet" type="text/css" media="(min-width: 320px) and (max-width: 639px)" >
 
   </head>
-<div class="article-container">
-  <%= render "container_left" %>
-  <div class="article-container-right">
-      <div class="recent_entry_container">
-        <div class="recent_header">
-          Recent Entry
-        </div>
-        <div class="recent_body">
-          <% @articles.each do |article| %>
-                  <ul class="recent_ul">
-                    <li class="recent_li">
-                      <%= link_to article do %>
-                        <%= article.title %>
-                      <% end %>
-                    </li>
-                  </ul>
-           <% end %>
-        </div>
-
-      </div>  
-      <div class="recent_entry_container">
-        <div class="recent_header">
-          Category
-        </div>
-        <div class="recent_body">
-          <% @categories.each do |category| %>
-                  <ul class="recent_ul">
-                    <li class="recent_li">
-                      <%= link_to category do %>
-                        <%= category.name %>
-                      <% end %>
-                    </li>
-                  </ul>
-           <% end %>
-        </div>
-      </div>  
- 
-  </div>
-</div>
-              <%= debug(params) if Rails.env.development? %>
+<%= @category %>
 
     <% if logged_in? %>
       <section class="FAB">

@@ -3,15 +3,15 @@
         <div class="recent_header">
           Recent Entry
         </div>
+        <div class="recent-entry">
         <%= render 'recent_entry' %>
+        </div>
       </div>  
 
       <div class="recent_entry_container">
         <div class="recent_header">
           Category
         </div>
-        <div class="recent_c_body">
-      <%= render partial: 'category', collection: @categories %>
-        </div>  
+          <%= render 'category'%>
       </div>
   </div>

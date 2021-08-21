@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :inquiries, only: [:new, :create]
 
+
   get      '/login',  to: 'sessions#new'
   post     '/login',  to: 'sessions#create'
   delete   '/logout', to: 'sessions#destroy'
@@ -16,5 +17,6 @@ Rails.application.routes.draw do
     resources :searches, only: :index, defaults: { format: :json }
   end
 
-  resources :articles # このコードより上に追加する(※補足説明へ)
+  
+
 end

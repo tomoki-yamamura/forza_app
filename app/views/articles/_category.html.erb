@@ -1,10 +1,9 @@
+<% unless @categories.blank? %>
 <ul class="recent_ul">
-  <li class="recent_li">
-    <%= link_to category do %>
-      <%= category.name %>
+    <% @categories.each do |category| %>
+    <li class="recent_li">
+        <%= link_to category.name,articles_path(category_id:category.id) %>
+    </li>
     <% end %>
-</li>
 </ul>
-
-
- 
+<% end %>
