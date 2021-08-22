@@ -1,18 +1,25 @@
-   <% if logged_in? %>
-      <div class="edit-icons">
+<% if logged_in? %>
+    <div class="edit-icons">
+       <div class="edit-action-button">
           <%= link_to edit_article_path(@article) do %>
           <a class="js-modal-open" href="">
-          <i class="fa fa-edit"></i>
+          <i class="fa fa-edit "></i>
+          <p class="mini-action-button__edit__text--hide">編集</p>
           </a>
           <% end %>
-
-          <%#= link_to article_path(@article), method: :delete, data:{confirm:"こちらの投稿を削除しますか？"} do %>
-          <%= button_to article_path(@article), method: :delete, data:{confirm:"こちらの投稿を削除しますか？"}, class:"btn_trash" do %>
+        </div>
+      <div class="edit-action-button">
+          <%= link_to @article, method: :delete, data:{confirm:"こちらの投稿を削除しますか？"} do %>
           <i class="fa fa-trash"></i>
-          <% end %>
-          <%= link_to articles_path do %>
-          <i class="fa fa-list-ul"></i>
+          <p class="mini-action-button__edit__text--hide">削除</p>
           <% end %>
       </div>
-
-    <% end %>
+      <div class="edit-action-button">
+          <%= link_to articles_path do %>
+          <i class="fa fa-list-ul"></i>
+          <p class="mini-action-button__text--hide">一覧に戻る</p>
+          <p class="mini-action-button__edit__text--hide">一覧に戻る</p>
+          <% end %>
+      </div>
+    </div>
+<% end %>

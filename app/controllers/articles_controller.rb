@@ -40,7 +40,6 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       if @article.update(article_params)
       get_aside_contents
-
         format.html { redirect_to @article } # showアクションを実行し、詳細ページを表示
         format.js 
       else

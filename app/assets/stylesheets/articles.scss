@@ -276,6 +276,10 @@ label, input[type='checkbox'] {
   }
 }
 
+.edit-action-button {
+  position: relative;
+}
+
 .mini-action-button {
   
   &__icon {
@@ -289,6 +293,26 @@ label, input[type='checkbox'] {
       @include circleShadow(8px);
     }
     
+  }
+
+  &__edit__text {
+    &--hide {
+      display: none;
+    }
+
+    &--show {
+      background-color: #212121;
+      border-radius: 3px;
+      color: #fff;
+      display: block;
+      font-size: 14px;
+      opacity: .6;
+      padding: 0px 3px;
+      white-space: nowrap;
+      line-height: 1.6;
+      position: absolute;
+      top: 35px;
+    }
   }
   
   &__text {

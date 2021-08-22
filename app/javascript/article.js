@@ -22,6 +22,14 @@ $(function(){
     $(this).find('.action-button__text--show').attr('class', 'action-button__text--hide');
   });
 
+  // 編集のやつ
+
+  $('.edit-action-button').hover(function(){
+    $(this).find('.mini-action-button__edit__text--hide').attr('class', 'mini-action-button__edit__text--show');
+  }, function(){
+    $(this).find('.mini-action-button__edit__text--show').attr('class', 'mini-action-button__edit__text--hide');
+  });
+
   // サムネ
   $('#article_image').on('change', function (e) {
     var reader = new FileReader();
