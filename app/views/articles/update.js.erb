@@ -4,3 +4,19 @@ $(".recent-entry").html("<%= escape_javascript(render('articles/recent_entry'))%
 $('.js-modal').fadeOut();
 $('.js-form')[0].reset();
 $('.js-message-errors').empty(); // 追加
+
+$(document).ready(function(){
+      //投稿完了メッセージ
+  function postSuccessMsg(msg){
+      document.getElementById('post-success-msg').innerText = msg;
+      setTimeout(function(){
+          $('#post-success-msg').addClass('active');
+      },400);
+      setTimeout(function(){
+          $('#post-success-msg').removeClass('active');
+      },3000);
+  };
+
+  var msg = "編集が完了しました"
+  postSuccessMsg(msg);
+});

@@ -24,13 +24,15 @@ Rails.start()
 
 ActiveStorage.start()
 
+
+
 require('article.js')
 require('login.js')
 require('calender.js')
 require('side.js')
 require('fade-up.js')
 require('modal.js')
-
+require('inquiry.js')
 
 
 

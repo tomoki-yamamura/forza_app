@@ -49,11 +49,18 @@
     border-radius: 7px;
     border: 1px solid;
     display: block;
-    padding: 15px 0px;
+    height: 50px;
     letter-spacing: 2px;
     background-color: $cWhite;
-    transition: all .3s;
+    transition: all .3s ease;
     width: 75%;
+
+    &.loading {
+      border-radius: 50px;
+      width: 50px;
+      background-color: $btnhover;
+    }
+
     &:hover {
       background-color: $btnhover;
       color: $cBlack !important;
@@ -78,4 +85,20 @@
   position: relative;
   top: 0;
   margin-bottom: 10%;
+}
+
+/* Spinner */
+.spinner {
+  width: 40px;
+  margin: -45px auto;
+  height: 40px;
+  border: 4px #ddd solid;
+  border-top: 4px #2e93e6 solid;
+  border-radius: 50%;
+  animation: sp-anime 0.8s infinite linear;
+}
+@keyframes sp-anime {
+  100% { 
+    transform: rotate(360deg); 
+  }
 }
