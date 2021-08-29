@@ -14,11 +14,11 @@ class User < ApplicationRecord
 
   
  # 渡された文字列のハッシュ値を返す
-  def User.digest(string)
-    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
-                                                  BCrypt::Engine.cost
-    BCrypt::Password.create(string, cost: cost)
-  end
+ def User.digest(string)
+  cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+                                            BCrypt::Engine.cost
+  BCrypt::Password.create(string, cost: cost)
+end
 
   # ランダムなトークンを返す
   def User.new_token
@@ -33,13 +33,14 @@ class User < ApplicationRecord
 
   # 渡されたトークンがダイジェストと一致したらtrueを返す
   #has_secureで自動でやってくれたことを実装しているだけ
+  # このremember_tokenは上記のattr_accesorとは異なる
   def authenticate?(remember_token)
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
   end
 
     # ユーザーのログイン情報を破棄する(DB)
   def forget
-    self.update_attribute(:remember_digest, nil)
+    update_attribute(:remember_digest, nil)
   end
 
   

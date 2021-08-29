@@ -43,21 +43,11 @@
   </div>
 
 
-
-<%# <h1 id="hello">Hello World</h1> %>
-
-<%# <%= javascript_pack_tag 'home/index' %> 
-
 <%= javascript_pack_tag 'scripts/mobile-menu' %>
 <%= javascript_pack_tag 'scripts/scroll' %>
 
-
-<script>
-$(function () {
-    document.querySelector('.disabled').innerHTML = ""
-});
-</script>
-
+<%= debug(params) if Rails.env.development? %>
 
   </body>
+  
 </html>

@@ -27,6 +27,15 @@ ja:
               blank: を記入してください。
             category_ids:
               too_short: を１つ以上選択してください。
+        user:
+          attributes:
+            name:
+              blank: が空です。
+            email:
+              blank: が空です。
+              taken: 既に使用されています。
+            password:
+              blank: が空です。
     attributes:
       article:
         title: タイトル

@@ -3,8 +3,9 @@ class SessionsController < ApplicationController
   layout 'sessions'
 
   def new
-    # render :layout => nil
-
+    # /loginpageにいかせないようにする
+    
+    redirect_to articles_path if current_user
   end
 
   def create
@@ -20,7 +21,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out
+    log_out if logged_in?
     redirect_to login_url
   end
 

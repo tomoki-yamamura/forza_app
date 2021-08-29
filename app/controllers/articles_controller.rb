@@ -54,6 +54,9 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
 
+  
+
+
     respond_to do |format|
       if @article.save
         get_aside_contents

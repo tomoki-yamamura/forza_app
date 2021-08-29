@@ -1,7 +1,13 @@
 require "test_helper"
 
 class ArticleTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  def setup
+    @post = Article.new(title: "aiueo", body: "kakikukeko")
+  end
+
+  test "should be valid" do
+    assert_not @post.valid?
+  end
+
 end

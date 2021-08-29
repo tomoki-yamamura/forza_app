@@ -8,15 +8,6 @@ Rails.application.routes.draw do
   post     '/login',  to: 'sessions#create'
   delete   '/logout', to: 'sessions#destroy'
   root 'forza#home'
-  # get '/help',        to: 'forza#help'
-  get '/news',        to: 'forza#news'
-  # get '/contact',     to: 'forza#contact'
-  get '/about',       to: 'forza#about'
 
-  namespace :articles do 
-    resources :searches, only: :index, defaults: { format: :json }
-  end
-
-  
-
+  get '/about', to: 'forza#about'
 end
