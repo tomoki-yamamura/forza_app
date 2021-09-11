@@ -34,7 +34,7 @@ end
   # 渡されたトークンがダイジェストと一致したらtrueを返す
   #has_secureで自動でやってくれたことを実装しているだけ
   # このremember_tokenは上記のattr_accesorとは異なる
-  def authenticate?(remember_token)
+  def authenticated?(remember_token)
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
   end
 
