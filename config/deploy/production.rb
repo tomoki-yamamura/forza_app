@@ -7,6 +7,13 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
+server "54.178.86.146", user: "tomoki", roles: %w{app db web}
+
+set :ssh_options, {
+  keys: %w(~/.ssh/aws_forza_app.pem),
+  forward_agent: true,
+  auth_methods: %w(publickey),
+}
 
 
 # role-based syntax

@@ -2,7 +2,7 @@
 lock "~> 3.16.0"
 
 set :application, "aws_forza_app"
-set :repo_url, "GitHubのリポジトリURL"
+set :repo_url, "git@github.com:tomoki-yamamura/forza_app.git"
 set :rbenv_ruby, File.read('.ruby-version').strip
 set :branch, ENV['BRANCH'] || "master"
 
