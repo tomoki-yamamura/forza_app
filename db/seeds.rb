@@ -12,4 +12,5 @@ Category.create(name: "土曜日の練習")
 Category.create(name: "つぶやき")
 Category.create(name: "大会情報")
 
-User.create()
+User.create(name: ENV['FORZA_USER'], email: ENV["FORZA_EMAIL"], password: ["FORZA_PASSWORD"])
+
