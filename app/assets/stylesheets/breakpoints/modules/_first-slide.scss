@@ -62,18 +62,18 @@
     left: 0;
     // animation: first-anime 18s infinite;
     &:nth-of-type(1) {
-      background-image: url(IMG_0603.JPG);
+      background-image: image-url(img_0603);
       background-position: top;
     }
     
     &:nth-of-type(2){
-      background-image: url(IMG_0539.JPG);
+      background-image: image-url(img_0539);
       animation-delay: -6s;
       background-position: center;
     }
 
     &:nth-of-type(3){
-      background-image: url(IMG_0641.JPG);
+      background-image: image-url(img_0641);
       animation-delay: -12s;
       background-position: right;
     }
