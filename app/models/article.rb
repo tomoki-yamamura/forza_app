@@ -2,7 +2,7 @@ class Article < ApplicationRecord
   has_many :article_category_relationships
   has_many :categories, through: :article_category_relationships
   has_rich_text :body
-  has_one_attached :image  # サムネイル画像を用いる為記載
+  has_one_attached :image  # サムネイル画像を用いる為記載,activerecordのattachment blob
 
   validates :title, presence: true
   validates :body, presence: true
