@@ -95,5 +95,6 @@ gem 'dotenv-rails'
 
 gem 'pry-rails'
 
-
-
+# S3
+gem 'mini_magick'
+gem 'aws-sdk-s3', require: false
