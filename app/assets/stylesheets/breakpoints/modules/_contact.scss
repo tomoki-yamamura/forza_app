@@ -59,6 +59,10 @@
   }
 }
 
+.contact_header {
+  font-size: $font-lg;
+} 
+
 .contact_m_header {
   position: relative;
   top: 0;
@@ -117,9 +121,10 @@
     font-size: $font-sm;
     margin-bottom: $mb-sm;
   }
-  .news_head_link {
-    font-size: $font-tab-main; 
-  }
+  .contact_header {
+    font-size: $font-tab-main;
+  } 
+
   .contact-area {
     width: 80%;
     & h2 {
@@ -149,6 +154,9 @@
       margin-bottom: $pd-md;
     }
   }
+  .contact_header {
+    font-size: $font-lap-main;
+  } 
   .contact-area-link {
     width: 45%;
     font-size: $font-sm;

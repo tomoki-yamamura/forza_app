@@ -8,6 +8,7 @@
 
 .news_head_link {
   position: relative;
+  font-size: $font-lg;
 }
 article {
   margin-bottom: $font-md;
@@ -21,9 +22,7 @@ article {
     padding-top: $pd-60;
   }
 }
-.articles {
-  padding-top: $pd-md;
-}
+
  .article{
    &-container {
      margin: 0 auto;
@@ -388,11 +387,26 @@ label, input[type='checkbox'] {
   padding: 0px;
 }
 
+.news_images {
+  background-image: image-url("news.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 130px;
+}
+
+
 
   // 600px〜959px：600px以上のタブレットやモニタで適用
    // ------------------------------ 
 @media (min-width: 600px) {
+  .articles {
+    padding-top: $pd-md;
+  }
   .contact_header {
+    font-size: $font-tab-main; 
+  }
+  .news_head_link {
     font-size: $font-tab-main; 
   }
   .article-container {
@@ -423,9 +437,13 @@ label, input[type='checkbox'] {
   // 960px〜1279px：960px以上のモニタで適用
    // ------------------------------ 
 @media (min-width: 960px) {
-  .article-container {
-    padding-top: 80px;
+  .news_head_link {
+    font-size: $font-lap-main; 
   }
+  .news_images {
+    height: 200px;
+  }
+
 }
    
   // 1280px>=：1280px以上のモニタで適用
