@@ -14,28 +14,6 @@
 .contact_header {
   position: relative;
   display: inline;
-  // &::before {
-  //   content:"";
-  //   display:inline-block;
-  //   width: 30px;
-  //   height: 3px;
-  //   background-color: black;
-  //   position: absolute;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   left: -30%;
-  // }
-  // &::after {
-  //   content:"";
-  //   display:inline-block;
-  //   width: 30px;
-  //   height: 3px;
-  //   background-color: black;
-  //   position: absolute;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   right: -30%;
-  // }
 }
 
 .contact_intro {
@@ -93,7 +71,22 @@ margin-top: $mb-form;
   &_message {
     background-color: #f7f7f7;
   }
+  &_container {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
+
+.form-last {
+  margin-top: 40px;
+}
+
+.form {
+  & .form-group {
+    margin-bottom: 20px;
+  }
+}
+
 
 
 
@@ -129,6 +122,12 @@ margin-top: $mb-form;
 // 600px〜959px：600px以上のタブレットやモニタで適用
  // ------------------------------ 
 @media (min-width: 600px) {
+  .form {
+    & .form-group {
+      margin-bottom: 40px;
+    }
+  }
+  
 
   .contact_intro {
     font-size: $font-sm;
@@ -148,6 +147,10 @@ margin-top: $mb-form;
   }
   .form-group {
     flex-direction: row;
+  }
+
+  #inquiry_container {
+    width: 80%;
   }
 
 }
@@ -171,6 +174,9 @@ margin-top: $mb-form;
       font-size: $font-p;
       margin: 40px 0 60px;
     }
+  }
+  .form-last {
+    margin-top: 80px;
   }
 
 
