@@ -179,9 +179,7 @@ body.fadeout::after {
   margin-bottom: 30px;
 }
 
-.images{
-  margin-bottom: 30px;
-}
+
 
 .field {
   margin-bottom: 30px;
@@ -210,43 +208,6 @@ label, input[type='checkbox'] {
   }
 }
 
-// 投稿ボタン
-
-.FAB {
-  position: fixed;
-  bottom: 30px;
-  right: 40px;
-  width: 56px;
-  z-index: 100;
-
-
-  
-  &__action-button,
-  &__mini-action-button{
-    cursor: pointer;
-    position: absolute;
-  }
-  
-  &__action-button {
-    bottom: 0;
-    right: 0;
-    
-    &:hover {
-      .action-button__icon {
-        @include circleShadow(8px);
-      }
-    }
-  }
-  
-  &__mini-action-button {
-    bottom: 0;
-    right: 49px;
-    
-    
-  }
-  
-  
-}
 
 .action-button {
 
