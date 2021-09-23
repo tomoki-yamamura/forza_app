@@ -2,44 +2,8 @@
 @import "../mixin";
 @import "../loader";
 
-// 横幅のサイズ
 
 
-#calender_container {
-  width: 80%;
-}
-
-.header_btn {
-  display: block;
-  display: flex;
-}
-
-// ここまで
-
-
-
-
-
-
-// flash
-
-
-.contact_intro {
-  margin-top: 75px;
-}
-
-#inquiry_container {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.field_container {
-  width: 60%;
-}
-
-.label_container {
-  width: 260px;
-}
 
 .form {
   &-group {
@@ -48,59 +12,6 @@
     justify-content: space-between;
   }
 }
-
-// newsシリーズ
-
-.top_news_btn {
-  transform: translateX(-30%);
-}
-
-
-
-
-
-// ここまで
-
-
-// news2ページ
-
-#top_posts {
-  // width: 80%;
-  margin: 0 auto;
-}
-
-.top_news_btn2 {
-  transform: translateX(-45%);
-}
-
-.pagination {
-  font-size: 130%;
-}
-// ここまで
-
-
-// schedule
-
-// ここまで
-
-
-.news_m_header {
-  padding-top: 80px;
-  margin-bottom: 10%;
-  height: 700px;
-}
-
-.news_m_title {
-  font-size: 3.8vw;
-}
-
-.contact_intro {
-  font-size: 17px;
-  line-height: 2.5;
-
-}
-
-
 
 
 

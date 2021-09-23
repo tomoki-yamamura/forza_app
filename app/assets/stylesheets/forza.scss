@@ -6,6 +6,18 @@
 
 @import "variables";
 
+
+body{
+  font-family: 'Montserrat','Noto Sans JP', sans-serif;
+  letter-spacing: 0.2rem;
+}
+
+ 
+html {
+  font-size: 62.5%;
+}
+
+
 #main-content {
   width: 90%;
   margin: 0 auto;
@@ -287,6 +299,10 @@
   }
 }
 
+.top_news_btn {
+  transform: translateX(-30%);
+}
+
 .news_m_title {
   position: relative;
   z-index: 3;
@@ -420,14 +436,41 @@
   font-size: $font-lr;
 }
 
+// aside
+.side {
+  display: none;
+  position: fixed;
+  top: 60%;
+  // transform: translateY(-50%);
+  transition: all .3s ease-in;
+  &.left {
+    left: -50px;
 
+    &.inview {
+      left: 50px;
+    }
 
-// 480px〜599px：SP横
-// ------------------------------ 
-@media (min-width: 480px) {
+    & .side_inner {
+      transform: rotate(-90deg);
+      transform-origin: top left;
+    }
+  }
+  &.right {
+    right: -50px;
+    &.inview {
+      right: 50px;
+    }
 
-
+    & .side_inner {
+      transform: rotate(90deg);
+      transform-origin: top right;
+    }
+  }
 }
+// ここまで
+
+
+
  
 // 600px〜959px：600px以上のタブレットやモニタで適用
  // ------------------------------ 
@@ -467,8 +510,15 @@
   .article-area {
     padding: 100px 0;
   }
+  .article_sep {
+    &:nth-of-type(2) {
+      padding-top: 80px;
+    }
+    &:nth-of-type(3) {
+      padding-top: 80px;
+    }
+  }
   .page_title {
-    width: 90%;
     padding-bottom: $pd-text-sm;
     font-size: $font-md;
     padding-bottom: $mb-sm;
@@ -572,7 +622,6 @@
   padding: 120px 0;
   }
   .page_title {
-    width: 90%;
     font-size: $font-lg;
     padding-bottom: $mb-form;
   }
@@ -693,7 +742,6 @@
   }
   .page_title {
     padding-bottom: $pd-text-sm;
-    // font-size: $font-lap-main;
     padding-bottom: $pd-md;
   }
   .news_container {

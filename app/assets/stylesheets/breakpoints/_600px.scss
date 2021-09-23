@@ -7,43 +7,6 @@
   flex-wrap: wrap;
 }
 
-
-
-
-.about {
-  &__texts,
-  &__img {
-    flex-basis: 47%;
-  }
-
-  &__texts {
-    display: flex;
-    align-items: flex-end;
-  }
-  &__inner {
-    padding: 50px;
-    // width: 240%;
-  }
-  &-img02{
-      width: 45%;
-  }
-}
-
-
-
-
-
-
-
-// ここまで
-
-
-
-.recent_ul{
-  padding-left: 8%;
-}
-
-
 #post-success-msg{
   width: 30%;
 }

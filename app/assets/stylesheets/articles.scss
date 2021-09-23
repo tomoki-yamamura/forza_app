@@ -8,29 +8,6 @@
 
 .news_head_link {
   position: relative;
-
-  // &::before {
-  //   content:"";
-  //   display:inline-block;
-  //   width: 30px;
-  //   height: 3px;
-  //   background-color: black;
-  //   position: absolute;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   left: -40%;
-  // }
-  // &::after {
-  //   content:"";
-  //   display:inline-block;
-  //   width: 30px;
-  //   height: 3px;
-  //   background-color: black;
-  //   position: absolute;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   right: -40%;
-  // }
 }
 article {
   margin-bottom: $font-md;
@@ -155,6 +132,7 @@ article {
   &_ul {
     font-size: $font-p;
     padding-top: 30px;
+    padding-left: 8%;
   }
   &_li {
     line-height: 2;
@@ -419,6 +397,36 @@ label, input[type='checkbox'] {
   font-size: 14px;
   line-height: 3;
 }
+
+.edit-icons {
+  padding: 10px 5px;
+  display: flex;
+}
+
+.fa {
+  &-trash {
+  font-size: 25px;
+  padding-left: 5px;
+  color: gray;
+  }
+  &-edit {
+  font-size: 25px;
+  padding-left: 5px;
+  color: gray;
+  }
+  &-list-ul {
+  font-size: 25px;
+  padding-left: 10px;
+  color: gray;
+  }
+} 
+
+.btn_trash { 
+  border: none;
+  background-color: white;
+  padding: 0px;
+}
+
 
   // 600px〜959px：600px以上のタブレットやモニタで適用
    // ------------------------------ 
