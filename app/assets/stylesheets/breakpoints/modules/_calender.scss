@@ -7,18 +7,7 @@
 }
 
 // .calender-textのCSS
-.calender-text {
-  padding-top: 15px;
-  .blue {
-  padding: 2px 16px;
-  background: #3a87ad;
-  border-radius: 2px;
-  }
-  & > div {
-    padding-top: 30px;
-  }
-}
-  
+
 
 
 
@@ -59,10 +48,6 @@
     color: rgb(224, 102, 122) !important;
   }
   .event_holiday {
-    // background-color:  #ffeaea !important;
-    // border: none !important;
-    // position: absolute;
-    // top: 0;
     display: none;
   }
 }
@@ -95,3 +80,37 @@
 .map_container {
   margin: 0 auto;
 }
+
+// 480px〜599px：SP横
+// ------------------------------ 
+@media (min-width: 480px) {
+
+}
+  // 600px〜959px：600px以上のタブレットやモニタで適用
+   // ------------------------------ 
+  @media (min-width: 600px) {
+
+    #calender_container {
+      & h2 {
+      font-size: $font-p;
+
+      }
+    }
+  }
+   
+  // 960px〜1279px：960px以上のモニタで適用
+   // ------------------------------ 
+  @media (min-width: 960px) {
+    #calender_container {
+      & h2 {
+      font-size: $font-md;
+      }
+    }
+  }
+   
+  // 1280px>=：1280px以上のモニタで適用
+   // ------------------------------ 
+  @media (min-width: 1280px) {
+  
+  }
+  

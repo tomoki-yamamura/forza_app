@@ -14,3 +14,33 @@
 }
 
 
+.kaminari {
+  padding-top: 10%;
+}
+
+// 600px〜959px：600px以上のタブレットやモニタで適用
+// ------------------------------ 
+@media (min-width: 600px) {
+  .sns-area {
+    width: 90%;
+    & h2 {
+        font-size: $font-md;
+        margin-bottom: $mb-form;
+    }
+    &-inner {
+      font-size: $font-sm;
+    }
+  }
+}
+   
+// 960px〜1279px：960px以上のモニタで適用
+// ------------------------------ 
+ @media (min-width: 960px) {
+
+ }
+   
+// 1280px>=：1280px以上のモニタで適用
+// ------------------------------ 
+@media (min-width: 1280px) {
+  
+}

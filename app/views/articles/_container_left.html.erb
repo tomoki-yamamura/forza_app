@@ -1,16 +1,6 @@
 <div class="article-container-left">
-
-  <%#= render partial: 'article', collection: @articles %>
-  <%# 省略 %>
   <div class="articles">
-  <%= render @articles %>
+    <%= render @articles %>
+    <%= paginate @articles, remote:true %>
   </div>
-
-
-  <%#= render partial: 'category', article: article %>
-<%# article.categories.each_with_index do |category, index| %>
-
-                
-<%= paginate @articles, remote:true %>
-
 </div>

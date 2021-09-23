@@ -55,14 +55,39 @@
   }
   & .logo{
       justify-content: center;
-      font-size: $font-lg;
+      font-size: $font-lr;
       margin: 0;
+      display: flex;
+      align-items: center;
+
+      &__img {
+        height: 50px;
+        width: 70px;
+        object-fit: contain;
+        margin-right:5px;
+      }
   }
   &_btn {
-
-    display: flex;
+    display: none;
   }
 }
+
+
+#header__li4 {
+  position:relative;
+  &::after {
+   content:"";
+   display:inline-block;
+   width:3px;
+   height:35px;
+   background-color:#0097A7;
+   position:absolute;
+   top:-2px;
+   left:115px;
+  }
+}
+
+
 
 .logo__stay {
   &:hover {
@@ -72,4 +97,30 @@
 
 #header_log {
   color: red;
+}
+
+// 480px〜599px：SP横
+// ------------------------------ 
+@media (min-width: 480px) {
+
+}
+
+// 600px〜959px：600px以上のタブレットやモニタで適用
+// ------------------------------ 
+@media (min-width: 600px) {
+
+}
+
+ // 960px〜1279px：960px以上のモニタで適用
+// ------------------------------ 
+@media (min-width: 960px) {
+  .header_btn {
+    display: flex;
+  }
+}
+
+// 1280px>=：1280px以上のモニタで適用
+// ------------------------------ 
+@media (min-width: 1280px) {
+
 }

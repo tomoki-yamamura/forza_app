@@ -14,18 +14,31 @@
   margin-top: 70px;
 }
 // asideを表示
-.side {
-  display: block;
-}
-.side_inner {
-  display: flex;
-}
+
 // ここまで
 
-.article-container {
-  &-left {
-    width: 60%;
-  }
-}
 
+// .about-btn {
+//   border: 1px solid black;
+//   border-radius: 27px;
+//   transition: all .3s;
+//   letter-spacing: 2px;
+//   background-color: white;
+//   transition: all .3s;
+//   font-size: $font-text;
+//   margin: 0 auto;
+//   width: 50%;
+//   padding: 10px;
+//   &:hover {
+//     color: $cBlack;
+//     background-color: $btnhover;
+//   }
+//   &-container {
+//     text-align: center;
+//   }
 
+// &-link-btn {
+//   display: inline-block;
+// }
+
+// }

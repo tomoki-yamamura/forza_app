@@ -35,14 +35,13 @@ end
   #has_secureで自動でやってくれたことを実装しているだけ
   # このremember_tokenは上記のattr_accesorとは異なる
   def authenticated?(remember_token)
+    return false if remember_digest.nil?
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
-  end
+end
 
     # ユーザーのログイン情報を破棄する(DB)
   def forget
     update_attribute(:remember_digest, nil)
   end
-
-  
 
 end

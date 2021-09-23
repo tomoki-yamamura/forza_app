@@ -1,59 +1,37 @@
 @import ".././../variables";
+// contact-area
 
-.contact_header {
-  position: relative;
-  display: inline;
-  &::before {
-    content:"";
-    display:inline-block;
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -30%;
-  }
-  &::after {
-    content:"";
-    display:inline-block;
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -30%;
-  }
-}
+
 
 .contact-area {
-  width: 90%;
   margin: 0 auto;
   max-width: $contentMaxWidth;
 
-
   & h2 {
     text-align: center;
-    margin-bottom: $mb-md;
+    margin: 0 auto;
+    font-size: $font-lr;
+    margin-bottom: $mb-sm;
   }
   &-inner {
     background-color: $sepbg;
   }
 
   &-box {
-    padding: 40px 30px;
+    padding: 20px;
     text-align: center;
   }
   &-link {
-    border-radius: 7px;
+    border-radius: 27px;
     border: 1px solid;
     display: block;
-    height: 50px;
     letter-spacing: 2px;
     background-color: $cWhite;
     transition: all .3s ease;
     width: 75%;
+    margin: 0 auto;
+    font-size: $font-text;
+    height:50px; 
 
     &.loading {
       border-radius: 50px;
@@ -77,7 +55,7 @@
   }
 
   &-text {
-    margin-bottom: 25px;
+    font-size: $font-text;
   }
 }
 
@@ -85,6 +63,27 @@
   position: relative;
   top: 0;
   margin-bottom: 10%;
+}
+
+.underline {
+  border-bottom: 1px solid red;
+}
+
+.contact-area-link-layout {
+  border-radius: 27px;
+  border: 1px solid;
+  display: block;
+  letter-spacing: 2px;
+  background-color: $cWhite;
+  transition: all .3s ease;
+  width: 75%;
+  margin: 0 auto;
+  font-size: $font-text;
+  padding: 10px;
+  &:hover {
+    color: $cBlack;
+    background-color: $btnhover;
+  }
 }
 
 /* Spinner */
@@ -100,5 +99,78 @@
 @keyframes sp-anime {
   100% { 
     transform: rotate(360deg); 
+  }
+}
+// ここまで
+
+
+// 480px〜599px：SP横
+// ------------------------------ 
+@media (min-width: 480px) {
+
+}
+ 
+// 600px〜959px：600px以上のタブレットやモニタで適用
+ // ------------------------------ 
+@media (min-width: 600px) {
+  .contact-area-text {
+    font-size: $font-sm;
+    margin-bottom: $mb-sm;
+  }
+  .news_head_link {
+    font-size: $font-tab-main; 
+  }
+  .contact-area {
+    width: 80%;
+    & h2 {
+      font-size: $font-md;
+    }
+  }
+  .contact-area-link {
+    width: 45%;
+  }
+  .contact-area-link-layout {
+    width: 50%;
+  }
+
+}
+ 
+// 960px〜1279px：960px以上のモニタで適用
+ // ------------------------------ 
+@media (min-width: 960px) {
+  .contact-area-text {
+    font-size: $font-p;
+    margin-bottom: $mb-form;
+
+  }
+  .contact-area {
+    & h2 {
+      font-size: $font-lg;
+      margin-bottom: $pd-md;
+    }
+  }
+  .contact-area-link {
+    width: 45%;
+    font-size: $font-sm;
+    border-radius: 20px;
+  }
+  .contact-area-link-layout {
+    width: 50%;
+    font-size: $font-sm;
+    padding: 15px;
+  }
+}
+ 
+// 1280px>=：1280px以上のモニタで適用
+ // ------------------------------ 
+@media (min-width: 1280px) {
+  // .contact-area-text {
+  //   font-size: $font-lr;
+  // }
+  .contact-area {
+    width: 70%;
+  }
+  .contact-area-link {
+    width: 45%;
   }
 }

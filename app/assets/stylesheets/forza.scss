@@ -2,30 +2,742 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-// style.scss
+
+
+@import "variables";
+
+#main-content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+// about_area
+
+
+#about {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 30px;
+
+}
+
+.about {
+
+  &-copy {
+    font-size: $font-p;
+    line-height: 1.6;
+    margin: $mb-text-sm 0;
+  }
+
+  &-text {
+    font-size: $font-text;
+    margin-bottom: $mb-sm;
+    line-height: 2;
+  }
+
+  &-sec-left {
+    transition: all 1s;
+    transform: translateY(10px);
+    opacity: 0;
+  
+    &.inview {
+      opacity: 1;
+      transform: none;
+    }
+
+    & h2 {
+      font-size: $font-lr;
+      margin: $mb-sm 0;
+    }
+  }
+
+  &-sec-right {
+    // margin: 40px 0 0 -30px;
+    position: relative;
+    margin: 0;
+    padding-left: 0;
+    &::before{
+      content: "";
+      display: block;
+    } 
+
+    &::after{
+      content: "";
+      display: block;
+    }
+  }
+
+  &-img01 {
+    transition: all 1s;
+    transform: translateY(10px);
+    opacity: 0;
+    // box-shadow: 6px 7px 9px 0px grey;
+    &.inview {
+      transform: none;
+      opacity: 1;
+    }
+    &-img {
+      width: 75%;
+    }
+  }
+  &-img02 {
+    position: relative;
+    width: 45%;
+    // background-color: aquamarine;
+    transition: all 1s;
+    transform: translateY(10px);
+    opacity: 0;
+    // box-shadow: 6px 7px 9px 0px grey;
+
+    &-img {
+    border-radius: 50%;
+
+    }
+
+    &.inview {
+      opacity: 1;
+      transform: none;
+    }
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 80%;
+    }
+
+    &-inner {
+      position: absolute;
+      top: -50%;
+      left: 120%;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+.about-btn {
+    border: 1px solid black;
+    border-radius: 27px;
+    transition: all .3s;
+    letter-spacing: 2px;
+    background-color: white;
+    transition: all .3s;
+    font-size: $font-text;
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px;
+    &:hover {
+      color: $cBlack;
+      background-color: $btnhover;
+    }
+    &-container {
+      text-align: center;
+    }
+  
+  &-link-btn {
+    display: inline-block;
+  }
+  
+}
+
+.span-btn {
+  display: inline-block;
+  
+}
+
+.fa-volleyball-ball {
+}
+
+.faa-bounce {
+  animation-duration: 2s !important;
+}
+
+
+
+
+
+
+// article_area
+
+
+
+.article-area {
+  margin: 0 auto;
+  padding: $pd-60 0;
+}
+
+.page_title {
+  font-size: $font-lr;
+  margin: 0 auto;
+  padding-bottom: $pd-text-sm;
+}
+
+.news {
+  &_date {
+    margin-bottom: 0;
+    font-size: $font-text;
+  }
+  &_title {
+    font-size: $font-text;
+    line-height: 1;
+  }
+  &_text {
+    display: none;
+  }
+  &_border {
+   border-top: 2px solid gray;
+
+    border-bottom: 2px solid gray;
+    &:last-of-type {
+      border-bottom: 2px solid gray;
+    }
+  }
+  &_container {
+   display: flex;
+   padding: 10px;
+   position: relative;
+   justify-content: space-between;
+   background-color: #f6f6f7;
+
+
+  }
+  &_left{
+    width: 40%; 
+    overflow: hidden;
+    border-radius: 5%;
+    position: relative; 
+    flex-basis: 40%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height:100%;
+      z-index: 3;
+      transition: background-color .3s ease;
+      pointer-events: none;
+    }
+    &:hover::before {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-basis: 55%;
+    &_2 {
+      position: relative;
+    }
+  }
+} 
+
+.article_img_list {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+.article_image {
+  border-radius: 2%;
+}
+
+.img_fit {
+  position: relative;
+  width: 100%;
+  list-style: none;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+.top_news_btn {
+  position: relative;
+  bottom: 0;
+  left: 65%;
+  top: 10px;
+}
+
+
+.readmore {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: $font-text;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #FFF;
+  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  transition: .4s;
+  &:hover {
+    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+  }
+}
+
+.news_m_title {
+  position: relative;
+  z-index: 3;
+  top: 45%;
+  left: 20%;
+  transition: all 1s;
+  transform: translateX(-30px);
+  opacity: 0;
+  color: white;
+  &.inview {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.news_m_header {
+  position: relative;
+  top: 0;
+  margin-bottom: 10%;
+  background-image: image-url('news_head.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+
+
+.article_sep {
+  margin: 0 auto;
+  &:nth-of-type(2) {
+    padding-top: $pd-60;
+  }
+  &:nth-of-type(3) {
+    padding-top: $pd-60;
+  }
+}
+
+// ここまで
+
+
+
+
+
+
+
+// schedule-area
+.schedule{
+  
+  &-area {
+  padding-top: $pd-60;
+  margin: 0 auto;
+  // background-color: $contactbgc;
+    & h2 {
+    text-align: center;
+    font-size: $font-lr;
+    }
+  }
+}
+
+// .fc-toolbar-title {
+//   font-size: $font-p !important;
+// }
+
+#calender_container {
+  width: 100%;
+  & dl, dt {
+    font-size: $font-text;
+  }
+}
+
+.calender-text {
+  padding-top: 15px;
+  font-size: $font-text;
+  .blue {
+  padding: 2px 16px;
+  background: #3a87ad;
+  border-radius: 2px;
+  }
+  & > div {
+    padding-top: 30px;
+  }
+
+
+}
+  
+
+// ここまで
+
+// map-area
+.map{
+  &-area {
+  padding-top: 10%;
+  margin: 0 auto;
+  // background-color: $contactbgc;
+    & h2 {
+      text-align: center;
+      font-size: $font-lr;
+      margin-bottom: $mb-sm;
+    }
+  }
+}
+
+#map {
+  position: relative;
+  width: 100%;
+  padding-top: 100px;
+  overflow: hidden;
+  height: 200px;
+}
+#map iframe {
+  position: absolute;
+  top: -200px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 200px + 200px);
+}
+
+// ここまで
+
+
+// ここまで
+
+.logo__img {
+  display: none;
+}
+
+.text-center {
+  margin-top: 150px;
+  font-size: $font-lr;
+}
+
+
 
 // 480px〜599px：SP横
 // ------------------------------ 
- @media (min-width: 480px) {
-   @import "../stylesheets/breakpoints/480px";
- }
+@media (min-width: 480px) {
 
- // 600px〜959px：600px以上のタブレットやモニタで適用
-// ------------------------------ 
- @media (min-width: 600px) {
-   @import "../stylesheets/breakpoints/600px";
- }
 
-  // 960px〜1279px：960px以上のモニタで適用
-// ------------------------------ 
- @media (min-width: 960px) {
-  @import "../stylesheets/breakpoints/960px";
- }
+}
+ 
+// 600px〜959px：600px以上のタブレットやモニタで適用
+ // ------------------------------ 
+@media (min-width: 600px) {
+  // about
+  #about {
+    display: flex;
+    flex-direction: row;
+    margin-top: $mb-60;
+    & h2 {
+      font-size: $font-lr; 
+    }
+  }
+  .about {
+    &-copy {
+      font-size: $font-p;
+    }
+    &-text {
+      font-size: $font-sm;
+    }
+    &-btn {
+      width: 30%;
+      padding: 14px;
+      font-size: $font-sm;
+    }
+  }
+  .about-sec-left {
+    flex-basis: 150%;
+    padding-right: 40px;
+    & h2 {
+      font-size: $font-md;
+    }
+  }
+  // ここまで
 
- // 1280px>=：1280px以上のモニタで適用
-// ------------------------------ 
- @media (min-width: 1280px) {
-   @import "../stylesheets/breakpoints/1280px";
- }
+  // article
+  .article-area {
+    padding: 100px 0;
+  }
+  .page_title {
+    width: 90%;
+    padding-bottom: $pd-text-sm;
+    font-size: $font-md;
+    padding-bottom: $mb-sm;
+  }
+  .news_container {
+    padding: 20px 25px;
+  }
+
+  .news_left {
+    flex-basis: 28%;
+  }
+  .news {
+    &_date {
+      margin-bottom: 0;
+      font-size: $font-sm;
+    }
+    &_title {
+      font-size: $font-p;
+      line-height: 1;
+      margin: 10px 0;
+    }
+    &_text {
+      display: block;
+    }
+    &_container {
+     display: flex;
+     padding: 25px 0;
+     position: relative;
+     justify-content: space-around;
+     background-color: #f6f6f7;
+    }
+  }
+  .top_news_btn {
+    left: 95%;
+  }
+  .readmore {
+    font-size: $font-sm;
+  }
+  // ここまで
+  .schedule-area {
+    padding-top: 100px;
+  }
+  .calender-text {
+    font-size: $font-sm;
+  }
+  #calender_container {
+    & dl, dt {
+      font-size: $font-sm;
+    }
+  }
+  .map-area {
+    & h2 {
+      font-size: $font-md;
+    }
+  }
+  #map {
+    height: 400px;
+  }
+
+}
+
 
  
+// 960px〜1279px：960px以上のモニタで適用
+ // ------------------------------ 
+@media (min-width: 960px) {
+  #main-content {
+    width: 75%;
+  }
+  // about
+  #about {
+    margin-top: 100px;
+    & h2 {
+      font-size: $font-lg; 
+    }
+  }
+  .about {
+    &-copy {
+      font-size: $font-md;
+      margin: 25px 0;
+    }
+    &-text {
+      font-size: $font-p;
+    }
+    &-btn {
+      width: 30%;
+      padding: 14px;
+      font-size: $font-p;
+    }
+  }
+  .about-sec-left {
+    flex-basis: 150%;
+    padding-right: 40px;
+    & h2 {
+      font-size: $font-md;
+    }
+  }
+  // ここまで
+// article
+.article-area {
+  padding: 120px 0;
+  }
+  .page_title {
+    width: 90%;
+    font-size: $font-lg;
+    padding-bottom: $mb-form;
+  }
+  .news_container {
+    padding: 20px 25px;
+  }
+
+  .news_left {
+    flex-basis: 25%;
+  }
+  .top_news_btn {
+    left: 100%;
+  }
+  .news {
+    &_date {
+      font-size: $font-p;
+    }
+    &_title {
+      font-size: $font-lr;
+      line-height: 1;
+      margin: 20px 0;
+    }
+    &_text {
+      font-size: $font-p;
+    }
+    &_container {
+    display: flex;
+    padding: 25px 0;
+    position: relative;
+    justify-content: space-around;
+    background-color: #f6f6f7;
+    }
+  }
+
+  .readmore {
+    font-size: $font-p;
+    padding: 10px 15px;
+  }
+  .article_sep {
+    margin: 0 auto;
+    &:nth-of-type(2) {
+      padding-top: 100px;
+    }
+    &:nth-of-type(3) {
+      padding-top: 100px;
+    }
+  }
+
+  .schedule-area {
+    padding-top: 120px;
+    & h2 {
+      font-size: $font-lg;
+      margin-bottom: 20px;
+    }
+  }
+  .calender-text {
+    font-size: $font-p;
+  }
+  #calender_container {
+    & dl, dt {
+      font-size: $font-p;
+    }
+  }
+  .map-area {
+    padding-top: 120px;
+    & h2 {
+      font-size: $font-lg;
+      margin-bottom: 40px;
+    }
+  }
+  #map {
+    height: 400px;
+  }
+  .sns-area {
+    padding-top: 120px;
+    & h2 {
+      font-size: $font-lg;
+      margin-bottom: $pd-md;
+    }
+    &-inner {
+      font-size: $font-p;
+      padding: $pd-md 0;
+    }
+  }
+
+}
+ 
+// 1280px>=：1280px以上のモニタで適用
+ // ------------------------------ 
+@media (min-width: 1280px) {
+  // about
+  #about {
+    margin-top: 100px;
+  }
+  .about {
+    &-copy {
+      margin: 40px 0;
+    }
+    // &-text {
+    //   font-size: $font-lr;
+    // }
+    // &-btn {
+    //   font-size: $font-lr;
+    // }
+  }
+  .about-sec-left {
+    flex-basis: 100%;
+    padding-right: 100px;
+    // & h2 {
+    //   font-size: $font-md;
+    // }
+  }
+  // ここまで
+
+ // article
+ .article-area {
+  padding: 100px 0;
+  }
+  .page_title {
+    padding-bottom: $pd-text-sm;
+    // font-size: $font-lap-main;
+    padding-bottom: $pd-md;
+  }
+  .news_container {
+    padding: 20px 25px;
+  }
+
+  .news {
+    &_date {
+      margin-bottom: 0;
+      // font-size: $font-lr;
+    }
+    &_title {
+      // font-size: $font-lg;
+      line-height: 1;
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+    &_text {
+      display: block;
+      // font-size: $font-lr;
+    }
+    &_container {
+    display: flex;
+    padding: 25px 0;
+    position: relative;
+    justify-content: space-around;
+    background-color: #f6f6f7;
+    }
+  }
+  .top_news_btn {
+    left: 95%;
+  }
+  .readmore {
+    font-size: $font-sm;
+  }
+  #top_news_container {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .side {
+    display: block;
+  }
+  .side_inner {
+    display: flex;
+  }
+}
+

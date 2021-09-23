@@ -3,33 +3,26 @@
 
 .sns {
   &-area {
-    width: 90%;
-    margin: 0 auto;
+    padding-top: $pd-60;
     max-width: $contentMaxWidth;
+    margin: 0 auto;
+    & h2 {
+      text-align: center;
+      font-size: $font-lr;
+      margin-bottom: $mb-sm;
+    }
     & span {
       padding-left: 15px;
     }
-    & h2 {
-      margin-top: 80px;
-      margin-bottom: $mb-md;
-      text-align: center
+    &-inner {
+      font-size: $font-text;
+      display: flex;
+      justify-content: space-around;
+      border-top: 1px solid;
+      border-bottom: 1px solid;
+      padding: 25px 0;
     }
   }
-  &-link {
-    &:hover {
-      color: gray;
-    }
-  }
-
-  &-area-inner {
-    font-size: $font-sm;
-    display: flex;
-    justify-content: space-around;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    padding: 45px 0;
-  }
-
   &-right {
     text-align: center;
     display: inline-block;
@@ -39,7 +32,6 @@
       justify-content: center;
     }
   }
-
   &-left {
     text-align: center;
     display: inline-block;
@@ -49,20 +41,15 @@
       justify-content: center;
     }
   }
-  
   &-twitter-link {
     position: relative;
-    padding-left: 5%;
-    
-    
+    padding-left: 5%; 
   }
   &-instagram-link {
     position: relative;
     padding-left: 5%;
   }
-  
 }
-
 
 
 
@@ -87,5 +74,39 @@
   background:radial-gradient(at 20% 120%,orange, #f15a4d 25%, #f13f79 55%, #9933ff 100%) no-repeat;
   border-radius:20%;
   font-size: 1.6em 
-  // padding-right: 15px;
 }
+
+
+
+// 480px〜599px：SP横
+// ------------------------------ 
+@media (min-width: 480px) {
+
+} 
+// 600px〜959px：600px以上のタブレットやモニタで適用
+// ------------------------------ 
+@media (min-width: 600px) {
+  .sns-area {
+    width: 90%;
+    & h2 {
+        font-size: $font-md;
+        margin-bottom: $mb-form;
+    }
+    &-inner {
+      font-size: $font-sm;
+    }
+  }
+}
+   
+// 960px〜1279px：960px以上のモニタで適用
+// ------------------------------ 
+ @media (min-width: 960px) {
+
+ }
+   
+// 1280px>=：1280px以上のモニタで適用
+// ------------------------------ 
+@media (min-width: 1280px) {
+  
+}
+  

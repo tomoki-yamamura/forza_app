@@ -13,7 +13,6 @@
     transform: translate(-50%, -50%);
     color: $cBlack;
     z-index: 30;
-    font-size: 3.8vw;
     color: $cWhite;
   }
 
@@ -23,7 +22,7 @@
     bottom: 0;
     left: 20%;
     padding-bottom: 125px;
-    font-size: 12px;
+    font-size: $font-text;
     letter-spacing: 0.2em;
     transition: all .3s;
     z-index: 30;
@@ -60,7 +59,7 @@
     background-size: cover;
     top: 0;
     left: 0;
-    animation: first-anime 18s infinite;
+    // animation: first-anime 18s infinite;
     &:nth-of-type(1) {
       background-image: image-url("img_0603.jpg");
       background-position: top;
@@ -113,5 +112,48 @@
   }
   100% {
     top:100%;
+  }
+}
+
+
+// 480px〜599px：SP横
+// ------------------------------ 
+@media (min-width: 480px) {
+
+}
+ 
+// 600px〜959px：600px以上のタブレットやモニタで適用
+ // ------------------------------ 
+@media (min-width: 600px) {
+  .first__title-p {
+    font-size: $font-lr;
+  }
+}
+ 
+// 960px〜1279px：960px以上のモニタで適用
+ // ------------------------------ 
+@media (min-width: 960px) {
+  .first{
+    height: 700px;
+    & p {
+   font-size: $font-lap-main;
+    }
+    & span {
+    font-size: $font-p;
+    }
+  }
+}
+ 
+// 1280px>=：1280px以上のモニタで適用
+ // ------------------------------ 
+@media (min-width: 1280px) {
+  .first{
+    height: 700px;
+    & p {
+   font-size: $font-full-main;
+    }
+    & span {
+    font-size: $font-lr;
+    }
   }
 }

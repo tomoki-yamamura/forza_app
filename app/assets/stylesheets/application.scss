@@ -28,6 +28,9 @@
 
 a {
   color: black;
+  &:hover {
+    color: gray;
+  }
 }
 
 p {

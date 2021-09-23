@@ -1,0 +1,59 @@
+@import "variables";
+
+.alert {
+  text-align: center;
+  width: 90%;
+  margin: 20px auto;
+  font-size: $font-text;
+  padding: 5px !important;
+  line-height: 2;
+}
+
+.alert-faile {
+    border: 1px solid red !important;
+    color: red;
+}
+
+.alert-gotit {
+    border: 1px solid green !important;
+    color: green;
+}
+
+.field_with_errors {
+  display: contents;
+  // もしくは diplay: inline;
+}
+
+// 480px〜599px：SP横
+// ------------------------------ 
+@media (min-width: 480px) {
+
+}
+ 
+// 600px〜959px：600px以上のタブレットやモニタで適用
+ // ------------------------------ 
+@media (min-width: 600px) {
+  .alert {
+    width: 40%;
+    font-size: $font-sm;
+  }
+}
+ 
+// 960px〜1279px：960px以上のモニタで適用
+ // ------------------------------ 
+@media (min-width: 960px) {
+  .alert {
+    width: 40%;
+    font-size: $font-p;
+  }
+
+}
+ 
+// 1280px>=：1280px以上のモニタで適用
+ // ------------------------------ 
+@media (min-width: 1280px) {
+  .alert {
+    width: 40%;
+    font-size: $font-lr;
+  }
+}

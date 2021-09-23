@@ -5,42 +5,56 @@
 @import "mixin";
 
 
+
 .news_head_link {
   position: relative;
 
-  &::before {
-    content:"";
-    display:inline-block;
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -40%;
+  // &::before {
+  //   content:"";
+  //   display:inline-block;
+  //   width: 30px;
+  //   height: 3px;
+  //   background-color: black;
+  //   position: absolute;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   left: -40%;
+  // }
+  // &::after {
+  //   content:"";
+  //   display:inline-block;
+  //   width: 30px;
+  //   height: 3px;
+  //   background-color: black;
+  //   position: absolute;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   right: -40%;
+  // }
+}
+article {
+  margin-bottom: $font-md;
+}
+.news_sep {
+  margin: 0 auto;
+  &:nth-of-type(2) {
+    padding-top: $pd-60;
   }
-  &::after {
-    content:"";
-    display:inline-block;
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -40%;
+  &:nth-of-type(3) {
+    padding-top: $pd-60;
   }
 }
-
-article {
-  margin-bottom: 80px;
-  // border-bottom: 2px solid black;
+.articles {
+  padding-top: $pd-md;
 }
  .article{
    &-container {
-     width: 90%;
      margin: 0 auto;
-    //  padding-top: 60px;
+     display: flex;
+     flex-direction: column;
+     &-right {
+       margin-top: 60px;
+     }
    }
    &_header {
      position: relative;
@@ -56,15 +70,14 @@ article {
     font-size: 1.6rem;
    }
   &_title {
-    font-size: 25px;
-    margin-top: 5px;
+    font-size: $font-lr;
     display: inline-block;
+    font-weight: 400;
   }
   &_content {
-    padding-top: 30px;
+    padding: 10px 0;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    padding-bottom: 30px;
   }
   &_body {
     line-height: 3;
@@ -136,8 +149,15 @@ article {
   }
   &_header{
   border-bottom: 2px solid black;
-  padding-bottom: 20px;
-  margin-bottom: 30px;
+  font-size: $font-lr;
+  padding-bottom: 10px;
+  }
+  &_ul {
+    font-size: $font-p;
+    padding-top: 30px;
+  }
+  &_li {
+    line-height: 2;
   }
 }
 
@@ -165,9 +185,6 @@ body.fadeout::after {
   opacity: 1;
 }
 
-// body.fadeout #global-container{
-//   transform:scale(1.2);
-// }
 
 .newbtn {
   display: none;
@@ -395,4 +412,55 @@ label, input[type='checkbox'] {
 }
 #post-success-msg.active{
   opacity: 1;
+}
+
+
+.trix-content {
+  font-size: 14px;
+  line-height: 3;
+}
+
+  // 600px〜959px：600px以上のタブレットやモニタで適用
+   // ------------------------------ 
+@media (min-width: 600px) {
+  .contact_header {
+    font-size: $font-tab-main; 
+  }
+  .article-container {
+    flex-direction: row;
+    justify-content: space-between;
+    &-left {
+      flex-basis: 55%;
+    }
+    &-right {
+      margin-top: 53px;
+      flex-basis: 30%;
+    }
+  }
+  .article{
+    &_title {
+      font-size: $font-lg;
+    }
+  }
+  .trix-content {
+    font-size: 16px;
+  }
+  .recent_header {
+    font-size: $font-md;
+  }
+
+}
+   
+  // 960px〜1279px：960px以上のモニタで適用
+   // ------------------------------ 
+@media (min-width: 960px) {
+  .article-container {
+    padding-top: 80px;
+  }
+}
+   
+  // 1280px>=：1280px以上のモニタで適用
+   // ------------------------------ 
+@media (min-width: 1280px) {
+  
 }
