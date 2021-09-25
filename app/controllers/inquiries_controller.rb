@@ -15,7 +15,6 @@ class InquiriesController < ApplicationController
       msg = msg.gsub(",","<br>")
       flash.now[:faile] = msg.html_safe
       render "new"
-      
     end
   end
 
