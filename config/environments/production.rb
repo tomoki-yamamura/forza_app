@@ -125,8 +125,8 @@ Rails.application.configure do
    address:              'smtp.gmail.com',
    port:                  587,
    domain:               'gmail.com',
-   user_name:             'forza.kanazawa.volleyball@gmail.com',
-   password:              'beffmwgzvyxxicnm',
+   user_name:            ENV["FORZA_USER"],
+   password:             ENV["FORZA_EMAIL2"],
    authentication:       'plain',
   #  enable_starttls_auto:  true
   }
