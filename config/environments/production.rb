@@ -126,7 +126,7 @@ Rails.application.configure do
    port:                  587,
    domain:               'gmail.com',
    user_name:             'forza.kanazawa.volleyball@gmail.com',
-   password:              'volleyball.819',
+   password:              'beffmwgzvyxxicnm',
    authentication:       'plain',
   #  enable_starttls_auto:  true
   }
