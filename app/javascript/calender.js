@@ -3,16 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let calendar = new FullCalendar.Calendar(document.getElementById('calender'), {
     // google apiを叩く
-    googleCalendarApiKey: gon.google_calender_API_key,
+    googleCalendarApiKey:gon.google_calender_API_key,
     eventSources: [
       {
-        googleCalendarId: gon.calender_id_1,
+        googleCalendarId:gon.calender_id_1,
         className: 'event_holiday',
         textColor: 'rgb(224, 102, 122)',
         eventDisplay: 'none'
       },
       {
-        googleCalendarId: gon.calender_id_2,
+        googleCalendarId:gon.calender_id_2,
         className: 'forza_cal_event',
       }
     ],
