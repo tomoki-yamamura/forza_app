@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
     ],
     // ここまで
 
-    // events: 'forza.kanazawa.volleyball@gmail.com',
 
 
     // 日付枠内の日付を数字のみにする
