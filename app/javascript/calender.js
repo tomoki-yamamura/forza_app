@@ -3,16 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let calendar = new FullCalendar.Calendar(document.getElementById('calender'), {
     // google apiを叩く
-    googleCalendarApiKey:'AIzaSyBphPljC66Tbjuo5m8EHkD4BrywVTb2X_8',
+    googleCalendarApiKey:gon.google_calender_API_key,
     eventSources: [
       {
-        googleCalendarId:'ja.japanese#holiday@group.v.calendar.google.com',
+        googleCalendarId:gon.calender_id_1,
         className: 'event_holiday',
         textColor: 'rgb(224, 102, 122)',
         eventDisplay: 'none'
       },
       {
-        googleCalendarId:'forza.kanazawa.volleyball@gmail.com',
+        googleCalendarId:gon.calender_id_2,
         className: 'forza_cal_event',
       }
     ],
