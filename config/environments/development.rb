@@ -80,7 +80,7 @@ Rails.application.configure do
    port:                  587,
    domain:               'gmail.com',
    user_name:             ENV["FORZA_EMAIL"],
-   password:              ENV["FORZA_EMAIL2"],
+   password:              ENV["FORZA_PASSWORD"],
    authentication:       'plain',
    enable_starttls_auto:  true
   }
