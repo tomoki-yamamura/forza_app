@@ -45,10 +45,17 @@
       color: gray;
     }
   }
-
   & .logo {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    font-size: $font-lg;
+  }
+
+  & .logo__img {
+  height: 50px;
+  width: 70px;
+  object-fit: contain;
+  margin-right: 5px;
   }
 
   &_forza {
@@ -87,6 +94,9 @@
     &__li {
       margin-left: 40px;
       font-size: $font-sm;
+    }
+    & .logo {
+      
     }
   }
 }

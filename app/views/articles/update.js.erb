@@ -1,4 +1,4 @@
-$('.article_show').html("<%= escape_javascript(render(@article)) %>");
+$('.articles').html("<%= escape_javascript(render(@article)) %>");
 $(".recent-entry").html("<%= escape_javascript(render('articles/recent_entry'))%>");
 
 $('.js-modal').fadeOut();

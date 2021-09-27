@@ -1,7 +1,5 @@
 class ArticlesController < ApplicationController
-  # before_action :move_to_signed_in
-  before_action :find_article, only: [:show, :edit, :update, :destroy]
- #  before_action :current_user, only: [:edit, :update, :destroy]
+ before_action :find_article, only: [:show, :edit, :update, :destroy]
  
  include ArticlesHelper
  
@@ -14,11 +12,6 @@ class ArticlesController < ApplicationController
     else
       @articles = Article.order(created_at: :desc).page(params[:page]).per(2)
     end
-
-    #  respond_to do |format|
-    #   format.html
-    #   format.js
-    # end
    end
  
    def show
@@ -48,15 +41,9 @@ class ArticlesController < ApplicationController
       end
     end
    end
- 
-
 
   def create
     @article = Article.new(article_params)
-
-  
-
-
     respond_to do |format|
       if @article.save
         get_aside_contents
@@ -71,17 +58,11 @@ class ArticlesController < ApplicationController
   end
  
    def destroy
-     # Article.find(params[:id]).destroy
      @article.destroy!
        redirect_to articles_url
-     # else
-     #   redirect_to root_url, alert: "削除できませんでした"
-     # end
    end
 
 
-   
- 
    private
  
    def find_article
@@ -91,7 +72,7 @@ class ArticlesController < ApplicationController
    def article_params
      params.require(:article).permit(:title, :body, :image, category_ids: [])
    end
- 
+
    def move_to_signed_in
      unless logged_in?
        #サインインしていないユーザーはログインページが表示される
@@ -99,4 +80,5 @@ class ArticlesController < ApplicationController
        redirect_to  login_url
      end
    end
+
 end

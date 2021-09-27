@@ -75,6 +75,10 @@ article {
   text-align: right;
 }
 
+.article_index_date {
+  margin-bottom: 10px;
+}
+
 .text-center{
   &.show{
     text-align: left;
@@ -246,6 +250,10 @@ label, input[type='checkbox'] {
 
 .edit-action-button {
   position: relative;
+  // &-not-login {
+  //   position: relative;
+  //   right: 10px;
+  // }
 }
 
 .mini-action-button {
@@ -364,17 +372,16 @@ label, input[type='checkbox'] {
 }
 
 .fa {
-  &-trash {
-  font-size: 25px;
-  padding-left: 5px;
-  color: gray;
-  }
   &-edit {
   font-size: 25px;
-  padding-left: 5px;
+  padding-left: 10px;
   color: gray;
   }
   &-list-ul {
+  font-size: 25px;
+  color: gray;
+  }
+  &-trash {
   font-size: 25px;
   padding-left: 10px;
   color: gray;
